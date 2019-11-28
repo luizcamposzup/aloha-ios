@@ -14,6 +14,17 @@
 		425A2F41238862CD009828A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425A2F3F238862CD009828A4 /* Main.storyboard */; };
 		425A2F43238862CF009828A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425A2F42238862CF009828A4 /* Assets.xcassets */; };
 		425A2F46238862CF009828A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425A2F44238862CF009828A4 /* LaunchScreen.storyboard */; };
+		42B212F0238BEFEA00BC7000 /* Background - aloha NO LIMITS.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B212EF238BEFEA00BC7000 /* Background - aloha NO LIMITS.png */; };
+		42B212F2238BF50300BC7000 /* logo zup.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 42B212F1238BF50300BC7000 /* logo zup.jpeg */; };
+		42B212F4238C171600BC7000 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B212F3238C171600BC7000 /* BaseViewController.swift */; };
+		42B212F6238C1B1100BC7000 /* ButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B212F5238C1B1100BC7000 /* ButtonClass.swift */; };
+		42B212FF238C428200BC7000 /* Diavlo_BLACK_II.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42B212FA238C428100BC7000 /* Diavlo_BLACK_II.otf */; };
+		42B21300238C428200BC7000 /* Diavlo_BOLD_II.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42B212FB238C428100BC7000 /* Diavlo_BOLD_II.otf */; };
+		42B21301238C428200BC7000 /* Diavlo_BOOK_II.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42B212FC238C428100BC7000 /* Diavlo_BOOK_II.otf */; };
+		42B21302238C428200BC7000 /* Diavlo_LIGHT_II.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42B212FD238C428100BC7000 /* Diavlo_LIGHT_II.otf */; };
+		42B21303238C428200BC7000 /* Diavlo_MEDIUM_II.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42B212FE238C428200BC7000 /* Diavlo_MEDIUM_II.otf */; };
+		42B21307238C463F00BC7000 /* TextFieldClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B21306238C463F00BC7000 /* TextFieldClass.swift */; };
+		42B21309238D430A00BC7000 /* TitleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B21308238D430A00BC7000 /* TitleClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +37,17 @@
 		425A2F42238862CF009828A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		425A2F45238862CF009828A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		425A2F47238862CF009828A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42B212EF238BEFEA00BC7000 /* Background - aloha NO LIMITS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background - aloha NO LIMITS.png"; path = "../../../Downloads/Background - aloha NO LIMITS.png"; sourceTree = "<group>"; };
+		42B212F1238BF50300BC7000 /* logo zup.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "logo zup.jpeg"; path = "../../../Downloads/logo zup.jpeg"; sourceTree = "<group>"; };
+		42B212F3238C171600BC7000 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		42B212F5238C1B1100BC7000 /* ButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClass.swift; sourceTree = "<group>"; };
+		42B212FA238C428100BC7000 /* Diavlo_BLACK_II.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Diavlo_BLACK_II.otf; sourceTree = "<group>"; };
+		42B212FB238C428100BC7000 /* Diavlo_BOLD_II.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Diavlo_BOLD_II.otf; sourceTree = "<group>"; };
+		42B212FC238C428100BC7000 /* Diavlo_BOOK_II.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Diavlo_BOOK_II.otf; sourceTree = "<group>"; };
+		42B212FD238C428100BC7000 /* Diavlo_LIGHT_II.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Diavlo_LIGHT_II.otf; sourceTree = "<group>"; };
+		42B212FE238C428200BC7000 /* Diavlo_MEDIUM_II.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Diavlo_MEDIUM_II.otf; sourceTree = "<group>"; };
+		42B21306238C463F00BC7000 /* TextFieldClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldClass.swift; sourceTree = "<group>"; };
+		42B21308238D430A00BC7000 /* TitleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleClass.swift; sourceTree = "<group>"; };
 		DEE4A7936E3C258576A02C1E /* Pods-AlohaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlohaIOS.release.xcconfig"; path = "Target Support Files/Pods-AlohaIOS/Pods-AlohaIOS.release.xcconfig"; sourceTree = "<group>"; };
 		F4B69D8B198CDCA75980FB00 /* Pods_AlohaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlohaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,15 +85,34 @@
 		425A2F38238862CD009828A4 /* AlohaIOS */ = {
 			isa = PBXGroup;
 			children = (
+				42B212F7238C424500BC7000 /* Fonts */,
 				425A2F39238862CD009828A4 /* AppDelegate.swift */,
 				425A2F3B238862CD009828A4 /* SceneDelegate.swift */,
 				425A2F3D238862CD009828A4 /* ViewController.swift */,
+				42B212F3238C171600BC7000 /* BaseViewController.swift */,
+				42B212F5238C1B1100BC7000 /* ButtonClass.swift */,
+				42B21308238D430A00BC7000 /* TitleClass.swift */,
+				42B21306238C463F00BC7000 /* TextFieldClass.swift */,
 				425A2F3F238862CD009828A4 /* Main.storyboard */,
 				425A2F42238862CF009828A4 /* Assets.xcassets */,
+				42B212F1238BF50300BC7000 /* logo zup.jpeg */,
+				42B212EF238BEFEA00BC7000 /* Background - aloha NO LIMITS.png */,
 				425A2F44238862CF009828A4 /* LaunchScreen.storyboard */,
 				425A2F47238862CF009828A4 /* Info.plist */,
 			);
 			path = AlohaIOS;
+			sourceTree = "<group>";
+		};
+		42B212F7238C424500BC7000 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				42B212FA238C428100BC7000 /* Diavlo_BLACK_II.otf */,
+				42B212FB238C428100BC7000 /* Diavlo_BOLD_II.otf */,
+				42B212FC238C428100BC7000 /* Diavlo_BOOK_II.otf */,
+				42B212FD238C428100BC7000 /* Diavlo_LIGHT_II.otf */,
+				42B212FE238C428200BC7000 /* Diavlo_MEDIUM_II.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		7C6078BBC1DD9F652F517C46 /* Frameworks */ = {
@@ -88,7 +129,6 @@
 				29D43CB3464AC6A45D8C1EA4 /* Pods-AlohaIOS.debug.xcconfig */,
 				DEE4A7936E3C258576A02C1E /* Pods-AlohaIOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,8 +191,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B212F0238BEFEA00BC7000 /* Background - aloha NO LIMITS.png in Resources */,
+				42B21300238C428200BC7000 /* Diavlo_BOLD_II.otf in Resources */,
 				425A2F46238862CF009828A4 /* LaunchScreen.storyboard in Resources */,
+				42B21301238C428200BC7000 /* Diavlo_BOOK_II.otf in Resources */,
+				42B212FF238C428200BC7000 /* Diavlo_BLACK_II.otf in Resources */,
 				425A2F43238862CF009828A4 /* Assets.xcassets in Resources */,
+				42B212F2238BF50300BC7000 /* logo zup.jpeg in Resources */,
+				42B21303238C428200BC7000 /* Diavlo_MEDIUM_II.otf in Resources */,
+				42B21302238C428200BC7000 /* Diavlo_LIGHT_II.otf in Resources */,
 				425A2F41238862CD009828A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,8 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B212F6238C1B1100BC7000 /* ButtonClass.swift in Sources */,
 				425A2F3E238862CD009828A4 /* ViewController.swift in Sources */,
+				42B21309238D430A00BC7000 /* TitleClass.swift in Sources */,
+				42B212F4238C171600BC7000 /* BaseViewController.swift in Sources */,
 				425A2F3A238862CD009828A4 /* AppDelegate.swift in Sources */,
+				42B21307238C463F00BC7000 /* TextFieldClass.swift in Sources */,
 				425A2F3C238862CD009828A4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
