@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Diavlo_BOOK_II.otf">
+            <string>DiavloBook-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmViewController" customModule="AlohaIOS" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UM7-BH-DqF">
+                    <rect key="frame" x="35" y="35" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="6Hf-dc-Uo7"/>
+                        <constraint firstAttribute="height" constant="60" id="yQe-os-Bgr"/>
+                    </constraints>
+                    <color key="tintColor" name="zupGreen"/>
+                    <state key="normal" image="chevron.left" catalog="system">
+                        <color key="titleColor" name="zupGreen"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="black"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPM-ki-YHc">
+                    <rect key="frame" x="90" y="860" width="630" height="70"/>
+                    <color key="backgroundColor" name="noButton"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="ZXn-wk-TDb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
+                    <state key="normal" title="NÃO">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirma a vista com Sicrano?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufT-93-m31" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="261.5" y="150" width="287.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBZ-vE-9sJ" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="90" y="760" width="630" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="cHf-H5-lWG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                    <state key="normal" title="SIM"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="GPM-ki-YHc" secondAttribute="bottom" constant="150" id="7T8-X1-LQN"/>
+                <constraint firstItem="dBZ-vE-9sJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="8IK-30-kfS"/>
+                <constraint firstItem="ufT-93-m31" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9lU-jq-6Az"/>
+                <constraint firstItem="UM7-BH-DqF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="ALO-ht-WKa"/>
+                <constraint firstItem="UM7-BH-DqF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="AyU-7n-9q2"/>
+                <constraint firstItem="ufT-93-m31" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="IaS-DI-msa"/>
+                <constraint firstAttribute="trailing" secondItem="GPM-ki-YHc" secondAttribute="trailing" constant="90" id="KXA-aS-PTf"/>
+                <constraint firstAttribute="trailing" secondItem="dBZ-vE-9sJ" secondAttribute="trailing" constant="90" id="Trx-s5-knS"/>
+                <constraint firstItem="GPM-ki-YHc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="h6N-bz-SVH"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ufT-93-m31" secondAttribute="trailing" constant="90" id="hKy-HJ-tH1"/>
+                <constraint firstItem="ufT-93-m31" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="kr9-Hl-Lmz"/>
+                <constraint firstItem="GPM-ki-YHc" firstAttribute="top" secondItem="dBZ-vE-9sJ" secondAttribute="bottom" constant="30" id="s2j-he-X8W"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="121"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <namedColor name="noButton">
+            <color red="0.59600001573562622" green="0.63899999856948853" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="zupGreen">
+            <color red="0.67100000381469727" green="0.75700002908706665" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

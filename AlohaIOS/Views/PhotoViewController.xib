@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoViewController" customModule="AlohaIOS" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49N-4i-ld3">
+                    <rect key="frame" x="35" y="35" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="2Kx-uS-zyS"/>
+                        <constraint firstAttribute="height" constant="60" id="jib-oe-iNb"/>
+                    </constraints>
+                    <color key="tintColor" name="zupGreen"/>
+                    <state key="normal" image="chevron.left" catalog="system">
+                        <color key="titleColor" name="zupGreen"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="black"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6f-oy-46B" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="90" y="860" width="630" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="69H-AD-Njg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                    <state key="normal" title="CONTINUAR"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos capturar o seu sorriso!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="868-Mf-a5Y" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="265" y="150" width="280.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ocd-ec-v9R">
+                    <rect key="frame" x="137" y="239" width="536" height="502"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="502" id="Toa-qw-eOg"/>
+                        <constraint firstAttribute="width" secondItem="Ocd-ec-v9R" secondAttribute="height" multiplier="251:235" id="pio-Nf-Pq8"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="K6f-oy-46B" secondAttribute="trailing" constant="90" id="13x-tI-H5m"/>
+                <constraint firstAttribute="bottom" secondItem="K6f-oy-46B" secondAttribute="bottom" constant="150" id="Bpj-Ht-zfL"/>
+                <constraint firstItem="49N-4i-ld3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="QNk-yl-1Cz"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="868-Mf-a5Y" secondAttribute="trailing" constant="90" id="VE0-AW-QzR"/>
+                <constraint firstItem="868-Mf-a5Y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="bAK-sZ-iYv"/>
+                <constraint firstItem="868-Mf-a5Y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dSK-9s-hw5"/>
+                <constraint firstItem="868-Mf-a5Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="eNd-Tt-sgq"/>
+                <constraint firstItem="Ocd-ec-v9R" firstAttribute="width" secondItem="Ocd-ec-v9R" secondAttribute="height" multiplier="251:235" id="nWT-HW-pR8"/>
+                <constraint firstItem="49N-4i-ld3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="toc-Gb-9hE"/>
+                <constraint firstItem="K6f-oy-46B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="uBr-9H-zhc"/>
+                <constraint firstItem="Ocd-ec-v9R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="v6n-Wi-ZXO"/>
+                <constraint firstItem="Ocd-ec-v9R" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="zHX-mg-SrQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="121"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <namedColor name="zupGreen">
+            <color red="0.67100000381469727" green="0.75700002908706665" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

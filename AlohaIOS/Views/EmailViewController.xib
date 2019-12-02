@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmailViewController" customModule="AlohaIOS" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09g-Ce-dtd">
+                    <rect key="frame" x="35" y="35" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="OTC-o5-ugc"/>
+                        <constraint firstAttribute="width" constant="60" id="rEr-86-gWB"/>
+                    </constraints>
+                    <color key="tintColor" name="zupGreen"/>
+                    <state key="normal" image="chevron.left" catalog="system">
+                        <color key="titleColor" name="zupGreen"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="black"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gag-t8-ZtF" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="90" y="860" width="630" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="hog-Jb-AT9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                    <state key="normal" title="CONTINUAR"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informe o seu melhor e-mail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IA-9B-HPa" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="273" y="150" width="264.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: fulano@zup.com.br" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ead-N8-Cgz" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="90" y="346.5" width="630" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="egp-Ns-UrR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5IA-9B-HPa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="3A7-mm-ID3"/>
+                <constraint firstAttribute="bottom" secondItem="Gag-t8-ZtF" secondAttribute="bottom" constant="150" id="9eF-yu-mDx"/>
+                <constraint firstItem="5IA-9B-HPa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Bn8-wG-j6S"/>
+                <constraint firstItem="09g-Ce-dtd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="Hsr-J5-WmP"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5IA-9B-HPa" secondAttribute="trailing" constant="90" id="KIl-HY-jy5"/>
+                <constraint firstItem="Ead-N8-Cgz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="QIE-t7-Gvu"/>
+                <constraint firstItem="09g-Ce-dtd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="QxU-lG-ZYU"/>
+                <constraint firstAttribute="trailing" secondItem="Gag-t8-ZtF" secondAttribute="trailing" constant="90" id="V8X-cp-Xf2"/>
+                <constraint firstItem="Ead-N8-Cgz" firstAttribute="top" secondItem="5IA-9B-HPa" secondAttribute="bottom" constant="170" id="XAq-hr-ftY"/>
+                <constraint firstAttribute="trailing" secondItem="Ead-N8-Cgz" secondAttribute="trailing" constant="90" id="dSN-yX-w8N"/>
+                <constraint firstItem="5IA-9B-HPa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="o59-3h-X4B"/>
+                <constraint firstItem="Gag-t8-ZtF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="s8M-az-6Hw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="121"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <namedColor name="zupGreen">
+            <color red="0.67100000381469727" green="0.75700002908706665" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

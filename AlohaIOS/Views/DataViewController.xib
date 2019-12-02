@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DataViewController" customModule="AlohaIOS" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gm-Nd-q2V">
+                    <rect key="frame" x="35" y="35" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="IRi-uk-F2h"/>
+                        <constraint firstAttribute="width" constant="60" id="R11-yH-fzm"/>
+                    </constraints>
+                    <color key="tintColor" name="zupGreen"/>
+                    <state key="normal" image="chevron.left" catalog="system">
+                        <color key="titleColor" name="zupGreen"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="black"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmM-lQ-qcm" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="90" y="860" width="630" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="LJH-Cc-bmG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                    <state key="normal" title="CONTINUAR"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afinal, quem é você?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BV0-FT-DAc" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="307" y="150" width="196.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oD0-pb-5HR" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="90" y="346.5" width="630" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="nR1-76-6PH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sobrenome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oMS-RZ-Q0n" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="90" y="436.5" width="630" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="sOP-5P-4le"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Empresa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTR-ft-3vG" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="90" y="616.5" width="630" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="dwc-JS-BK9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(  ) Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NWV-js-QuP" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                    <rect key="frame" x="90" y="526.5" width="630" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="MWd-Wa-cUY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NWV-js-QuP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="0px-TJ-zTl"/>
+                <constraint firstItem="BV0-FT-DAc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="3pC-RK-PV6"/>
+                <constraint firstAttribute="trailing" secondItem="NWV-js-QuP" secondAttribute="trailing" constant="90" id="5uG-Sh-FEh"/>
+                <constraint firstItem="XTR-ft-3vG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="98K-23-r28"/>
+                <constraint firstAttribute="bottom" secondItem="LmM-lQ-qcm" secondAttribute="bottom" constant="150" id="Eyu-TO-MJu"/>
+                <constraint firstItem="oD0-pb-5HR" firstAttribute="top" secondItem="BV0-FT-DAc" secondAttribute="bottom" constant="170" id="Fqk-lG-asg"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BV0-FT-DAc" secondAttribute="trailing" constant="90" id="GDC-iZ-hDQ"/>
+                <constraint firstItem="XTR-ft-3vG" firstAttribute="top" secondItem="NWV-js-QuP" secondAttribute="bottom" constant="20" id="IJe-L5-InM"/>
+                <constraint firstAttribute="trailing" secondItem="XTR-ft-3vG" secondAttribute="trailing" constant="90" id="MSD-8t-CrD"/>
+                <constraint firstAttribute="trailing" secondItem="LmM-lQ-qcm" secondAttribute="trailing" constant="90" id="Q4a-Ck-Wee"/>
+                <constraint firstItem="oMS-RZ-Q0n" firstAttribute="top" secondItem="oD0-pb-5HR" secondAttribute="bottom" constant="20" id="QbU-sn-Q9Q"/>
+                <constraint firstItem="LmM-lQ-qcm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="XRd-Ss-thU"/>
+                <constraint firstItem="oMS-RZ-Q0n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="a4T-BY-L3p"/>
+                <constraint firstItem="oD0-pb-5HR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="c7o-30-38E"/>
+                <constraint firstAttribute="trailing" secondItem="oD0-pb-5HR" secondAttribute="trailing" constant="90" id="eck-vE-fkF"/>
+                <constraint firstItem="BV0-FT-DAc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gHt-0w-J26"/>
+                <constraint firstItem="5gm-Nd-q2V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="iPA-0W-FPN"/>
+                <constraint firstAttribute="trailing" secondItem="oMS-RZ-Q0n" secondAttribute="trailing" constant="90" id="jg2-Gv-mAY"/>
+                <constraint firstItem="NWV-js-QuP" firstAttribute="top" secondItem="oMS-RZ-Q0n" secondAttribute="bottom" constant="20" id="p5W-gF-q3E"/>
+                <constraint firstItem="5gm-Nd-q2V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="swh-qJ-XUL"/>
+                <constraint firstItem="BV0-FT-DAc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="ug0-hr-kTL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="121"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <namedColor name="zupGreen">
+            <color red="0.67100000381469727" green="0.75700002908706665" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
