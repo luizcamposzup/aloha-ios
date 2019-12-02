@@ -12,18 +12,29 @@
 		FDA99EA601E08C56AFB136BD61A6CD75 /* Pods-AlohaIOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F90C750B6A31F023BCE3983A402626 /* Pods-AlohaIOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		42B5DBA0239527A000196B89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42B5DB9C239527A000196B89 /* AlohaIOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 425A2F36238862CD009828A4;
+			remoteInfo = AlohaIOS;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		11B650D9597A41F3946CF6134B78CF84 /* Pods-AlohaIOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AlohaIOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		132E80F7AD59EA889F5517235E1394FB /* Pods-AlohaIOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AlohaIOS.modulemap"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3A286BBEC6DE765D70F49B10A1550BB4 /* Pods-AlohaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AlohaIOS.release.xcconfig"; sourceTree = "<group>"; };
+		42B5DB9C239527A000196B89 /* AlohaIOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlohaIOS.xcodeproj; path = ../AlohaIOS.xcodeproj; sourceTree = "<group>"; };
 		5C19B7D19599C72163CB454CB842BE83 /* Pods-AlohaIOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AlohaIOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		6171E120AC5C28F737627E9CC3B5AA00 /* Pods-AlohaIOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AlohaIOS-Info.plist"; sourceTree = "<group>"; };
 		90F90C750B6A31F023BCE3983A402626 /* Pods-AlohaIOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AlohaIOS-umbrella.h"; sourceTree = "<group>"; };
 		998E84A3DDB0DB461DFCBFD3FFA8BE94 /* Pods-AlohaIOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AlohaIOS-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B32C98189A896BD6B33C44751293CA5F /* Pods-AlohaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AlohaIOS.debug.xcconfig"; sourceTree = "<group>"; };
-		FDB355B8DE5A7CF589E0F7242F04A28A /* Pods_AlohaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AlohaIOS.framework; path = "Pods-AlohaIOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDB355B8DE5A7CF589E0F7242F04A28A /* Pods_AlohaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlohaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42B5DB9D239527A000196B89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42B5DBA1239527A000196B89 /* AlohaIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		57800227F5BB2C9097C6E44F9AB99B84 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +100,7 @@
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
+				42B5DB9C239527A000196B89 /* AlohaIOS.xcodeproj */,
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				609B923A7EE199300CF097F52D02839C /* Products */,
@@ -148,12 +168,28 @@
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 609B923A7EE199300CF097F52D02839C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 42B5DB9D239527A000196B89 /* Products */;
+					ProjectRef = 42B5DB9C239527A000196B89 /* AlohaIOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F24692E84E470F40CD9F13EEFEDB0F49 /* Pods-AlohaIOS */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		42B5DBA1239527A000196B89 /* AlohaIOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = AlohaIOS.app;
+			remoteRef = 42B5DBA0239527A000196B89 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		275B91B15C28CE1EB3C8FFC7B52B7D4A /* Resources */ = {
