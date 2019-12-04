@@ -6,5 +6,7 @@ target 'AlohaIOS' do
   use_frameworks!
 
   # Pods for AlohaIOS
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 
 end
