@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="31a-6N-F78">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Diavlo_BOOK_II.otf">
+            <string>DiavloBook-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Who View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="WhoViewController" id="BYZ-38-t0r" customClass="WhoViewController" customModule="AlohaIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJ4-hO-LtY" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="860" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Vdl-Jo-4ds"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="CONTINUAR"/>
+                                <connections>
+                                    <action selector="callNextViewControllerWhenButtonTouchUpInside" destination="ofD-Uy-Oxq" eventType="touchUpInside" id="2q4-BA-fB2"/>
+                                    <action selector="callNextViewControllerWhenButtonTouchUpInside" destination="BYZ-38-t0r" eventType="touchUpInside" id="xsJ-rp-ICz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quem você deseja encontrar?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcA-L7-rS4" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="263.5" y="150" width="283.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: Sicrano da Silva" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96a-qX-bec" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="346.5" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="C3R-2R-rxU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFF-gC-trh">
+                                <rect key="frame" x="55" y="35" width="29" height="40"/>
+                                <color key="tintColor" name="zupGreen"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <color key="titleColor" name="zupGreen"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="backViewControllerWhenButtonTouchUpInside" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lzc-vd-Apr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="96a-qX-bec" firstAttribute="top" secondItem="wcA-L7-rS4" secondAttribute="bottom" constant="170" id="2e8-P2-gjl"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="wcA-L7-rS4" secondAttribute="trailing" constant="85" id="6kn-Ca-asG"/>
+                            <constraint firstItem="96a-qX-bec" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="BBw-jI-BsC"/>
+                            <constraint firstItem="oFF-gC-trh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="35" id="T6e-iB-8nE"/>
+                            <constraint firstItem="wcA-L7-rS4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aYw-qw-WKH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="96a-qX-bec" secondAttribute="trailing" constant="85" id="fWf-lE-Q6o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sJ4-hO-LtY" secondAttribute="trailing" constant="85" id="fxo-65-qB6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sJ4-hO-LtY" secondAttribute="bottom" constant="150" id="igT-cG-wUQ"/>
+                            <constraint firstItem="sJ4-hO-LtY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="j3W-U0-if9"/>
+                            <constraint firstItem="wcA-L7-rS4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="150" id="pXt-Qx-TaI"/>
+                            <constraint firstItem="wcA-L7-rS4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="rkU-Xg-sCw"/>
+                            <constraint firstItem="oFF-gC-trh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="yKc-Ne-Fm1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u4V-nf-NUd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="ofD-Uy-Oxq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3347.4074074074074" y="-35"/>
+        </scene>
+        <!--Objective View Controller-->
+        <scene sceneID="0Az-cp-VXA">
+            <objects>
+                <viewController storyboardIdentifier="ObjectiveViewController" id="RSI-89-xrc" customClass="ObjectiveViewController" customModule="AlohaIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ynN-hA-CS7">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que traz você aqui?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjs-D5-qzT" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="322" y="150" width="166.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i38-Yp-Osk">
+                                <rect key="frame" x="70" y="717" width="203.5" height="193"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <color key="tintColor" name="zupGreen"/>
+                                <state key="normal" title="Button" image="location.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="95F-7O-Ahu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4B-Eg-flh">
+                                <rect key="frame" x="536.5" y="717" width="203.5" height="193"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <color key="tintColor" name="zupGreen"/>
+                                <state key="normal" title="Button" image="person.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="YqP-OE-4uz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sr2-NM-VeJ">
+                                <rect key="frame" x="303.5" y="717" width="203.5" height="193"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <color key="tintColor" name="zupGreen"/>
+                                <state key="normal" title="Button" image="ellipsis.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="5P1-hF-Dzd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESC-M8-0LG">
+                                <rect key="frame" x="70" y="424.5" width="204" height="192.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <color key="tintColor" name="zupGreen"/>
+                                <state key="normal" title="Button" image="mic.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="5aQ-D6-uGM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNa-HE-CYj">
+                                <rect key="frame" x="303.5" y="424" width="203.5" height="193"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <color key="tintColor" name="zupGreen"/>
+                                <state key="normal" title="Button" image="phone.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="DtP-Ux-MJ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0J-bS-zSn">
+                                <rect key="frame" x="536.5" y="424" width="203.5" height="193"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <color key="tintColor" name="zupGreen"/>
+                                <state key="normal" title="Button" image="star.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="aaB-PJ-n2v"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visita Zupper" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2Z-Kv-c1G">
+                                <rect key="frame" x="70" y="618" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ByS-af-zbu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrega comida" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-YC-GqJ">
+                                <rect key="frame" x="305" y="618" width="200" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="IPq-Qb-4nU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartão Sulamerica" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFR-O2-bbB">
+                                <rect key="frame" x="540" y="911" width="200" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="khX-vq-LmT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrega encomenda" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH3-op-4Bf">
+                                <rect key="frame" x="70" y="911" width="200" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="XQH-gX-ObJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fornecedor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPW-Ez-QPF">
+                                <rect key="frame" x="305" y="911" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="jiR-I7-W03"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devolução Materiais" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09b-Hd-HBe">
+                                <rect key="frame" x="540" y="618" width="200" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8qB-Jp-loV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ML-Pn-hBu">
+                                <rect key="frame" x="55" y="35" width="29" height="40"/>
+                                <color key="tintColor" name="zupGreen"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <color key="titleColor" name="zupGreen"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="backScreenWhenTouchUpInside:" destination="kau-qt-t7Z" eventType="touchUpInside" id="dB7-NG-8q4"/>
+                                    <action selector="backViewControllerWhenButtonTouchUpInside" destination="RSI-89-xrc" eventType="touchUpInside" id="Hdf-8k-9Bc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="U2Z-Kv-c1G" firstAttribute="top" secondItem="ESC-M8-0LG" secondAttribute="bottom" constant="1" id="4aD-kJ-i8F"/>
+                            <constraint firstItem="sr2-NM-VeJ" firstAttribute="top" secondItem="xNa-HE-CYj" secondAttribute="bottom" constant="100" id="4c2-Or-pib"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hFR-O2-bbB" secondAttribute="trailing" constant="50" id="5Ys-ef-xMR"/>
+                            <constraint firstItem="0ML-Pn-hBu" firstAttribute="top" secondItem="Yeb-za-zFG" secondAttribute="top" constant="35" id="7AF-Ov-va9"/>
+                            <constraint firstItem="ZPW-Ez-QPF" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="85T-q8-ldO"/>
+                            <constraint firstItem="ESC-M8-0LG" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="50" id="8G1-yR-d16"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="W4B-Eg-flh" secondAttribute="bottom" constant="170" id="8ao-gf-ZPD"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="sr2-NM-VeJ" secondAttribute="bottom" constant="170" id="AlW-rC-QbF"/>
+                            <constraint firstItem="W4B-Eg-flh" firstAttribute="top" secondItem="c0J-bS-zSn" secondAttribute="bottom" constant="100" id="BNj-Op-RIr"/>
+                            <constraint firstItem="hFR-O2-bbB" firstAttribute="top" secondItem="W4B-Eg-flh" secondAttribute="bottom" constant="1" id="GXB-rP-LfX"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="i38-Yp-Osk" secondAttribute="bottom" constant="170" id="JVP-ay-4Fv"/>
+                            <constraint firstItem="zX3-YC-GqJ" firstAttribute="top" secondItem="xNa-HE-CYj" secondAttribute="bottom" constant="1" id="OvF-xX-naF"/>
+                            <constraint firstItem="tjs-D5-qzT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="85" id="P7e-bp-y66"/>
+                            <constraint firstItem="09b-Hd-HBe" firstAttribute="top" secondItem="c0J-bS-zSn" secondAttribute="bottom" constant="1" id="UDx-FH-ibF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c0J-bS-zSn" secondAttribute="trailing" constant="50" id="VJO-TU-Ce1"/>
+                            <constraint firstItem="i38-Yp-Osk" firstAttribute="top" secondItem="ESC-M8-0LG" secondAttribute="bottom" constant="100" id="YSj-5t-kDl"/>
+                            <constraint firstItem="0ML-Pn-hBu" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="35" id="Ywo-78-1S7"/>
+                            <constraint firstItem="xNa-HE-CYj" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="a2a-7m-n7X"/>
+                            <constraint firstItem="zX3-YC-GqJ" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="ali-k3-MI7"/>
+                            <constraint firstItem="i38-Yp-Osk" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="50" id="cDb-Pq-Wcw"/>
+                            <constraint firstItem="ZPW-Ez-QPF" firstAttribute="top" secondItem="sr2-NM-VeJ" secondAttribute="bottom" constant="1" id="glW-uI-ovs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="09b-Hd-HBe" secondAttribute="trailing" constant="50" id="hHC-0s-rYi"/>
+                            <constraint firstItem="tjs-D5-qzT" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="i44-cT-lMl"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="tjs-D5-qzT" secondAttribute="trailing" constant="85" id="iIl-e9-39m"/>
+                            <constraint firstItem="U2Z-Kv-c1G" firstAttribute="top" secondItem="ESC-M8-0LG" secondAttribute="bottom" constant="1" id="jwX-3b-Aqs"/>
+                            <constraint firstItem="aH3-op-4Bf" firstAttribute="top" secondItem="i38-Yp-Osk" secondAttribute="bottom" constant="1" id="pAV-bG-Agg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W4B-Eg-flh" secondAttribute="trailing" constant="50" id="q4B-sL-JMw"/>
+                            <constraint firstItem="sr2-NM-VeJ" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="qfY-3r-fUw"/>
+                            <constraint firstItem="tjs-D5-qzT" firstAttribute="top" secondItem="ynN-hA-CS7" secondAttribute="topMargin" constant="150" id="rO8-rc-XP9"/>
+                            <constraint firstItem="aH3-op-4Bf" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="50" id="yDd-bA-8Oa"/>
+                            <constraint firstItem="U2Z-Kv-c1G" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="50" id="yiV-kP-kfh"/>
+                            <constraint firstItem="xNa-HE-CYj" firstAttribute="top" relation="lessThanOrEqual" secondItem="tjs-D5-qzT" secondAttribute="bottom" constant="272" id="z86-cU-rsU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yeb-za-zFG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q0w-9n-5W8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cRG-fC-bD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="kau-qt-t7Z" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2569" y="-35"/>
+        </scene>
+        <!--Confirm View Controller-->
+        <scene sceneID="7B0-tU-v6w">
+            <objects>
+                <viewController storyboardIdentifier="ConfirmViewController" id="NLB-60-R4p" customClass="ConfirmViewController" customModule="AlohaIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Vq-oh-4nf">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amx-gQ-1nd">
+                                <rect key="frame" x="55" y="35" width="29" height="40"/>
+                                <color key="tintColor" name="zupGreen"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <color key="titleColor" name="zupGreen"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="backViewControllerWhenButtonTouchUpInside" destination="NLB-60-R4p" eventType="touchUpInside" id="MZP-zt-4ND"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOx-Aq-EJ4">
+                                <rect key="frame" x="105" y="860" width="600" height="70"/>
+                                <color key="backgroundColor" name="noButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="DfV-3l-9z2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
+                                <state key="normal" title="NÃO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelVisitWhenButtonTouchUpInside" destination="NLB-60-R4p" eventType="touchUpInside" id="c2K-S2-pCM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirma a vista com Sicrano?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xeu-rS-vev" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="150" width="600" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kw5-fm-GvQ" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="760" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="fVh-8g-Ook"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="SIM"/>
+                                <connections>
+                                    <action selector="confirmVisitWhenButtonTouchUpInside" destination="NLB-60-R4p" eventType="touchUpInside" id="q5f-36-nGv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xeu-rS-vev" firstAttribute="leading" secondItem="1Vq-oh-4nf" secondAttribute="leadingMargin" constant="85" id="900-ea-bi4"/>
+                            <constraint firstItem="Amx-gQ-1nd" firstAttribute="top" secondItem="1Vq-oh-4nf" secondAttribute="topMargin" constant="35" id="Ijf-a7-K5d"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="LOx-Aq-EJ4" secondAttribute="bottom" constant="150" id="MO1-4q-Eeq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kw5-fm-GvQ" secondAttribute="trailing" constant="85" id="NRD-hu-vwv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LOx-Aq-EJ4" secondAttribute="trailing" constant="85" id="YAQ-2r-OaV"/>
+                            <constraint firstItem="LOx-Aq-EJ4" firstAttribute="leading" secondItem="1Vq-oh-4nf" secondAttribute="leadingMargin" constant="85" id="Zrf-gH-0jy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xeu-rS-vev" secondAttribute="trailing" constant="85" id="b1J-iq-6ta"/>
+                            <constraint firstItem="LOx-Aq-EJ4" firstAttribute="top" secondItem="kw5-fm-GvQ" secondAttribute="bottom" constant="30" id="eMK-IN-D87"/>
+                            <constraint firstItem="kw5-fm-GvQ" firstAttribute="leading" secondItem="1Vq-oh-4nf" secondAttribute="leadingMargin" constant="85" id="kFp-RQ-A25"/>
+                            <constraint firstItem="Xeu-rS-vev" firstAttribute="top" secondItem="1Vq-oh-4nf" secondAttribute="topMargin" constant="150" id="mFG-KC-QK7"/>
+                            <constraint firstItem="Amx-gQ-1nd" firstAttribute="leading" secondItem="1Vq-oh-4nf" secondAttribute="leadingMargin" constant="35" id="sFc-ux-MyV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b69-75-RtO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u7d-CO-JKL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FP1-DE-46n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5442.9629629629626" y="-35"/>
+        </scene>
+        <!--Data View Controller-->
+        <scene sceneID="ose-SP-JpC">
+            <objects>
+                <viewController storyboardIdentifier="DataViewController" id="dlc-zL-LAa" customClass="DataViewController" customModule="AlohaIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I3x-xi-b5s">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stu-rg-eCh">
+                                <rect key="frame" x="55" y="35" width="29" height="40"/>
+                                <color key="tintColor" name="zupGreen"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <color key="titleColor" name="zupGreen"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="backViewControllerWhenButtonTouchUpInside" destination="dlc-zL-LAa" eventType="touchUpInside" id="5n6-kD-nTz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7C-eH-8qk" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="860" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="sNp-Jt-jDa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="CONTINUAR"/>
+                                <connections>
+                                    <action selector="callNextViewControllerWhenButtonTouchUpInside" destination="dlc-zL-LAa" eventType="touchUpInside" id="clR-3E-Qrd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afinal, quem é você?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-fC-rQB" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="150" width="600" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZX-FR-419" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="346.5" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="LjY-cy-1xe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sobrenome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xU7-Rm-pfF" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="436.5" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="kD8-cf-bka"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Empresa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dyh-P9-rWP" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="616.5" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="eDJ-MW-jIi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(  ) Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z1n-gN-47o" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="526.5" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="rl7-b8-6EZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sZX-FR-419" secondAttribute="trailing" constant="85" id="0mh-jD-hd3"/>
+                            <constraint firstItem="xU7-Rm-pfF" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="85" id="1EI-LU-Qza"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L6d-fC-rQB" secondAttribute="trailing" constant="85" id="7S3-0b-6qz"/>
+                            <constraint firstItem="stu-rg-eCh" firstAttribute="top" secondItem="I3x-xi-b5s" secondAttribute="topMargin" constant="35" id="7uc-Ty-wHX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xU7-Rm-pfF" secondAttribute="trailing" constant="85" id="EFN-En-jDd"/>
+                            <constraint firstItem="Z1n-gN-47o" firstAttribute="top" secondItem="xU7-Rm-pfF" secondAttribute="bottom" constant="20" id="G6W-g7-twJ"/>
+                            <constraint firstItem="L6d-fC-rQB" firstAttribute="top" secondItem="I3x-xi-b5s" secondAttribute="topMargin" constant="150" id="IFd-j0-Zge"/>
+                            <constraint firstItem="stu-rg-eCh" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="35" id="Iop-L6-TI5"/>
+                            <constraint firstItem="O7C-eH-8qk" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="85" id="OFN-4W-tE0"/>
+                            <constraint firstItem="L6d-fC-rQB" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="85" id="SFB-oL-4Z4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z1n-gN-47o" secondAttribute="trailing" constant="85" id="TFt-S4-TCV"/>
+                            <constraint firstItem="sZX-FR-419" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="85" id="UBn-gN-Yxv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dyh-P9-rWP" secondAttribute="trailing" constant="85" id="Z1w-Lm-7CY"/>
+                            <constraint firstItem="Z1n-gN-47o" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="85" id="Zgr-Sk-x2G"/>
+                            <constraint firstItem="Dyh-P9-rWP" firstAttribute="top" secondItem="Z1n-gN-47o" secondAttribute="bottom" constant="20" id="acD-iZ-w0A"/>
+                            <constraint firstItem="Dyh-P9-rWP" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="85" id="bFY-Kr-c5Y"/>
+                            <constraint firstItem="sZX-FR-419" firstAttribute="top" secondItem="L6d-fC-rQB" secondAttribute="bottom" constant="170" id="hDV-4W-TqB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O7C-eH-8qk" secondAttribute="trailing" constant="85" id="iof-MU-qsU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="O7C-eH-8qk" secondAttribute="bottom" constant="150" id="mk5-Qv-YDe"/>
+                            <constraint firstItem="xU7-Rm-pfF" firstAttribute="top" secondItem="sZX-FR-419" secondAttribute="bottom" constant="20" id="zC3-ik-t6F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jyK-0Q-Aob"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3F6-RH-SGX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggz-Ce-bsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4284" y="-756"/>
+        </scene>
+        <!--Email View Controller-->
+        <scene sceneID="zmj-2X-kSv">
+            <objects>
+                <viewController storyboardIdentifier="EmailViewController" id="YQx-rR-qes" customClass="EmailViewController" customModule="AlohaIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ruy-cl-bwS">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="342-si-IES">
+                                <rect key="frame" x="55" y="35" width="29" height="40"/>
+                                <color key="tintColor" name="zupGreen"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <color key="titleColor" name="zupGreen"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="backViewControllerWhenButtonTouchUpInside" destination="YQx-rR-qes" eventType="touchUpInside" id="WKi-3j-Jrb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plg-ge-7DS" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="860" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="IY7-5f-p0K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="CONTINUAR"/>
+                                <connections>
+                                    <action selector="callNextViewControllerWhenButtonTouchUpInside" destination="YQx-rR-qes" eventType="touchUpInside" id="7Xm-b4-sGN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informe o seu melhor e-mail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4b-bK-1dd" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="150" width="600" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: fulano@zup.com.br" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFv-Zt-6YK" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="346.5" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="kec-wc-YpC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pFv-Zt-6YK" firstAttribute="leading" secondItem="ruy-cl-bwS" secondAttribute="leadingMargin" constant="85" id="13y-Ky-IJI"/>
+                            <constraint firstItem="342-si-IES" firstAttribute="top" secondItem="ruy-cl-bwS" secondAttribute="topMargin" constant="35" id="6Jf-rP-g5D"/>
+                            <constraint firstItem="plg-ge-7DS" firstAttribute="leading" secondItem="ruy-cl-bwS" secondAttribute="leadingMargin" constant="85" id="8CO-77-Yez"/>
+                            <constraint firstItem="n4b-bK-1dd" firstAttribute="leading" secondItem="ruy-cl-bwS" secondAttribute="leadingMargin" constant="85" id="A85-12-kyL"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="plg-ge-7DS" secondAttribute="bottom" constant="150" id="CC1-2q-71l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pFv-Zt-6YK" secondAttribute="trailing" constant="85" id="F0D-Y6-8JL"/>
+                            <constraint firstItem="342-si-IES" firstAttribute="leading" secondItem="ruy-cl-bwS" secondAttribute="leadingMargin" constant="35" id="JQP-xN-D27"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n4b-bK-1dd" secondAttribute="trailing" constant="85" id="eaA-R8-hlH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="plg-ge-7DS" secondAttribute="trailing" constant="85" id="ebZ-Hr-BQL"/>
+                            <constraint firstItem="n4b-bK-1dd" firstAttribute="top" secondItem="ruy-cl-bwS" secondAttribute="topMargin" constant="150" id="hzM-lN-HQb"/>
+                            <constraint firstItem="pFv-Zt-6YK" firstAttribute="top" secondItem="n4b-bK-1dd" secondAttribute="bottom" constant="170" id="ozh-XD-kI2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N1K-53-mc5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="X4N-9k-IaT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hta-EU-rZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4154.8148148148148" y="-35"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="RN2-EM-nJO">
+            <objects>
+                <viewController storyboardIdentifier="PhotoViewController" id="2Ee-7f-rcE" customClass="PhotoViewController" customModule="AlohaIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="keu-me-SNi">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDp-Nf-gLq">
+                                <rect key="frame" x="55" y="35" width="29" height="40"/>
+                                <color key="tintColor" name="zupGreen"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <color key="titleColor" name="zupGreen"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="backViewControllerWhenButtonTouchUpInside" destination="2Ee-7f-rcE" eventType="touchUpInside" id="UuP-f0-eWC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFq-kU-UFI" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="860" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Jl3-Xk-cuR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="CONTINUAR"/>
+                                <connections>
+                                    <action selector="callNextViewControllerWhenButtonTouchUpInside" destination="2Ee-7f-rcE" eventType="touchUpInside" id="Inp-Tr-vzR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos capturar o seu sorriso!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngh-8v-vE3" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="150" width="600" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdo-dg-n90">
+                                <rect key="frame" x="105" y="289" width="536" height="502"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="502" id="Fn9-Wi-g8g"/>
+                                    <constraint firstAttribute="width" secondItem="gdo-dg-n90" secondAttribute="height" multiplier="251:235" id="jHE-kY-xo0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ngh-8v-vE3" firstAttribute="top" secondItem="keu-me-SNi" secondAttribute="topMargin" constant="150" id="2E9-mF-T6o"/>
+                            <constraint firstItem="gdo-dg-n90" firstAttribute="centerY" secondItem="keu-me-SNi" secondAttribute="centerY" id="6TS-T9-jca"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="AFq-kU-UFI" secondAttribute="bottom" constant="150" id="87P-l5-Zlh"/>
+                            <constraint firstItem="fDp-Nf-gLq" firstAttribute="leading" secondItem="keu-me-SNi" secondAttribute="leadingMargin" constant="35" id="IFO-VD-iWJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ngh-8v-vE3" secondAttribute="trailing" constant="85" id="NzM-8u-DYp"/>
+                            <constraint firstItem="gdo-dg-n90" firstAttribute="centerX" secondItem="keu-me-SNi" secondAttribute="centerX" id="YTV-w5-hWe"/>
+                            <constraint firstItem="fDp-Nf-gLq" firstAttribute="top" secondItem="keu-me-SNi" secondAttribute="topMargin" constant="35" id="hs2-en-5YB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gdo-dg-n90" secondAttribute="trailing" constant="85" id="isJ-ct-wZK"/>
+                            <constraint firstItem="ngh-8v-vE3" firstAttribute="leading" secondItem="keu-me-SNi" secondAttribute="leadingMargin" constant="85" id="mgS-Ql-63f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AFq-kU-UFI" secondAttribute="trailing" constant="85" id="paL-DT-oO4"/>
+                            <constraint firstItem="AFq-kU-UFI" firstAttribute="leading" secondItem="keu-me-SNi" secondAttribute="leadingMargin" constant="85" id="qQR-hc-NnW"/>
+                            <constraint firstItem="gdo-dg-n90" firstAttribute="leading" secondItem="keu-me-SNi" secondAttribute="leadingMargin" constant="85" id="uLY-hA-2xD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WEk-Un-26M"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x42-Qg-s8P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Rk-YY-iIv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5070" y="-756"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="gdT-iI-X67">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="B0e-tT-faJ" customClass="WelcomeViewController" customModule="AlohaIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r5o-iE-R4c">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá visitante!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdy-PL-xMa">
+                                <rect key="frame" x="232" y="278" width="346" height="70"/>
+                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="60"/>
+                                <color key="textColor" name="textBoxColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo zup" translatesAutoresizingMaskIntoConstraints="NO" id="QD6-ig-YL0">
+                                <rect key="frame" x="285" y="100" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Dpb-cb-Tfk"/>
+                                    <constraint firstAttribute="width" constant="240" id="uow-dv-8rH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Q-sZ-WHh" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="860" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="jas-WI-Rr2"/>
+                                </constraints>
+                                <state key="normal" title="ALOHA!"/>
+                                <connections>
+                                    <action selector="nextScreenWhenTouchUpInside:" destination="B0e-tT-faJ" eventType="touchUpInside" id="i1q-Au-neu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Z5Q-sZ-WHh" firstAttribute="leading" secondItem="r5o-iE-R4c" secondAttribute="leadingMargin" constant="85" id="9WG-ia-5UI"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="tdy-PL-xMa" secondAttribute="trailing" constant="85" id="FHa-jr-q0L"/>
+                            <constraint firstItem="tdy-PL-xMa" firstAttribute="centerX" secondItem="r5o-iE-R4c" secondAttribute="centerX" id="SfM-8W-8ku"/>
+                            <constraint firstItem="tdy-PL-xMa" firstAttribute="top" secondItem="QD6-ig-YL0" secondAttribute="bottom" constant="50" id="VTl-Mo-asU"/>
+                            <constraint firstItem="QD6-ig-YL0" firstAttribute="top" secondItem="r5o-iE-R4c" secondAttribute="topMargin" constant="50" id="f5v-kP-1QW"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Z5Q-sZ-WHh" secondAttribute="bottom" constant="150" id="jnk-Vc-nbt"/>
+                            <constraint firstItem="QD6-ig-YL0" firstAttribute="centerX" secondItem="r5o-iE-R4c" secondAttribute="centerX" id="txD-3s-aNd"/>
+                            <constraint firstItem="tdy-PL-xMa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r5o-iE-R4c" secondAttribute="leadingMargin" constant="85" id="w7T-DG-saL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z5Q-sZ-WHh" secondAttribute="trailing" constant="85" id="z0a-yJ-LBm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bDt-7u-c0e"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rB8-Pn-LcR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AFF-Qz-Nkv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="-35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YyK-AT-3Fj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="31a-6N-F78" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="chevron.left" catalog="system" id="IxM-FA-bpL">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B0e-tT-faJ" kind="relationship" relationship="rootViewController" id="0Gt-eb-kkr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVj-lZ-YHp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030.3703703703702" y="-35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <image name="ellipsis.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="location.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="logo zup" width="600" height="332"/>
+        <image name="mic.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="person.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="phone.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="star.circle.fill" catalog="system" width="64" height="60"/>
+        <namedColor name="noButton">
+            <color red="0.59600001573562622" green="0.63899999856948853" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textBoxColor">
+            <color red="0.93699997663497925" green="0.93699997663497925" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="zupGreen">
+            <color red="0.67100000381469727" green="0.75700002908706665" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
