@@ -27,5 +27,6 @@ class ButtonClass: UIButton {
         titleLabel?.font = UIFont(name: "DiavloBook-Regular", size: 30)
         layer.cornerRadius = frame.size.height/5
         
+        
     }
 }
