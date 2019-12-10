@@ -7,21 +7,29 @@
 //
 
 import Foundation
+import UIKit
 
 class FormValidation {
     
-    private func isValidPassword(password:String?) -> Bool {
-      guard let password = password else { return false }
-      return password != ""
+    static func isValidEmail(email:String?) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
     
-    private func isValidEmail(email:String?) -> Bool {
-      guard let email = email else { return false }
-      return validation(with: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", value: email)
+    static func isValidEmailZupper(email: String) -> Bool {
+        return email.contains("@zup.com.br")
     }
     
-    private func validation(with regex:String, value:String) -> Bool {
+    static func validation(with regex:String, value:String) -> Bool {
       let predicate = NSPredicate(format:"SELF MATCHES %@", regex)
       return predicate.evaluate(with: value)
     }
+    
+    static func isValidTextFrom(textField: UITextField) -> Bool {
+        let textReceivedFromTextField: String! = textField.text
+        return !textReceivedFromTextField.isEmpty
+    }
+    
+    
 }

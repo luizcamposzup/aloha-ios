@@ -17,7 +17,7 @@ class ObjectiveViewController: BaseViewController {
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        callNext(viewController: "WelcomeViewController")
+        callView(controller: "EmailViewController")
     }
     
     
@@ -26,15 +26,16 @@ class ObjectiveViewController: BaseViewController {
     }
     
     func doSomethingDependingOnWhoSent(_ senderTag: Int) {
-         switch senderTag {
-         case 0 : callNext(viewController: "WhoViewController"); print(senderTag)
-              case 1 : callNext(viewController: "WhoViewController")
-              case 2 : callNext(viewController: "WhoViewController")
-              case 3 : callNext(viewController: "WhoViewController")
-              case 4: callNext(viewController: "WhoViewController")
-              case 5: callNext(viewController: "WhoViewController")
-              default: break
-         }
+        callView(controller: "WhoViewController")
+//         switch senderTag {
+//              case 0 : callView(controller: "WhoViewController");
+//              case 1 : callView(controller: "WhoViewController")
+//              case 2 : callView(controller: "WhoViewController")
+//              case 3 : callView(controller: "WhoViewController")
+//              case 4: callView(controller: "WhoViewController")
+//              case 5: callView(controller: "WhoViewController")
+//              default: break
+//         }
     }
     
 }

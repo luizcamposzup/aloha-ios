@@ -11,16 +11,21 @@ import UIKit
 
 class WhoViewController: BaseViewController {
     
+    @IBOutlet weak var nameTextField: TextFieldClass!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        callNext(viewController: "ObjectiveViewController")
+        callView(controller: "ObjectiveViewController")
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
-        
-        callNext(viewController: "EmailViewController")
+        if(FormValidation.isValidTextFrom(textField: nameTextField)) {
+            callView(controller: "DataViewController")
+        } else {
+            let alert = Alert.showAlertError(messageError:"Informe um nome")
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

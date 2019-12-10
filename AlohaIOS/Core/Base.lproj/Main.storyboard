@@ -81,11 +81,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="u4V-nf-NUd"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="96a-qX-bec" id="BRm-KG-RGq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="ofD-Uy-Oxq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3347.4074074074074" y="-35"/>
+            <point key="canvasLocation" x="3812" y="-35"/>
         </scene>
         <!--Objective View Controller-->
         <scene sceneID="0Az-cp-VXA">
@@ -192,7 +195,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2Z-Kv-c1G">
-                                <rect key="frame" x="50" y="650" width="200" height="35"/>
+                                <rect key="frame" x="50" y="650" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="ByS-af-zbu"/>
                                 </constraints>
@@ -201,7 +204,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departamento Pessoal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-YC-GqJ">
-                                <rect key="frame" x="305" y="650" width="200" height="70"/>
+                                <rect key="frame" x="305" y="650" width="200" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="IPq-Qb-4nU"/>
                                 </constraints>
@@ -210,7 +213,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visita" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFR-O2-bbB">
-                                <rect key="frame" x="560" y="920" width="200" height="35"/>
+                                <rect key="frame" x="560" y="920" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="khX-vq-LmT"/>
                                 </constraints>
@@ -219,7 +222,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrevista" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH3-op-4Bf">
-                                <rect key="frame" x="50" y="920" width="200" height="35"/>
+                                <rect key="frame" x="50" y="920" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="XQH-gX-ObJ"/>
                                 </constraints>
@@ -228,7 +231,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fornecedores" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPW-Ez-QPF">
-                                <rect key="frame" x="305" y="920" width="200" height="35"/>
+                                <rect key="frame" x="305" y="920" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="jiR-I7-W03"/>
                                 </constraints>
@@ -237,7 +240,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encomendas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09b-Hd-HBe">
-                                <rect key="frame" x="560" y="650" width="200" height="35"/>
+                                <rect key="frame" x="560" y="650" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="8qB-Jp-loV"/>
                                 </constraints>
@@ -303,7 +306,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRG-fC-bD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="kau-qt-t7Z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2569" y="-35"/>
+            <point key="canvasLocation" x="3118" y="-35"/>
         </scene>
         <!--Confirm View Controller-->
         <scene sceneID="7B0-tU-v6w">
@@ -385,7 +388,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FP1-DE-46n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5442.9629629629626" y="-35"/>
+            <point key="canvasLocation" x="6490" y="-35"/>
         </scene>
         <!--Data View Controller-->
         <scene sceneID="ose-SP-JpC">
@@ -435,13 +438,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Empresa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dyh-P9-rWP" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Empresa (opcional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dyh-P9-rWP" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
                                 <rect key="frame" x="105" y="456.5" width="600" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="eDJ-MW-jIi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(  ) Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z1n-gN-47o" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
                                 <rect key="frame" x="105" y="366.5" width="600" height="70"/>
@@ -449,7 +452,10 @@
                                     <constraint firstAttribute="height" constant="70" id="rl7-b8-6EZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="maskString" value="(NN) NNNNN-NNNN"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -475,10 +481,15 @@
                         <viewLayoutGuide key="safeArea" id="jyK-0Q-Aob"/>
                     </view>
                     <navigationItem key="navigationItem" id="3F6-RH-SGX"/>
+                    <connections>
+                        <outlet property="companyTextField" destination="Dyh-P9-rWP" id="mGm-ou-nWj"/>
+                        <outlet property="nameTextField" destination="sZX-FR-419" id="qKI-zx-aZH"/>
+                        <outlet property="phoneTextField" destination="Z1n-gN-47o" id="0WO-CJ-VRR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggz-Ce-bsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4284" y="-756"/>
+            <point key="canvasLocation" x="4441" y="-749"/>
         </scene>
         <!--Email View Controller-->
         <scene sceneID="zmj-2X-kSv">
@@ -526,7 +537,7 @@
                                     <constraint firstAttribute="height" constant="70" id="kec-wc-YpC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -546,10 +557,13 @@
                         <viewLayoutGuide key="safeArea" id="N1K-53-mc5"/>
                     </view>
                     <navigationItem key="navigationItem" id="X4N-9k-IaT"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="pFv-Zt-6YK" id="14c-K2-c46"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hta-EU-rZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4154.8148148148148" y="-35"/>
+            <point key="canvasLocation" x="2445" y="-35"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="RN2-EM-nJO">
@@ -637,7 +651,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Rk-YY-iIv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5161" y="-756"/>
+            <point key="canvasLocation" x="5168" y="-749"/>
         </scene>
         <!--Preview View Controller-->
         <scene sceneID="5mW-QY-0P8">
@@ -716,7 +730,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CU8-cR-reh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5913" y="-756"/>
+            <point key="canvasLocation" x="5895" y="-749"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="gdT-iI-X67">
@@ -727,7 +741,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá visitante!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdy-PL-xMa">
-                                <rect key="frame" x="232" y="278" width="346" height="70"/>
+                                <rect key="frame" x="232" y="278" width="346" height="60"/>
                                 <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="60"/>
                                 <color key="textColor" name="textBoxColor"/>
                                 <nil key="highlightedColor"/>

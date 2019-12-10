@@ -14,9 +14,25 @@
             filePath = "AlohaIOS/Util/FormValidation.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "validation(with:value:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "isValidEmailZupper(email:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "914A7FA5-C0C5-40C4-B144-296C091221E9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlohaIOS/Screen/EmailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "backViewControllerWhenButtonTouchUpInside()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

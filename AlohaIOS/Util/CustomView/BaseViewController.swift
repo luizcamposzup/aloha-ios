@@ -30,7 +30,6 @@ class BaseViewController: UIViewController {
         backgroundImageView.contentMode = .scaleAspectFill
         view.addSubview(backgroundImageView)
         view.sendSubviewToBack(backgroundImageView)
-        
         backgroundImageView.translatesAutoresizingMaskIntoConstraints                            = false
         backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive               = true
         backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive       = true
@@ -39,10 +38,9 @@ class BaseViewController: UIViewController {
         
     }
     
-    func callNext(viewController: String) {
+    func callView(controller: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: viewController)
+        let secondVC = storyboard.instantiateViewController(identifier: controller)
         show(secondVC, sender: self)
     }
-
 }

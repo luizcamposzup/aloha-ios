@@ -11,16 +11,27 @@ import UIKit
 
 class EmailViewController: BaseViewController {
     
+    @IBOutlet weak var emailTextField: TextFieldClass!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        callNext(viewController: "WhoViewController")
+        callView(controller: "WelcomeViewController")
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
-        callNext(viewController: "DataViewController")
+        let emailText = emailTextField.text
+        if FormValidation.isValidEmail(email: emailText) {
+            //Verify if email is Zupper or registered
+            if FormValidation.isValidEmailZupper(email: emailText ?? "") {
+                //Save user as email registered
+            }
+            callView(controller: "ObjectiveViewController")
+        } else {
+            let alert = Alert.showAlertError(messageError: "Informe um email válido")
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

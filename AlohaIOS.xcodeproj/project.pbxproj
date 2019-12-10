@@ -24,7 +24,8 @@
 		42B21303238C428200BC7000 /* Diavlo_MEDIUM_II.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42B212FE238C428200BC7000 /* Diavlo_MEDIUM_II.otf */; };
 		42B21307238C463F00BC7000 /* TextFieldClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B21306238C463F00BC7000 /* TextFieldClass.swift */; };
 		42B21309238D430A00BC7000 /* TitleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B21308238D430A00BC7000 /* TitleClass.swift */; };
-		42C7FF2F239857000075E104 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF2E239857000075E104 /* User.swift */; };
+		42C3F07E239FEAA50038C34B /* MaskField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3F07D239FEAA50038C34B /* MaskField.swift */; };
+		42C7FF2F239857000075E104 /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF2E239857000075E104 /* Visitor.swift */; };
 		42C7FF33239857430075E104 /* FormValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF32239857430075E104 /* FormValidation.swift */; };
 		42C7FF38239859680075E104 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF37239859680075E104 /* WelcomeViewController.swift */; };
 		42C7FF3A23985A690075E104 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF3923985A690075E104 /* Alert.swift */; };
@@ -56,7 +57,8 @@
 		42B212FE238C428200BC7000 /* Diavlo_MEDIUM_II.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Diavlo_MEDIUM_II.otf; sourceTree = "<group>"; };
 		42B21306238C463F00BC7000 /* TextFieldClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldClass.swift; sourceTree = "<group>"; };
 		42B21308238D430A00BC7000 /* TitleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleClass.swift; sourceTree = "<group>"; };
-		42C7FF2E239857000075E104 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		42C3F07D239FEAA50038C34B /* MaskField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskField.swift; sourceTree = "<group>"; };
+		42C7FF2E239857000075E104 /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
 		42C7FF32239857430075E104 /* FormValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidation.swift; sourceTree = "<group>"; };
 		42C7FF37239859680075E104 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		42C7FF3923985A690075E104 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -140,7 +142,7 @@
 		42C7FF2D239856F40075E104 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				42C7FF2E239857000075E104 /* User.swift */,
+				42C7FF2E239857000075E104 /* Visitor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +165,7 @@
 				42B212F5238C1B1100BC7000 /* ButtonClass.swift */,
 				42B21308238D430A00BC7000 /* TitleClass.swift */,
 				42B21306238C463F00BC7000 /* TextFieldClass.swift */,
+				42C3F07D239FEAA50038C34B /* MaskField.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -305,10 +308,11 @@
 				42C7FF38239859680075E104 /* WelcomeViewController.swift in Sources */,
 				42C7FF3C23985B150075E104 /* ConfirmViewController.swift in Sources */,
 				42C7FF4223985B4E0075E104 /* EmailViewController.swift in Sources */,
+				42C3F07E239FEAA50038C34B /* MaskField.swift in Sources */,
 				42B21309238D430A00BC7000 /* TitleClass.swift in Sources */,
 				42C7FF4623985B970075E104 /* ObjectiveViewController.swift in Sources */,
 				42B212F4238C171600BC7000 /* BaseViewController.swift in Sources */,
-				42C7FF2F239857000075E104 /* User.swift in Sources */,
+				42C7FF2F239857000075E104 /* Visitor.swift in Sources */,
 				425A2F3A238862CD009828A4 /* AppDelegate.swift in Sources */,
 				42C7FF4023985B3B0075E104 /* DataViewController.swift in Sources */,
 				42C7FF33239857430075E104 /* FormValidation.swift in Sources */,
@@ -464,13 +468,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 58DN94AXR5;
+				DEVELOPMENT_TEAM = VKMWQN46TC;
 				INFOPLIST_FILE = AlohaIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.aloha;
+				PRODUCT_BUNDLE_IDENTIFIER = .br.com.zup.aloha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -483,13 +487,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 58DN94AXR5;
+				DEVELOPMENT_TEAM = VKMWQN46TC;
 				INFOPLIST_FILE = AlohaIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.aloha;
+				PRODUCT_BUNDLE_IDENTIFIER = .br.com.zup.aloha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

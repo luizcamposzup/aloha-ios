@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextFieldClass: UITextField {
+class TextFieldClass: MaskField {
     override init(frame: CGRect) {
          super.init(frame: frame)
          setupTextField()

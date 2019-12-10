@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User {
+struct Visitor {
     var name:String!
     var email:String!
     var company: String?

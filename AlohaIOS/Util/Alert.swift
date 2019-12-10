@@ -10,26 +10,23 @@ import Foundation
 import UIKit
 
 class Alert: UIAlertController {
-  
-  @discardableResult
-    static func showAlertInfo(viewController: UIViewController, title: String?, message: String?, preferredStyle: UIAlertController.Style = .alert, buttonTouched:((UIAlertAction)->Void)? = nil) -> UIAlertController {
     
-    let alert = Alert(title: title, message: message, preferredStyle: preferredStyle)
-    viewController.present(alert, animated: true, completion: nil)
-    let okAction = UIAlertAction(title: "OK", style: .default, handler: buttonTouched)
-    alert.addAction(okAction)
+    static func showAlertInfo(title: String, messageSuccess: String) -> UIAlertController{
+        let alert = UIAlertController(title: title, message: messageSuccess, preferredStyle: .alert)
+        let buttonClose = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(buttonClose)
+        return alert
+    }
     
-    return alert
-  }
+    static func showAlertAction(title: String, messageSuccess: String) -> UIAlertController{
+        let alert = UIAlertController(title: title, message: messageSuccess, preferredStyle: .alert)
+        return alert
+    }
     
-  @discardableResult
-    static func showAlertError(viewController: ObjectiveViewController, title: String? = "Erro", message: String?, preferredStyle: UIAlertController.Style = .alert, buttonTouched:((UIAlertAction)->Void)? = nil) -> UIAlertController {
-    return showAlertInfo(viewController: viewController, title: title, message: message, preferredStyle: preferredStyle, buttonTouched: buttonTouched)
-  }
-  
-  @discardableResult
-    static func showAlertSucceess(viewController: UIViewController, title: String?, message: String?, preferredStyle: UIAlertController.Style = .alert, buttonTouched:((UIAlertAction)->Void)? = nil) -> UIAlertController {
-    return showAlertInfo(viewController: viewController, title: title, message: message, preferredStyle: preferredStyle, buttonTouched: buttonTouched)
-  }
-  
+    static func showAlertError(messageError: String) -> UIAlertController{
+        let alert = UIAlertController(title: "Erro", message: messageError, preferredStyle: .alert)
+        let buttonClose = UIAlertAction(title: "FECHAR", style: .cancel, handler: nil)
+        alert.addAction(buttonClose)
+        return alert
+    }
 }

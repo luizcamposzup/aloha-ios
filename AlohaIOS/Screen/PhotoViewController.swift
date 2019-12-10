@@ -82,7 +82,7 @@ class PhotoViewController: BaseViewController {
        }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        callNext(viewController: "DataViewController")
+        callView(controller: "DataViewController")
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
@@ -92,7 +92,7 @@ class PhotoViewController: BaseViewController {
     }
     
     @IBAction func jumpViewControllerWhenButtonTouchUpInside(_ sender: Any) {
-        callNext(viewController: "ConfirmViewController")
+        callView(controller: "ConfirmViewController")
     }
     
     

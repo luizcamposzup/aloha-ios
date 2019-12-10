@@ -11,13 +11,12 @@ import UIKit
 
 class WelcomeViewController: BaseViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Make api request here
     }
     
     @IBAction func nextScreenWhenTouchUpInside(_ sender: Any) {
-        callNext(viewController: "ObjectiveViewController")
+        callView(controller: "EmailViewController")
     }
 }
