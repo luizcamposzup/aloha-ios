@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJ4-hO-LtY" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="860" width="600" height="70"/>
+                                <rect key="frame" x="110" y="860" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Vdl-Jo-4ds"/>
                                 </constraints>
@@ -34,13 +34,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quem você deseja encontrar?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcA-L7-rS4" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="263.5" y="150" width="283.5" height="26.5"/>
+                                <rect key="frame" x="110" y="150" width="590" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: Sicrano da Silva" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96a-qX-bec" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="346.5" width="600" height="70"/>
+                                <rect key="frame" x="110" y="346.5" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="C3R-2R-rxU"/>
                                 </constraints>
@@ -66,17 +66,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="96a-qX-bec" firstAttribute="top" secondItem="wcA-L7-rS4" secondAttribute="bottom" constant="170" id="2e8-P2-gjl"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="wcA-L7-rS4" secondAttribute="trailing" constant="85" id="6kn-Ca-asG"/>
-                            <constraint firstItem="96a-qX-bec" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="BBw-jI-BsC"/>
+                            <constraint firstItem="96a-qX-bec" firstAttribute="trailing" secondItem="wcA-L7-rS4" secondAttribute="trailing" id="2fc-MM-Mw7"/>
+                            <constraint firstItem="96a-qX-bec" firstAttribute="leading" secondItem="wcA-L7-rS4" secondAttribute="leading" id="95r-bM-mnO"/>
+                            <constraint firstItem="sJ4-hO-LtY" firstAttribute="leading" secondItem="wcA-L7-rS4" secondAttribute="leading" id="Cly-ld-Ib8"/>
+                            <constraint firstItem="sJ4-hO-LtY" firstAttribute="trailing" secondItem="wcA-L7-rS4" secondAttribute="trailing" id="Pt4-mW-hSe"/>
                             <constraint firstItem="oFF-gC-trh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="35" id="T6e-iB-8nE"/>
                             <constraint firstItem="wcA-L7-rS4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aYw-qw-WKH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="96a-qX-bec" secondAttribute="trailing" constant="85" id="fWf-lE-Q6o"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sJ4-hO-LtY" secondAttribute="trailing" constant="85" id="fxo-65-qB6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sJ4-hO-LtY" secondAttribute="bottom" constant="150" id="igT-cG-wUQ"/>
-                            <constraint firstItem="sJ4-hO-LtY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="j3W-U0-if9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sJ4-hO-LtY" secondAttribute="trailing" constant="90" id="nJN-YS-LrX"/>
                             <constraint firstItem="wcA-L7-rS4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="150" id="pXt-Qx-TaI"/>
-                            <constraint firstItem="wcA-L7-rS4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="rkU-Xg-sCw"/>
                             <constraint firstItem="oFF-gC-trh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="yKc-Ne-Fm1"/>
+                            <constraint firstItem="sJ4-hO-LtY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="zyf-xy-UBX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -98,156 +98,195 @@
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que traz você aqui?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjs-D5-qzT" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="322" y="150" width="166.5" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que traz você aqui?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjs-D5-qzT" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="110" y="150" width="590" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i38-Yp-Osk">
-                                <rect key="frame" x="70" y="740" width="170" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="5yY-RA-lys"/>
-                                    <constraint firstAttribute="height" constant="170" id="ig7-6v-zU4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                <color key="tintColor" name="zupGreen"/>
-                                <state key="normal" title="Button" image="aloha2Person">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="95F-7O-Ahu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4B-Eg-flh">
-                                <rect key="frame" x="570" y="740" width="170" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="OWr-xK-Tiy"/>
-                                    <constraint firstAttribute="height" constant="170" id="fGG-fa-dHb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                <color key="tintColor" name="zupGreen"/>
-                                <state key="normal" title="Button" image="alohaPerson">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="YqP-OE-4uz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sr2-NM-VeJ">
-                                <rect key="frame" x="320" y="740" width="170" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="7l3-NM-KlK"/>
-                                    <constraint firstAttribute="height" constant="170" id="cRB-0R-CWz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                <color key="tintColor" name="zupGreen"/>
-                                <state key="normal" title="Button" image="alohaFornecedores">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="5P1-hF-Dzd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESC-M8-0LG">
-                                <rect key="frame" x="70" y="470" width="170" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="CTg-pf-kuE"/>
-                                    <constraint firstAttribute="height" constant="170" id="vFF-mN-fWd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                <color key="tintColor" name="zupGreen"/>
-                                <state key="normal" title="Button" image="alohaFood">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="5aQ-D6-uGM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNa-HE-CYj">
-                                <rect key="frame" x="320" y="470" width="170" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="mEX-Wa-mL5"/>
-                                    <constraint firstAttribute="width" constant="170" id="nhy-sr-IMU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                <color key="tintColor" name="zupGreen"/>
-                                <state key="normal" title="Button" image="alohaCard">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="DtP-Ux-MJ8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0J-bS-zSn">
-                                <rect key="frame" x="570" y="470" width="170" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="Au5-A8-d6s"/>
-                                    <constraint firstAttribute="width" constant="170" id="Dih-tS-rgP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                <color key="tintColor" name="zupGreen"/>
-                                <state key="normal" title="Button" image="alohaBox">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="aaB-PJ-n2v"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2Z-Kv-c1G">
-                                <rect key="frame" x="50" y="650" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="ByS-af-zbu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departamento Pessoal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-YC-GqJ">
-                                <rect key="frame" x="305" y="650" width="200" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="IPq-Qb-4nU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visita" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFR-O2-bbB">
-                                <rect key="frame" x="560" y="920" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="khX-vq-LmT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrevista" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH3-op-4Bf">
-                                <rect key="frame" x="50" y="920" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="XQH-gX-ObJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fornecedores" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPW-Ez-QPF">
-                                <rect key="frame" x="305" y="920" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="jiR-I7-W03"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encomendas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09b-Hd-HBe">
-                                <rect key="frame" x="560" y="650" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="8qB-Jp-loV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8FT-Aa-5mC">
+                                <rect key="frame" x="55" y="512" width="700" height="468"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="3Kh-lt-WMq">
+                                        <rect key="frame" x="0.0" y="0.0" width="700" height="232"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yQ0-pF-mPH">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="206"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESC-M8-0LG">
+                                                        <rect key="frame" x="15" y="0.0" width="170" height="170"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="170" id="CTg-pf-kuE"/>
+                                                            <constraint firstAttribute="height" constant="170" id="vFF-mN-fWd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                                        <color key="tintColor" name="zupGreen"/>
+                                                        <state key="normal" title="Button" image="alohaFood">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="5aQ-D6-uGM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2Z-Kv-c1G">
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="ByS-af-zbu"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aO3-LO-5oC">
+                                                <rect key="frame" x="265" y="0.0" width="170" height="232"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNa-HE-CYj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="170" id="mEX-Wa-mL5"/>
+                                                            <constraint firstAttribute="width" constant="170" id="nhy-sr-IMU"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                                        <color key="tintColor" name="zupGreen"/>
+                                                        <state key="normal" title="Button" image="alohaCard">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="DtP-Ux-MJ8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departamento Pessoal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-YC-GqJ">
+                                                        <rect key="frame" x="0.0" y="180" width="170" height="52"/>
+                                                        <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Boi-Qg-jeP">
+                                                <rect key="frame" x="500" y="0.0" width="200" height="206"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0J-bS-zSn">
+                                                        <rect key="frame" x="15" y="0.0" width="170" height="170"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="170" id="Au5-A8-d6s"/>
+                                                            <constraint firstAttribute="width" constant="170" id="Dih-tS-rgP"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                                        <color key="tintColor" name="zupGreen"/>
+                                                        <state key="normal" title="Button" image="alohaBox">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="aaB-PJ-n2v"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encomendas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09b-Hd-HBe">
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="8qB-Jp-loV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="WWz-9q-gxi">
+                                        <rect key="frame" x="0.0" y="262" width="700" height="206"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mUD-6M-ejj">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="206"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i38-Yp-Osk">
+                                                        <rect key="frame" x="15" y="0.0" width="170" height="170"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="170" id="5yY-RA-lys"/>
+                                                            <constraint firstAttribute="height" constant="170" id="ig7-6v-zU4"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                                        <color key="tintColor" name="zupGreen"/>
+                                                        <state key="normal" title="Button" image="aloha2Person">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="95F-7O-Ahu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrevista" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH3-op-4Bf">
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="XQH-gX-ObJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zt0-TV-80L">
+                                                <rect key="frame" x="265" y="0.0" width="170" height="206"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sr2-NM-VeJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="170" id="7l3-NM-KlK"/>
+                                                            <constraint firstAttribute="height" constant="170" id="cRB-0R-CWz"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                                        <color key="tintColor" name="zupGreen"/>
+                                                        <state key="normal" title="Button" image="alohaFornecedores">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="5P1-hF-Dzd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fornecedores" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPW-Ez-QPF">
+                                                        <rect key="frame" x="0.0" y="180" width="170" height="26"/>
+                                                        <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7U2-Sn-yUY">
+                                                <rect key="frame" x="500" y="0.0" width="200" height="206"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4B-Eg-flh">
+                                                        <rect key="frame" x="15" y="0.0" width="170" height="170"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="170" id="OWr-xK-Tiy"/>
+                                                            <constraint firstAttribute="height" constant="170" id="fGG-fa-dHb"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                                        <color key="tintColor" name="zupGreen"/>
+                                                        <state key="normal" title="Button" image="alohaPerson">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chooseObjectiveWhenButtonTouchUpInside:" destination="RSI-89-xrc" eventType="touchUpInside" id="YqP-OE-4uz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visita" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFR-O2-bbB">
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="khX-vq-LmT"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ML-Pn-hBu">
                                 <rect key="frame" x="55" y="35" width="60" height="60"/>
                                 <constraints>
@@ -267,37 +306,15 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sr2-NM-VeJ" firstAttribute="top" secondItem="xNa-HE-CYj" secondAttribute="bottom" constant="100" id="4c2-Or-pib"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hFR-O2-bbB" secondAttribute="trailing" constant="30" id="5Ys-ef-xMR"/>
                             <constraint firstItem="0ML-Pn-hBu" firstAttribute="top" secondItem="Yeb-za-zFG" secondAttribute="top" constant="35" id="7AF-Ov-va9"/>
-                            <constraint firstItem="ZPW-Ez-QPF" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="85T-q8-ldO"/>
-                            <constraint firstItem="ESC-M8-0LG" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="50" id="8G1-yR-d16"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="W4B-Eg-flh" secondAttribute="bottom" constant="170" id="8ao-gf-ZPD"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="sr2-NM-VeJ" secondAttribute="bottom" constant="170" id="AlW-rC-QbF"/>
-                            <constraint firstItem="W4B-Eg-flh" firstAttribute="top" secondItem="c0J-bS-zSn" secondAttribute="bottom" constant="100" id="BNj-Op-RIr"/>
-                            <constraint firstItem="hFR-O2-bbB" firstAttribute="top" secondItem="W4B-Eg-flh" secondAttribute="bottom" constant="10" id="GXB-rP-LfX"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="i38-Yp-Osk" secondAttribute="bottom" constant="170" id="JVP-ay-4Fv"/>
-                            <constraint firstItem="zX3-YC-GqJ" firstAttribute="top" secondItem="xNa-HE-CYj" secondAttribute="bottom" constant="10" id="OvF-xX-naF"/>
-                            <constraint firstItem="tjs-D5-qzT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="85" id="P7e-bp-y66"/>
-                            <constraint firstItem="09b-Hd-HBe" firstAttribute="top" secondItem="c0J-bS-zSn" secondAttribute="bottom" constant="10" id="UDx-FH-ibF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="c0J-bS-zSn" secondAttribute="trailing" constant="50" id="VJO-TU-Ce1"/>
-                            <constraint firstItem="i38-Yp-Osk" firstAttribute="top" secondItem="ESC-M8-0LG" secondAttribute="bottom" constant="100" id="YSj-5t-kDl"/>
+                            <constraint firstItem="tjs-D5-qzT" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="90" id="P7e-bp-y66"/>
+                            <constraint firstItem="8FT-Aa-5mC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tjs-D5-qzT" secondAttribute="bottom" constant="10" id="QKB-6l-ubf"/>
                             <constraint firstItem="0ML-Pn-hBu" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="35" id="Ywo-78-1S7"/>
-                            <constraint firstItem="xNa-HE-CYj" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="a2a-7m-n7X"/>
-                            <constraint firstItem="zX3-YC-GqJ" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="ali-k3-MI7"/>
-                            <constraint firstItem="i38-Yp-Osk" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="50" id="cDb-Pq-Wcw"/>
-                            <constraint firstItem="ZPW-Ez-QPF" firstAttribute="top" secondItem="sr2-NM-VeJ" secondAttribute="bottom" constant="10" id="glW-uI-ovs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="09b-Hd-HBe" secondAttribute="trailing" constant="30" id="hHC-0s-rYi"/>
+                            <constraint firstItem="8FT-Aa-5mC" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="aiq-E0-FAy"/>
                             <constraint firstItem="tjs-D5-qzT" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="i44-cT-lMl"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="tjs-D5-qzT" secondAttribute="trailing" constant="85" id="iIl-e9-39m"/>
-                            <constraint firstItem="U2Z-Kv-c1G" firstAttribute="top" secondItem="ESC-M8-0LG" secondAttribute="bottom" constant="10" id="jwX-3b-Aqs"/>
-                            <constraint firstItem="aH3-op-4Bf" firstAttribute="top" secondItem="i38-Yp-Osk" secondAttribute="bottom" constant="10" id="pAV-bG-Agg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="W4B-Eg-flh" secondAttribute="trailing" constant="50" id="q4B-sL-JMw"/>
-                            <constraint firstItem="sr2-NM-VeJ" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="qfY-3r-fUw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tjs-D5-qzT" secondAttribute="trailing" constant="90" id="iIl-e9-39m"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8FT-Aa-5mC" secondAttribute="bottom" constant="100" id="inD-VZ-PMf"/>
                             <constraint firstItem="tjs-D5-qzT" firstAttribute="top" secondItem="ynN-hA-CS7" secondAttribute="topMargin" constant="150" id="rO8-rc-XP9"/>
-                            <constraint firstItem="aH3-op-4Bf" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="30" id="yDd-bA-8Oa"/>
-                            <constraint firstItem="U2Z-Kv-c1G" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="30" id="yiV-kP-kfh"/>
-                            <constraint firstItem="xNa-HE-CYj" firstAttribute="top" relation="lessThanOrEqual" secondItem="tjs-D5-qzT" secondAttribute="bottom" constant="272" id="z86-cU-rsU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yeb-za-zFG"/>
                     </view>
@@ -332,7 +349,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOx-Aq-EJ4">
-                                <rect key="frame" x="105" y="860" width="600" height="70"/>
+                                <rect key="frame" x="110" y="860" width="590" height="70"/>
                                 <color key="backgroundColor" name="noButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="DfV-3l-9z2"/>
@@ -351,13 +368,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirma a vista com Sicrano?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xeu-rS-vev" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="150" width="600" height="26.5"/>
+                                <rect key="frame" x="110" y="150" width="590" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kw5-fm-GvQ" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="760" width="600" height="70"/>
+                                <rect key="frame" x="110" y="760" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="fVh-8g-Ook"/>
                                 </constraints>
@@ -370,17 +387,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Xeu-rS-vev" firstAttribute="leading" secondItem="1Vq-oh-4nf" secondAttribute="leadingMargin" constant="85" id="900-ea-bi4"/>
+                            <constraint firstItem="LOx-Aq-EJ4" firstAttribute="leading" secondItem="1Vq-oh-4nf" secondAttribute="leadingMargin" constant="90" id="1P1-PN-rtd"/>
                             <constraint firstItem="Amx-gQ-1nd" firstAttribute="top" secondItem="1Vq-oh-4nf" secondAttribute="topMargin" constant="35" id="Ijf-a7-K5d"/>
                             <constraint firstAttribute="bottomMargin" secondItem="LOx-Aq-EJ4" secondAttribute="bottom" constant="150" id="MO1-4q-Eeq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kw5-fm-GvQ" secondAttribute="trailing" constant="85" id="NRD-hu-vwv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LOx-Aq-EJ4" secondAttribute="trailing" constant="85" id="YAQ-2r-OaV"/>
-                            <constraint firstItem="LOx-Aq-EJ4" firstAttribute="leading" secondItem="1Vq-oh-4nf" secondAttribute="leadingMargin" constant="85" id="Zrf-gH-0jy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Xeu-rS-vev" secondAttribute="trailing" constant="85" id="b1J-iq-6ta"/>
+                            <constraint firstItem="LOx-Aq-EJ4" firstAttribute="leading" secondItem="Xeu-rS-vev" secondAttribute="leading" id="XOS-33-Szv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LOx-Aq-EJ4" secondAttribute="trailing" constant="90" id="afI-l5-0NG"/>
                             <constraint firstItem="LOx-Aq-EJ4" firstAttribute="top" secondItem="kw5-fm-GvQ" secondAttribute="bottom" constant="30" id="eMK-IN-D87"/>
-                            <constraint firstItem="kw5-fm-GvQ" firstAttribute="leading" secondItem="1Vq-oh-4nf" secondAttribute="leadingMargin" constant="85" id="kFp-RQ-A25"/>
                             <constraint firstItem="Xeu-rS-vev" firstAttribute="top" secondItem="1Vq-oh-4nf" secondAttribute="topMargin" constant="150" id="mFG-KC-QK7"/>
+                            <constraint firstItem="LOx-Aq-EJ4" firstAttribute="trailing" secondItem="Xeu-rS-vev" secondAttribute="trailing" id="mk3-tx-I4T"/>
                             <constraint firstItem="Amx-gQ-1nd" firstAttribute="leading" secondItem="1Vq-oh-4nf" secondAttribute="leadingMargin" constant="35" id="sFc-ux-MyV"/>
+                            <constraint firstItem="kw5-fm-GvQ" firstAttribute="leading" secondItem="Xeu-rS-vev" secondAttribute="leading" id="v5D-wh-NXY"/>
+                            <constraint firstItem="kw5-fm-GvQ" firstAttribute="trailing" secondItem="Xeu-rS-vev" secondAttribute="trailing" id="xgG-Oz-tZX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b69-75-RtO"/>
                     </view>
@@ -414,7 +431,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7C-eH-8qk" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="860" width="600" height="70"/>
+                                <rect key="frame" x="110" y="860" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="sNp-Jt-jDa"/>
                                 </constraints>
@@ -425,34 +442,34 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afinal, quem é você?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-fC-rQB" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="150" width="600" height="26.5"/>
+                                <rect key="frame" x="110" y="150" width="590" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZX-FR-419" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="276.5" width="600" height="70"/>
+                                <rect key="frame" x="110" y="276.5" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="LjY-cy-1xe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Empresa (opcional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dyh-P9-rWP" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="456.5" width="600" height="70"/>
+                                <rect key="frame" x="110" y="456.5" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="eDJ-MW-jIi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(  ) Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z1n-gN-47o" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="366.5" width="600" height="70"/>
+                                <rect key="frame" x="110" y="366.5" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="rl7-b8-6EZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="maskString" value="(NN) NNNNN-NNNN"/>
                                 </userDefinedRuntimeAttributes>
@@ -460,23 +477,23 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="sZX-FR-419" secondAttribute="trailing" constant="85" id="0mh-jD-hd3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="L6d-fC-rQB" secondAttribute="trailing" constant="85" id="7S3-0b-6qz"/>
+                            <constraint firstItem="Dyh-P9-rWP" firstAttribute="leading" secondItem="sZX-FR-419" secondAttribute="leading" id="6b8-Iq-ALy"/>
+                            <constraint firstItem="O7C-eH-8qk" firstAttribute="trailing" secondItem="sZX-FR-419" secondAttribute="trailing" id="6lE-vz-Hqj"/>
                             <constraint firstItem="stu-rg-eCh" firstAttribute="top" secondItem="I3x-xi-b5s" secondAttribute="topMargin" constant="35" id="7uc-Ty-wHX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O7C-eH-8qk" secondAttribute="trailing" constant="90" id="Ama-wB-fTB"/>
                             <constraint firstItem="Z1n-gN-47o" firstAttribute="top" secondItem="sZX-FR-419" secondAttribute="bottom" constant="20" id="CkQ-sE-dah"/>
+                            <constraint firstItem="O7C-eH-8qk" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="90" id="HI4-cq-Wna"/>
                             <constraint firstItem="L6d-fC-rQB" firstAttribute="top" secondItem="I3x-xi-b5s" secondAttribute="topMargin" constant="150" id="IFd-j0-Zge"/>
+                            <constraint firstItem="Dyh-P9-rWP" firstAttribute="trailing" secondItem="sZX-FR-419" secondAttribute="trailing" id="IcV-WC-luC"/>
                             <constraint firstItem="stu-rg-eCh" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="35" id="Iop-L6-TI5"/>
-                            <constraint firstItem="O7C-eH-8qk" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="85" id="OFN-4W-tE0"/>
-                            <constraint firstItem="L6d-fC-rQB" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="85" id="SFB-oL-4Z4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Z1n-gN-47o" secondAttribute="trailing" constant="85" id="TFt-S4-TCV"/>
-                            <constraint firstItem="sZX-FR-419" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="85" id="UBn-gN-Yxv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Dyh-P9-rWP" secondAttribute="trailing" constant="85" id="Z1w-Lm-7CY"/>
-                            <constraint firstItem="Z1n-gN-47o" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="85" id="Zgr-Sk-x2G"/>
-                            <constraint firstItem="Dyh-P9-rWP" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="85" id="bFY-Kr-c5Y"/>
+                            <constraint firstItem="L6d-fC-rQB" firstAttribute="leading" secondItem="sZX-FR-419" secondAttribute="leading" id="KEf-zX-y0g"/>
+                            <constraint firstItem="O7C-eH-8qk" firstAttribute="leading" secondItem="sZX-FR-419" secondAttribute="leading" id="Mnm-X9-7xO"/>
+                            <constraint firstItem="Z1n-gN-47o" firstAttribute="trailing" secondItem="sZX-FR-419" secondAttribute="trailing" id="aF4-Jg-aK0"/>
                             <constraint firstItem="sZX-FR-419" firstAttribute="top" secondItem="L6d-fC-rQB" secondAttribute="bottom" constant="100" id="hDV-4W-TqB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="O7C-eH-8qk" secondAttribute="trailing" constant="85" id="iof-MU-qsU"/>
                             <constraint firstItem="Dyh-P9-rWP" firstAttribute="top" secondItem="Z1n-gN-47o" secondAttribute="bottom" constant="20" id="m0W-zh-hzo"/>
                             <constraint firstAttribute="bottomMargin" secondItem="O7C-eH-8qk" secondAttribute="bottom" constant="150" id="mk5-Qv-YDe"/>
+                            <constraint firstItem="Z1n-gN-47o" firstAttribute="leading" secondItem="sZX-FR-419" secondAttribute="leading" id="qA4-b5-bk4"/>
+                            <constraint firstItem="L6d-fC-rQB" firstAttribute="trailing" secondItem="sZX-FR-419" secondAttribute="trailing" id="tsj-p8-hHD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jyK-0Q-Aob"/>
                     </view>
@@ -515,7 +532,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plg-ge-7DS" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="860" width="600" height="70"/>
+                                <rect key="frame" x="110" y="860" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="IY7-5f-p0K"/>
                                 </constraints>
@@ -526,32 +543,32 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informe o seu melhor e-mail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4b-bK-1dd" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="150" width="600" height="26.5"/>
+                                <rect key="frame" x="110" y="150" width="590" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: fulano@zup.com.br" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFv-Zt-6YK" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="346.5" width="600" height="70"/>
+                                <rect key="frame" x="110" y="346.5" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="kec-wc-YpC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pFv-Zt-6YK" firstAttribute="leading" secondItem="ruy-cl-bwS" secondAttribute="leadingMargin" constant="85" id="13y-Ky-IJI"/>
                             <constraint firstItem="342-si-IES" firstAttribute="top" secondItem="ruy-cl-bwS" secondAttribute="topMargin" constant="35" id="6Jf-rP-g5D"/>
-                            <constraint firstItem="plg-ge-7DS" firstAttribute="leading" secondItem="ruy-cl-bwS" secondAttribute="leadingMargin" constant="85" id="8CO-77-Yez"/>
-                            <constraint firstItem="n4b-bK-1dd" firstAttribute="leading" secondItem="ruy-cl-bwS" secondAttribute="leadingMargin" constant="85" id="A85-12-kyL"/>
                             <constraint firstAttribute="bottomMargin" secondItem="plg-ge-7DS" secondAttribute="bottom" constant="150" id="CC1-2q-71l"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pFv-Zt-6YK" secondAttribute="trailing" constant="85" id="F0D-Y6-8JL"/>
+                            <constraint firstItem="plg-ge-7DS" firstAttribute="trailing" secondItem="n4b-bK-1dd" secondAttribute="trailing" id="D9A-iA-kzn"/>
+                            <constraint firstItem="plg-ge-7DS" firstAttribute="leading" secondItem="n4b-bK-1dd" secondAttribute="leading" id="IqP-8k-TCL"/>
                             <constraint firstItem="342-si-IES" firstAttribute="leading" secondItem="ruy-cl-bwS" secondAttribute="leadingMargin" constant="35" id="JQP-xN-D27"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="n4b-bK-1dd" secondAttribute="trailing" constant="85" id="eaA-R8-hlH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="plg-ge-7DS" secondAttribute="trailing" constant="85" id="ebZ-Hr-BQL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="plg-ge-7DS" secondAttribute="trailing" constant="90" id="UN3-Yw-xwV"/>
+                            <constraint firstItem="plg-ge-7DS" firstAttribute="leading" secondItem="ruy-cl-bwS" secondAttribute="leadingMargin" constant="90" id="XdP-LU-2mi"/>
+                            <constraint firstItem="pFv-Zt-6YK" firstAttribute="leading" secondItem="n4b-bK-1dd" secondAttribute="leading" id="Xjl-Ag-oIY"/>
                             <constraint firstItem="n4b-bK-1dd" firstAttribute="top" secondItem="ruy-cl-bwS" secondAttribute="topMargin" constant="150" id="hzM-lN-HQb"/>
+                            <constraint firstItem="pFv-Zt-6YK" firstAttribute="trailing" secondItem="n4b-bK-1dd" secondAttribute="trailing" id="k1R-YQ-hAL"/>
                             <constraint firstItem="pFv-Zt-6YK" firstAttribute="top" secondItem="n4b-bK-1dd" secondAttribute="bottom" constant="170" id="ozh-XD-kI2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N1K-53-mc5"/>
@@ -589,7 +606,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFq-kU-UFI" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="860" width="600" height="70"/>
+                                <rect key="frame" x="110" y="860" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Jl3-Xk-cuR"/>
                                 </constraints>
@@ -600,7 +617,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos capturar o seu sorriso!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngh-8v-vE3" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="150" width="600" height="26.5"/>
+                                <rect key="frame" x="110" y="150" width="590" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -632,12 +649,12 @@
                             <constraint firstItem="gdo-dg-n90" firstAttribute="centerY" secondItem="keu-me-SNi" secondAttribute="centerY" id="6TS-T9-jca"/>
                             <constraint firstAttribute="bottomMargin" secondItem="AFq-kU-UFI" secondAttribute="bottom" constant="150" id="87P-l5-Zlh"/>
                             <constraint firstItem="fDp-Nf-gLq" firstAttribute="leading" secondItem="keu-me-SNi" secondAttribute="leadingMargin" constant="35" id="IFO-VD-iWJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ngh-8v-vE3" secondAttribute="trailing" constant="85" id="NzM-8u-DYp"/>
+                            <constraint firstItem="AFq-kU-UFI" firstAttribute="trailing" secondItem="ngh-8v-vE3" secondAttribute="trailing" id="Q7z-rO-EIK"/>
+                            <constraint firstItem="AFq-kU-UFI" firstAttribute="leading" secondItem="keu-me-SNi" secondAttribute="leadingMargin" constant="90" id="TqQ-bh-xKI"/>
                             <constraint firstItem="gdo-dg-n90" firstAttribute="centerX" secondItem="keu-me-SNi" secondAttribute="centerX" id="YTV-w5-hWe"/>
                             <constraint firstItem="fDp-Nf-gLq" firstAttribute="top" secondItem="keu-me-SNi" secondAttribute="topMargin" constant="35" id="hs2-en-5YB"/>
-                            <constraint firstItem="ngh-8v-vE3" firstAttribute="leading" secondItem="keu-me-SNi" secondAttribute="leadingMargin" constant="85" id="mgS-Ql-63f"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AFq-kU-UFI" secondAttribute="trailing" constant="85" id="paL-DT-oO4"/>
-                            <constraint firstItem="AFq-kU-UFI" firstAttribute="leading" secondItem="keu-me-SNi" secondAttribute="leadingMargin" constant="85" id="qQR-hc-NnW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AFq-kU-UFI" secondAttribute="trailing" constant="90" id="sSP-Cx-V5n"/>
+                            <constraint firstItem="AFq-kU-UFI" firstAttribute="leading" secondItem="ngh-8v-vE3" secondAttribute="leading" id="sgB-7z-dss"/>
                             <constraint firstItem="dD5-HR-zEK" firstAttribute="top" secondItem="keu-me-SNi" secondAttribute="topMargin" constant="35" id="v1T-mc-kcH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dD5-HR-zEK" secondAttribute="trailing" constant="35" id="yKw-3K-lYU"/>
                         </constraints>
@@ -662,7 +679,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfA-E6-IRW">
-                                <rect key="frame" x="105" y="837" width="502" height="70"/>
+                                <rect key="frame" x="110" y="837" width="492" height="70"/>
                                 <color key="backgroundColor" name="noButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="TFJ-ea-0Qp"/>
@@ -682,7 +699,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wm2-Yl-Zx2" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="737" width="502" height="70"/>
+                                <rect key="frame" x="110" y="737" width="492" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="TYf-Tr-2IP"/>
                                 </constraints>
@@ -694,7 +711,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que achou da foto, podemos usar?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzb-4y-9Du" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="85" y="100" width="542" height="26.5"/>
+                                <rect key="frame" x="110" y="100" width="492" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -709,17 +726,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Wm2-Yl-Zx2" secondAttribute="trailing" constant="85" id="0uj-9D-Jub"/>
-                            <constraint firstItem="Vzb-4y-9Du" firstAttribute="leading" secondItem="qHg-lh-q57" secondAttribute="leading" constant="85" id="3Fh-wW-L5V"/>
+                            <constraint firstItem="Wm2-Yl-Zx2" firstAttribute="leading" secondItem="Vzb-4y-9Du" secondAttribute="leading" id="6ti-54-b5b"/>
+                            <constraint firstItem="YfA-E6-IRW" firstAttribute="leading" secondItem="qHg-lh-q57" secondAttribute="leadingMargin" constant="90" id="7Zk-co-hPc"/>
                             <constraint firstItem="YfA-E6-IRW" firstAttribute="top" secondItem="Wm2-Yl-Zx2" secondAttribute="bottom" constant="30" id="BP5-VZ-b3E"/>
+                            <constraint firstItem="Wm2-Yl-Zx2" firstAttribute="trailing" secondItem="Vzb-4y-9Du" secondAttribute="trailing" id="JCe-4J-rtW"/>
                             <constraint firstAttribute="bottomMargin" secondItem="YfA-E6-IRW" secondAttribute="bottom" constant="100" id="Mlb-3V-Cb7"/>
+                            <constraint firstItem="YfA-E6-IRW" firstAttribute="leading" secondItem="Vzb-4y-9Du" secondAttribute="leading" id="Mz6-d0-gYx"/>
                             <constraint firstItem="7vM-ZD-G2L" firstAttribute="centerX" secondItem="qHg-lh-q57" secondAttribute="centerX" id="Or1-D7-2SG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YfA-E6-IRW" secondAttribute="trailing" constant="85" id="VM6-47-j58"/>
                             <constraint firstItem="7vM-ZD-G2L" firstAttribute="centerY" secondItem="qHg-lh-q57" secondAttribute="centerY" constant="-70" id="WPY-mh-at4"/>
-                            <constraint firstItem="YfA-E6-IRW" firstAttribute="leading" secondItem="qHg-lh-q57" secondAttribute="leadingMargin" constant="85" id="h81-Zj-vfM"/>
-                            <constraint firstItem="mX7-Ch-aly" firstAttribute="trailing" secondItem="Vzb-4y-9Du" secondAttribute="trailing" constant="85" id="hHM-Gx-2et"/>
+                            <constraint firstItem="YfA-E6-IRW" firstAttribute="trailing" secondItem="Vzb-4y-9Du" secondAttribute="trailing" id="bTZ-IF-mp4"/>
                             <constraint firstItem="Vzb-4y-9Du" firstAttribute="top" secondItem="qHg-lh-q57" secondAttribute="top" constant="100" id="mCz-IY-1KJ"/>
-                            <constraint firstItem="Wm2-Yl-Zx2" firstAttribute="leading" secondItem="qHg-lh-q57" secondAttribute="leadingMargin" constant="85" id="zOi-Kj-M3C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YfA-E6-IRW" secondAttribute="trailing" constant="90" id="w0D-ar-01r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mX7-Ch-aly"/>
                     </view>
@@ -740,8 +757,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá visitante!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdy-PL-xMa">
-                                <rect key="frame" x="232" y="278" width="346" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá visitante!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdy-PL-xMa">
+                                <rect key="frame" x="110" y="278" width="590" height="60"/>
                                 <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="60"/>
                                 <color key="textColor" name="textBoxColor"/>
                                 <nil key="highlightedColor"/>
@@ -754,7 +771,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Q-sZ-WHh" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="105" y="860" width="600" height="70"/>
+                                <rect key="frame" x="110" y="860" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="jas-WI-Rr2"/>
                                 </constraints>
@@ -769,15 +786,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Z5Q-sZ-WHh" firstAttribute="leading" secondItem="r5o-iE-R4c" secondAttribute="leadingMargin" constant="85" id="9WG-ia-5UI"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="tdy-PL-xMa" secondAttribute="trailing" constant="85" id="FHa-jr-q0L"/>
+                            <constraint firstItem="Z5Q-sZ-WHh" firstAttribute="leading" secondItem="tdy-PL-xMa" secondAttribute="leading" id="2Cd-z5-M5c"/>
+                            <constraint firstItem="tdy-PL-xMa" firstAttribute="leading" secondItem="r5o-iE-R4c" secondAttribute="leadingMargin" constant="90" id="JvM-DN-L91"/>
                             <constraint firstItem="tdy-PL-xMa" firstAttribute="centerX" secondItem="r5o-iE-R4c" secondAttribute="centerX" id="SfM-8W-8ku"/>
                             <constraint firstItem="tdy-PL-xMa" firstAttribute="top" secondItem="QD6-ig-YL0" secondAttribute="bottom" constant="50" id="VTl-Mo-asU"/>
                             <constraint firstItem="QD6-ig-YL0" firstAttribute="top" secondItem="r5o-iE-R4c" secondAttribute="topMargin" constant="50" id="f5v-kP-1QW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tdy-PL-xMa" secondAttribute="trailing" constant="90" id="j9L-Ge-8Hk"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Z5Q-sZ-WHh" secondAttribute="bottom" constant="150" id="jnk-Vc-nbt"/>
+                            <constraint firstItem="Z5Q-sZ-WHh" firstAttribute="trailing" secondItem="tdy-PL-xMa" secondAttribute="trailing" id="oRj-0b-61k"/>
                             <constraint firstItem="QD6-ig-YL0" firstAttribute="centerX" secondItem="r5o-iE-R4c" secondAttribute="centerX" id="txD-3s-aNd"/>
-                            <constraint firstItem="tdy-PL-xMa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r5o-iE-R4c" secondAttribute="leadingMargin" constant="85" id="w7T-DG-saL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Z5Q-sZ-WHh" secondAttribute="trailing" constant="85" id="z0a-yJ-LBm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bDt-7u-c0e"/>
                     </view>
