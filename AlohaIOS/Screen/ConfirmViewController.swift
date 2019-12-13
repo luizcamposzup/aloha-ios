@@ -16,12 +16,13 @@ class ConfirmViewController: BaseViewController {
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        let typeUser = TypeUser()
-        if(typeUser.REGISTER) {
-            callView(controller: "EmailViewController")
-            } else {
-            callView(controller: "PhotoViewController")
-        }
+        callView(controller: "EmailViewController")
+//        let typeUser = TypeUser()
+//        if(typeUser.REGISTER) {
+//            callView(controller: "EmailViewController")
+//            } else {
+//            callView(controller: "PhotoViewController")
+//        }
     }
     
     @IBAction func confirmVisitWhenButtonTouchUpInside() {

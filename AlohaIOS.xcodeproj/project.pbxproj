@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3AF8DB0C62103EA67DD4E8BC /* Pods_AlohaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B69D8B198CDCA75980FB00 /* Pods_AlohaIOS.framework */; };
-		4254078D239AF1CA00718557 /* TypeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4254078C239AF1CA00718557 /* TypeUser.swift */; };
+		420F7B5D23A2EDA400E4796C /* AutoComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F7B5C23A2EDA400E4796C /* AutoComplete.swift */; };
+		420F7B5F23A2EDC100E4796C /* AutoCompleteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F7B5E23A2EDC100E4796C /* AutoCompleteViewCell.swift */; };
+		420F7B6123A2EE9D00E4796C /* AutoCompleteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 420F7B6023A2EE9D00E4796C /* AutoCompleteViewCell.xib */; };
+		423E3A3423A42B4400B7A841 /* Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E3A3323A42B4400B7A841 /* Load.swift */; };
 		425A2F3A238862CD009828A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A2F39238862CD009828A4 /* AppDelegate.swift */; };
 		425A2F3C238862CD009828A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A2F3B238862CD009828A4 /* SceneDelegate.swift */; };
 		425A2F41238862CD009828A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425A2F3F238862CD009828A4 /* Main.storyboard */; };
@@ -39,7 +42,10 @@
 
 /* Begin PBXFileReference section */
 		29D43CB3464AC6A45D8C1EA4 /* Pods-AlohaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlohaIOS.debug.xcconfig"; path = "Target Support Files/Pods-AlohaIOS/Pods-AlohaIOS.debug.xcconfig"; sourceTree = "<group>"; };
-		4254078C239AF1CA00718557 /* TypeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeUser.swift; sourceTree = "<group>"; };
+		420F7B5C23A2EDA400E4796C /* AutoComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoComplete.swift; sourceTree = "<group>"; };
+		420F7B5E23A2EDC100E4796C /* AutoCompleteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteViewCell.swift; sourceTree = "<group>"; };
+		420F7B6023A2EE9D00E4796C /* AutoCompleteViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoCompleteViewCell.xib; sourceTree = "<group>"; };
+		423E3A3323A42B4400B7A841 /* Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Load.swift; sourceTree = "<group>"; };
 		425A2F36238862CD009828A4 /* AlohaIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlohaIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		425A2F39238862CD009828A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		425A2F3B238862CD009828A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +90,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		420F7B5B23A2ED8900E4796C /* AutoComplete */ = {
+			isa = PBXGroup;
+			children = (
+				420F7B5C23A2EDA400E4796C /* AutoComplete.swift */,
+				420F7B5E23A2EDC100E4796C /* AutoCompleteViewCell.swift */,
+				420F7B6023A2EE9D00E4796C /* AutoCompleteViewCell.xib */,
+			);
+			path = AutoComplete;
+			sourceTree = "<group>";
+		};
+		423E3A3223A4295400B7A841 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				423E3A3323A42B4400B7A841 /* Load.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		425A2F2D238862CD009828A4 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +129,7 @@
 		425A2F38238862CD009828A4 /* AlohaIOS */ = {
 			isa = PBXGroup;
 			children = (
+				423E3A3223A4295400B7A841 /* Service */,
 				42C7FF362398594A0075E104 /* Screen */,
 				42C7FF302398571B0075E104 /* Util */,
 				42C7FF2D239856F40075E104 /* Models */,
@@ -150,10 +175,10 @@
 		42C7FF302398571B0075E104 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				420F7B5B23A2ED8900E4796C /* AutoComplete */,
 				42C7FF31239857340075E104 /* CustomView */,
 				42C7FF32239857430075E104 /* FormValidation.swift */,
 				42C7FF3923985A690075E104 /* Alert.swift */,
-				4254078C239AF1CA00718557 /* TypeUser.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -264,6 +289,7 @@
 				42B21300238C428200BC7000 /* Diavlo_BOLD_II.otf in Resources */,
 				425A2F46238862CF009828A4 /* LaunchScreen.storyboard in Resources */,
 				42B21301238C428200BC7000 /* Diavlo_BOOK_II.otf in Resources */,
+				420F7B6123A2EE9D00E4796C /* AutoCompleteViewCell.xib in Resources */,
 				42B212FF238C428200BC7000 /* Diavlo_BLACK_II.otf in Resources */,
 				425A2F43238862CF009828A4 /* Assets.xcassets in Resources */,
 				42B21303238C428200BC7000 /* Diavlo_MEDIUM_II.otf in Resources */,
@@ -313,13 +339,15 @@
 				42C7FF4623985B970075E104 /* ObjectiveViewController.swift in Sources */,
 				42B212F4238C171600BC7000 /* BaseViewController.swift in Sources */,
 				42C7FF2F239857000075E104 /* Visitor.swift in Sources */,
+				420F7B5D23A2EDA400E4796C /* AutoComplete.swift in Sources */,
 				425A2F3A238862CD009828A4 /* AppDelegate.swift in Sources */,
 				42C7FF4023985B3B0075E104 /* DataViewController.swift in Sources */,
 				42C7FF33239857430075E104 /* FormValidation.swift in Sources */,
+				423E3A3423A42B4400B7A841 /* Load.swift in Sources */,
 				42C7FF3A23985A690075E104 /* Alert.swift in Sources */,
 				42B21307238C463F00BC7000 /* TextFieldClass.swift in Sources */,
 				425A2F3C238862CD009828A4 /* SceneDelegate.swift in Sources */,
-				4254078D239AF1CA00718557 /* TypeUser.swift in Sources */,
+				420F7B5F23A2EDC100E4796C /* AutoCompleteViewCell.swift in Sources */,
 				42C7FF3E23985B290075E104 /* PhotoViewController.swift in Sources */,
 				42C7FF4423985B620075E104 /* WhoViewController.swift in Sources */,
 				427AC84F239E9BB9006CC402 /* PreviewViewController.swift in Sources */,
