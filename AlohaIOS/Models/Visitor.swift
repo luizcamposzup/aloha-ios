@@ -9,8 +9,6 @@
 import Foundation
 
 struct Visitor {
-    var name:String!
-    var email:String!
-    var company: String?
-    var phone: String!
+    let name:String!
+    let email:String!
 }

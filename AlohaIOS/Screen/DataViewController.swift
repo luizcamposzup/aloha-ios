@@ -11,7 +11,6 @@ import UIKit
 
 class DataViewController: BaseViewController {
     
-    
     @IBOutlet weak var nameTextField: TextFieldClass!
     @IBOutlet weak var phoneTextField: TextFieldClass!
     @IBOutlet weak var companyTextField: TextFieldClass!
@@ -31,9 +30,5 @@ class DataViewController: BaseViewController {
             let alert = Alert.showAlertError(messageError: "Informe os dados necessários")
             self.present(alert, animated: true, completion: nil)
         }
-        
-        
-        
     }
-    
 }
