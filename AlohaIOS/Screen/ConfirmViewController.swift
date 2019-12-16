@@ -27,12 +27,21 @@ class ConfirmViewController: BaseViewController {
     
     @IBAction func confirmVisitWhenButtonTouchUpInside() {
         //Call function notification to API
+        var status = false
         let alert = Alert.showAlertAction(title: "CONFIRMADA", messageSuccess: "Sicrano foi notificado da sua visita. Aguarde na recepção")
         let acceptAction = UIAlertAction(title: "OK", style: .default) { action in
-            self.callView(controller: "WelcomeViewController")
-        }
+                                                                        status = true
+                                                                        self.callView(controller: "WelcomeViewController")
+                                                                        }
         alert.addAction(acceptAction)
         self.present(alert, animated: true)
+        let when = DispatchTime.now() + 5
+        DispatchQueue.main.asyncAfter(deadline: when){
+            if !status {
+                alert.dismiss(animated: true, completion: nil)
+                self.callView(controller: "WelcomeViewController")
+            }
+        }
     }
     
     @IBAction func cancelVisitWhenButtonTouchUpInside() {
