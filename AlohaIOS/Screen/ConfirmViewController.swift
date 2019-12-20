@@ -11,12 +11,22 @@ import UIKit
 
 class ConfirmViewController: BaseViewController {
     
+    var page = FlowData.flowInstance.getLastPage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(UserFlow.userInstance.getUserName())
+        print(UserFlow.userInstance.getUserEmail())
+        print(UserFlow.userInstance.getUserPhone())
+        print(UserFlow.userInstance.getUserCompany())
+        print(ZupperFlow.zupperInstance.getUZupperName())
+        print(ZupperFlow.zupperInstance.getZupperEmail())
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        callView(controller: "EmailViewController")
+        FlowData.flowInstance.popLastPage()
+        page = FlowData.flowInstance.getLastPage()
+        callView(controller: page)
 //        let typeUser = TypeUser()
 //        if(typeUser.REGISTER) {
 //            callView(controller: "EmailViewController")
@@ -30,8 +40,8 @@ class ConfirmViewController: BaseViewController {
         var status = false
         let alert = Alert.showAlertAction(title: "CONFIRMADA", messageSuccess: "Sicrano foi notificado da sua visita. Aguarde na recepção")
         let acceptAction = UIAlertAction(title: "OK", style: .default) { action in
-                                                                        status = true
-                                                                        self.callView(controller: "WelcomeViewController")
+                status = true
+                self.callView(controller: "WelcomeViewController")
                                                                         }
         alert.addAction(acceptAction)
         self.present(alert, animated: true)
@@ -45,6 +55,7 @@ class ConfirmViewController: BaseViewController {
     }
     
     @IBAction func cancelVisitWhenButtonTouchUpInside() {
+        
         let alert = Alert.showAlertAction(title: "ABORTAR", messageSuccess: "Cancelar visita a Sicrano?")
         let acceptActionYes = UIAlertAction(title: "SIM", style: .default) { action in
             self.callView(controller: "WelcomeViewController")

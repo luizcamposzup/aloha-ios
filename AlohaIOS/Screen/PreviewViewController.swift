@@ -13,7 +13,7 @@ class PreviewViewController: BaseViewController {
  
     @IBOutlet weak var photo: UIImageView!
     
-    
+    var page = FlowData.flowInstance.getLastPage()
     var image : UIImage!
 
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class PreviewViewController: BaseViewController {
     }
     
     @IBAction func noButton(_ sender: Any) {
-        callView(controller: "PhotoViewController")
+        callView(controller: page)
     }
     
     @IBAction func yesButton(_ sender: Any) {

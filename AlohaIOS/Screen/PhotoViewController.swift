@@ -19,6 +19,7 @@ class PhotoViewController: BaseViewController {
     var photoOutput: AVCapturePhotoOutput?
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     var image : UIImage?
+    var page : String = ""
     
     @IBOutlet weak var cameraView: UIView!
     override func viewDidLoad() {
@@ -82,16 +83,21 @@ class PhotoViewController: BaseViewController {
        }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        callView(controller: "DataViewController")
+        FlowData.flowInstance.popLastPage()
+        page = FlowData.flowInstance.getLastPage()
+        callView(controller: page)
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
         let settings = AVCapturePhotoSettings()
         photoOutput?.capturePhoto(with: settings, delegate: self)
+//        FlowData.flowInstance.setLastPage(lastPagee: "PhotoViewController")
         //callNext(viewController: "ConfirmViewController")
     }
     
     @IBAction func jumpViewControllerWhenButtonTouchUpInside(_ sender: Any) {
+
+        FlowData.flowInstance.pushLastPage(ToAppendInArray: "ConfirmViewController")
         callView(controller: "ConfirmViewController")
     }
     
