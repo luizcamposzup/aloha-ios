@@ -13,10 +13,13 @@ class WelcomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        FlowData.flowInstance.popArrayList()
+        FlowData.flowInstance.pushLastPage(ToAppendInArray: "WelcomeViewController")
         //Make api request here
     }
     
     @IBAction func nextScreenWhenTouchUpInside(_ sender: Any) {
+        FlowData.flowInstance.pushLastPage(ToAppendInArray: "EmailViewController")
         callView(controller: "EmailViewController")
     }
 }

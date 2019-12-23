@@ -11,13 +11,16 @@ import UIKit
 
 class ObjectiveViewController: BaseViewController {
     
+    var page : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        callView(controller: "EmailViewController")
+        FlowData.flowInstance.popLastPage()
+        page = FlowData.flowInstance.getLastPage()
+        callView(controller: page)
     }
     
     
@@ -26,6 +29,7 @@ class ObjectiveViewController: BaseViewController {
     }
     
     func doSomethingDependingOnWhoSent(_ senderTag: Int) {
+        FlowData.flowInstance.pushLastPage(ToAppendInArray: "WhoViewController")
         callView(controller: "WhoViewController")
 //         switch senderTag {
 //              case 0 : callView(controller: "WhoViewController");

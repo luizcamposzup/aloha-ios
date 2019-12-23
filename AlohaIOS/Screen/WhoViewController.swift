@@ -13,6 +13,9 @@ class WhoViewController: BaseViewController {
     
     @IBOutlet weak var nameTextField: TextFieldClass!
     
+    var page : String = ""
+    var email = FlowData.flowInstance.getIsEmailRegistered()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addDropDown()
@@ -30,12 +33,15 @@ class WhoViewController: BaseViewController {
         }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        callView(controller: "ObjectiveViewController")
+        FlowData.flowInstance.popLastPage()
+        page = FlowData.flowInstance.getLastPage()
+        callView(controller: page)
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
         if(FormValidation.isValidTextFrom(textField: nameTextField)) {
-            callView(controller: "DataViewController")
+//            FlowData.flowInstance.setLastPage(lastPagee: "WhoViewController")
+            email == true ? goToConfirmScreen() : goToDataScreen()
         } else {
             let alert = Alert.showAlertError(messageError:"Informe um nome")
             self.present(alert, animated: true, completion: nil)
@@ -50,4 +56,16 @@ class WhoViewController: BaseViewController {
         }
         return list
     }
+    
+    func goToConfirmScreen() {
+        callView(controller: "ConfirmViewController")
+        FlowData.flowInstance.pushLastPage(ToAppendInArray: "ConfirmViewController")
+    }
+    
+    func goToDataScreen() {
+        callView(controller: "DataViewController")
+        FlowData.flowInstance.pushLastPage(ToAppendInArray: "DataViewController")
+    }
+    
+    
 }

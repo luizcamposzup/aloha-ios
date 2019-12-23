@@ -11,10 +11,14 @@ import UIKit
 
 class EmailViewController: BaseViewController {
     
+    var page : String = ""
+    
     @IBOutlet weak var emailTextField: TextFieldClass!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        page = FlowData.flowInstance.getLastPage()
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
@@ -23,15 +27,29 @@ class EmailViewController: BaseViewController {
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
         let emailText = emailTextField.text
-        if FormValidation.isValidEmail(email: emailText) {
-            //Verify if email is Zupper or registered
-            if FormValidation.isValidEmailZupper(email: emailText ?? "") {
-                //Save user as email registered
-            }
-            callView(controller: "ObjectiveViewController")
-        } else {
+        if !FormValidation.isValidEmail(email: emailText) {
             let alert = Alert.showAlertError(messageError: "Informe um email válido")
             self.present(alert, animated: true, completion: nil)
+            return
         }
+        //Save if email is Zupper or registered
+        UserFlow.userInstance.setUserEmail(email: emailText!)
+        FlowData.flowInstance.setEmailRegistered(status: verifyIfEmailIsRegistered(emailText!))
+        FlowData.flowInstance.pushLastPage(ToAppendInArray: "ObjectiveViewController")
+        callView(controller: "ObjectiveViewController")
     }
+    
+    func verifyIfEmailIsRegistered(_ email: String) -> Bool {
+        if FormValidation.isValidEmailZupper(email: email) || verifyIfEmailInApi(email: email) {
+            return true
+        } else { return false }
+    }
+    
+    //Call to API
+    func verifyIfEmailInApi(email: String) -> Bool{
+        if email == "luizhcarminati@gmail.com" || email == "lz___@hotmail.com" {
+            return true
+        } else { return false }
+    }
+    
 }
