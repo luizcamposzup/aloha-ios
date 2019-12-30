@@ -41,6 +41,7 @@
 		42C7FF4223985B4E0075E104 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF4123985B4E0075E104 /* EmailViewController.swift */; };
 		42C7FF4423985B620075E104 /* WhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF4323985B620075E104 /* WhoViewController.swift */; };
 		42C7FF4623985B970075E104 /* ObjectiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF4523985B970075E104 /* ObjectiveViewController.swift */; };
+		42EB501523B4CAD200DEBD57 /* SubTitleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EB501423B4CAD200DEBD57 /* SubTitleClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		42C7FF4123985B4E0075E104 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		42C7FF4323985B620075E104 /* WhoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoViewController.swift; sourceTree = "<group>"; };
 		42C7FF4523985B970075E104 /* ObjectiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveViewController.swift; sourceTree = "<group>"; };
+		42EB501423B4CAD200DEBD57 /* SubTitleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTitleClass.swift; sourceTree = "<group>"; };
 		DEE4A7936E3C258576A02C1E /* Pods-AlohaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlohaIOS.release.xcconfig"; path = "Target Support Files/Pods-AlohaIOS/Pods-AlohaIOS.release.xcconfig"; sourceTree = "<group>"; };
 		F4B69D8B198CDCA75980FB00 /* Pods_AlohaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlohaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -199,6 +201,7 @@
 				42B212F5238C1B1100BC7000 /* ButtonClass.swift */,
 				42B21308238D430A00BC7000 /* TitleClass.swift */,
 				42B21306238C463F00BC7000 /* TextFieldClass.swift */,
+				42EB501423B4CAD200DEBD57 /* SubTitleClass.swift */,
 				42C3F07D239FEAA50038C34B /* MaskField.swift */,
 			);
 			path = CustomView;
@@ -352,6 +355,7 @@
 				42B212F4238C171600BC7000 /* BaseViewController.swift in Sources */,
 				42C7FF2F239857000075E104 /* Visitor.swift in Sources */,
 				420F7B5D23A2EDA400E4796C /* AutoComplete.swift in Sources */,
+				42EB501523B4CAD200DEBD57 /* SubTitleClass.swift in Sources */,
 				425A2F3A238862CD009828A4 /* AppDelegate.swift in Sources */,
 				42C7FF4023985B3B0075E104 /* DataViewController.swift in Sources */,
 				42C7FF33239857430075E104 /* FormValidation.swift in Sources */,

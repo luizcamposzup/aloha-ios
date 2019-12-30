@@ -11,10 +11,16 @@ import UIKit
 
 class ConfirmViewController: BaseViewController {
     
+    
+    @IBOutlet weak var confirmTitleTextLabel: TitleClass!
+    
     var page = FlowData.flowInstance.getLastPage()
+    var zupperName = ZupperFlow.zupperInstance.getUZupperName()
+    var userName = UserFlow.userInstance.getUserName()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTextLabel()
         print(UserFlow.userInstance.getUserName())
         print(UserFlow.userInstance.getUserEmail())
         print(UserFlow.userInstance.getUserPhone())
@@ -65,4 +71,10 @@ class ConfirmViewController: BaseViewController {
         alert.addAction(acceptActionNo)
         self.present(alert, animated: true)
     }
+    
+    func setTextLabel(){
+        let text = "\(userName) confirma a visita com \(zupperName)"
+        confirmTitleTextLabel.text = text
+    }
+    
 }

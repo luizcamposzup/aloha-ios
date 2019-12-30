@@ -48,6 +48,7 @@ class EmailViewController: BaseViewController {
     //Call to API
     func verifyIfEmailInApi(email: String) -> Bool{
         if email == "luizhcarminati@gmail.com" || email == "lz___@hotmail.com" {
+            UserFlow.userInstance.setUserName(name: "Luiz Henrique")
             return true
         } else { return false }
     }

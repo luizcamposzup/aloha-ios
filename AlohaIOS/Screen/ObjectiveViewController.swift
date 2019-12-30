@@ -11,10 +11,17 @@ import UIKit
 
 class ObjectiveViewController: BaseViewController {
     
+    @IBOutlet weak var titleTextLabel: TitleClass!
+    @IBOutlet weak var subTitleTextLabel: SubTitleClass!
+    
+    
     var page : String = ""
+    var email = FlowData.flowInstance.getIsEmailRegistered()
+    var userName = UserFlow.userInstance.getUserName()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        changeTextLabel()
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
@@ -31,15 +38,25 @@ class ObjectiveViewController: BaseViewController {
     func doSomethingDependingOnWhoSent(_ senderTag: Int) {
         FlowData.flowInstance.pushLastPage(ToAppendInArray: "WhoViewController")
         callView(controller: "WhoViewController")
-//         switch senderTag {
-//              case 0 : callView(controller: "WhoViewController");
-//              case 1 : callView(controller: "WhoViewController")
+        
+//         switch SomethingDependingOnWhoSent  {
+//            case user == true : callView(controller: "WhoViewController");
+//            case user == false callView(controller: "WhoViewController");
 //              case 2 : callView(controller: "WhoViewController")
 //              case 3 : callView(controller: "WhoViewController")
 //              case 4: callView(controller: "WhoViewController")
 //              case 5: callView(controller: "WhoViewController")
 //              default: break
 //         }
+    }
+    
+    func changeTextLabel() {
+        if email == true {
+            let text = "Hey \(userName), então você já é de casa."
+            let subText = "Qual sua missão hoje?"
+            titleTextLabel.text = text
+            subTitleTextLabel.text = subText
+        }
     }
     
 }
