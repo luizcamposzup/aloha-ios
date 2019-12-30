@@ -13,6 +13,7 @@ struct FlowData {
     static var flowInstance = FlowData()
     var lastPage : [String] = []
     var isEmailRegistered = false
+    var resgisteredUser = false
     
     func getLastPage() -> String {
         if let last = lastPage.last {
@@ -38,12 +39,20 @@ struct FlowData {
     
     mutating func setEmailRegistered(status: Bool) {
         isEmailRegistered = status
+        setResgisteredUser(user: status)
     }
     
     func getIsEmailRegistered() -> Bool {
         return isEmailRegistered
     }
     
+    mutating func setResgisteredUser (user : Bool){
+        resgisteredUser = user
+    }
+    
+    func getResgisteredUser() -> Bool {
+        return resgisteredUser
+    }
     
 }
 

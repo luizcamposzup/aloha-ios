@@ -29,6 +29,7 @@ class WhoViewController: BaseViewController {
             dropDownTop.show { (str, index) in
                 print("string : \(str) and Index : \(index)")
                 self.nameTextField.text = str
+                ZupperFlow.zupperInstance.setZupperName(name: str)
             }
         }
     
