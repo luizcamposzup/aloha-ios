@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct Visitor {
-    let name:String!
-    let email:String!
+struct Visitor : Codable{
+    var id: Int?
+    var name:String!
+    var email:String!
+    var telephone: String!
+    var company: String?
+    var photo: String?
 }

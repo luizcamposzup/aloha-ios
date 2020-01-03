@@ -18,25 +18,27 @@ class WhoViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addDropDown()
+        let listZupperOnlyName = ListZupper.listZupperInstance.getListZupperOnlyName()
+        addDropDown(listNameToSetInTextField: listZupperOnlyName)
     }
     
-    func addDropDown(){
+    func addDropDown(listNameToSetInTextField: [String]){
             let dropDownTop = AutoComplete()
-            dropDownTop.dataSource = getZuppersFromAPI()
+            dropDownTop.dataSource = listNameToSetInTextField
             dropDownTop.onTextField = nameTextField
             dropDownTop.onView = self.view
             dropDownTop.show { (str, index) in
                 print("string : \(str) and Index : \(index)")
                 self.nameTextField.text = str
                 ZupperFlow.zupperInstance.setZupperName(name: str)
+                ZupperFlow.zupperInstance.setZupperIndexList(indexToSet: index)
             }
         }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
         FlowData.flowInstance.popLastPage()
         page = FlowData.flowInstance.getLastPage()
-        callView(controller: page)
+        call(viewController: page)
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
@@ -49,22 +51,13 @@ class WhoViewController: BaseViewController {
         }
     }
     
-    func getZuppersFromAPI() -> [String] {
-        var list = [String]()
-        var load = Load()
-        for zupper in load.loadZuppers() {
-            list.append(String(zupper.name))
-        }
-        return list
-    }
-    
     func goToConfirmScreen() {
-        callView(controller: "ConfirmViewController")
+        call(viewController: "ConfirmViewController")
         FlowData.flowInstance.pushLastPage(ToAppendInArray: "ConfirmViewController")
     }
     
     func goToDataScreen() {
-        callView(controller: "DataViewController")
+        call(viewController: "DataViewController")
         FlowData.flowInstance.pushLastPage(ToAppendInArray: "DataViewController")
     }
     

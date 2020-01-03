@@ -11,10 +11,10 @@ import UIKit
 
 class EmailViewController: BaseViewController {
     
-    var page : String = ""
+    var page = ""
+    var emailText: String?
     
     @IBOutlet weak var emailTextField: TextFieldClass!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,35 +22,79 @@ class EmailViewController: BaseViewController {
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        callView(controller: "WelcomeViewController")
+        call(viewController: "WelcomeViewController")
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
-        let emailText = emailTextField.text
+        emailText = emailTextField.text
         if !FormValidation.isValidEmail(email: emailText) {
             let alert = Alert.showAlertError(messageError: "Informe um email válido")
             self.present(alert, animated: true, completion: nil)
             return
         }
-        //Save if email is Zupper or registered
         UserFlow.userInstance.setUserEmail(email: emailText!)
         FlowData.flowInstance.setEmailRegistered(status: verifyIfEmailIsRegistered(emailText!))
         FlowData.flowInstance.pushLastPage(ToAppendInArray: "ObjectiveViewController")
-        callView(controller: "ObjectiveViewController")
+        call(viewController: "ObjectiveViewController")
     }
     
     func verifyIfEmailIsRegistered(_ email: String) -> Bool {
-        if FormValidation.isValidEmailZupper(email: email) || verifyIfEmailInApi(email: email) {
-            return true
-        } else { return false }
+        var result = false
+        if (FormValidation.isValidEmailZupper(email: email)) {
+            result = isVerifyEmailZupperInList(email)
+        } else {
+            result = requestIsEmailRegistered(email)
+        }
+        return result
     }
     
-    //Call to API
-    func verifyIfEmailInApi(email: String) -> Bool{
-        if email == "luizhcarminati@gmail.com" || email == "lz___@hotmail.com" {
-            UserFlow.userInstance.setUserName(name: "Luiz Henrique")
-            return true
-        } else { return false }
+    private func isVerifyEmailZupperInList(_ emailToVerify: String) -> Bool {
+        var result = false
+        let listZupper = ListZupper.listZupperInstance.getListZupperComplete()
+        for zupper in listZupper {
+            if zupper.email != nil && emailToVerify.contains(zupper.email!) {
+                UserFlow.userInstance.setUserName(name: zupper.fullName)
+                print("Email registered in Database")
+                result = true
+                break
+            }
+        }
+        return result
     }
     
+    private func requestIsEmailRegistered(_ emailToVerify: String) -> Bool {
+        var resultRequest = false
+        
+        let alertLoading = Alert.showAlertInfo(title: "Email", messageSuccess: "Checking if email is registered in database...")
+        self.present(alertLoading, animated: true)
+        
+        ApiRequest.defaultRequest.getListVisitors(completion: {result in
+                switch result {
+                case .success(let successGetListVisitors):
+                    resultRequest = self.verifyIf(emailIsRegistered: emailToVerify, listToVerify: successGetListVisitors)
+                    DispatchQueue.main.async {
+                        alertLoading.dismiss(animated: true, completion: nil)
+                        print("End Request Get List Visitors")
+                    }
+                case .failure(let error):
+                    let alertError = Alert.showAlertError(messageError: "Error while updating database")
+                    self.present(alertError, animated: true)
+                    print("Ocorreu um erro: \(error)")
+                }
+        })
+        return resultRequest
+    }
+    
+    private func verifyIf(emailIsRegistered: String, listToVerify: [Visitor]) -> Bool {
+        var result = false
+        for zupper in listToVerify {
+            if emailIsRegistered.contains(zupper.email) {
+                UserFlow.userInstance.setUserName(name: zupper.name)
+                print("Email registered in Database")
+                result = true
+                break
+            }
+        }
+        return result
+    }
 }

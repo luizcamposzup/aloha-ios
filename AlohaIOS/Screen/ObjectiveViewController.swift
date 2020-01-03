@@ -14,7 +14,6 @@ class ObjectiveViewController: BaseViewController {
     @IBOutlet weak var titleTextLabel: TitleClass!
     @IBOutlet weak var subTitleTextLabel: SubTitleClass!
     
-    
     var page : String = ""
     var email = FlowData.flowInstance.getIsEmailRegistered()
     var userName = UserFlow.userInstance.getUserName()
@@ -27,7 +26,7 @@ class ObjectiveViewController: BaseViewController {
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
         FlowData.flowInstance.popLastPage()
         page = FlowData.flowInstance.getLastPage()
-        callView(controller: page)
+        call(viewController: page)
     }
     
     
@@ -37,7 +36,7 @@ class ObjectiveViewController: BaseViewController {
     
     func doSomethingDependingOnWhoSent(_ senderTag: Int) {
         FlowData.flowInstance.pushLastPage(ToAppendInArray: "WhoViewController")
-        callView(controller: "WhoViewController")
+        call(viewController: "WhoViewController")
         
 //         switch SomethingDependingOnWhoSent  {
 //            case user == true : callView(controller: "WhoViewController");

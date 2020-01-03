@@ -85,7 +85,7 @@ class PhotoViewController: BaseViewController {
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
         FlowData.flowInstance.popLastPage()
         page = FlowData.flowInstance.getLastPage()
-        callView(controller: page)
+        call(viewController: page)
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
@@ -98,7 +98,7 @@ class PhotoViewController: BaseViewController {
     @IBAction func jumpViewControllerWhenButtonTouchUpInside(_ sender: Any) {
 
         FlowData.flowInstance.pushLastPage(ToAppendInArray: "ConfirmViewController")
-        callView(controller: "ConfirmViewController")
+        call(viewController: "ConfirmViewController")
     }
     
     

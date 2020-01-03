@@ -11,7 +11,6 @@
 		420F7B5D23A2EDA400E4796C /* AutoComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F7B5C23A2EDA400E4796C /* AutoComplete.swift */; };
 		420F7B5F23A2EDC100E4796C /* AutoCompleteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F7B5E23A2EDC100E4796C /* AutoCompleteViewCell.swift */; };
 		420F7B6123A2EE9D00E4796C /* AutoCompleteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 420F7B6023A2EE9D00E4796C /* AutoCompleteViewCell.xib */; };
-		423E3A3423A42B4400B7A841 /* Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E3A3323A42B4400B7A841 /* Load.swift */; };
 		425A2F3A238862CD009828A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A2F39238862CD009828A4 /* AppDelegate.swift */; };
 		425A2F3C238862CD009828A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A2F3B238862CD009828A4 /* SceneDelegate.swift */; };
 		425A2F41238862CD009828A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425A2F3F238862CD009828A4 /* Main.storyboard */; };
@@ -21,6 +20,10 @@
 		4271F83623AA8A5D0028CF75 /* UserFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271F83523AA8A5D0028CF75 /* UserFlow.swift */; };
 		4271F83823AA8AD10028CF75 /* ZupperFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271F83723AA8AD10028CF75 /* ZupperFlow.swift */; };
 		427AC84F239E9BB9006CC402 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427AC84E239E9BB9006CC402 /* PreviewViewController.swift */; };
+		42A7C5D223BD7DAF0082806E /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7C5D123BD7DAF0082806E /* ApiRequest.swift */; };
+		42A7C5D423BD7F100082806E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7C5D323BD7F100082806E /* Notification.swift */; };
+		42A7C5D623BD7F9B0082806E /* Zupper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7C5D523BD7F9B0082806E /* Zupper.swift */; };
+		42A7C5D823BD80DB0082806E /* ListZupper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7C5D723BD80DB0082806E /* ListZupper.swift */; };
 		42B212F4238C171600BC7000 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B212F3238C171600BC7000 /* BaseViewController.swift */; };
 		42B212F6238C1B1100BC7000 /* ButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B212F5238C1B1100BC7000 /* ButtonClass.swift */; };
 		42B212FF238C428200BC7000 /* Diavlo_BLACK_II.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42B212FA238C428100BC7000 /* Diavlo_BLACK_II.otf */; };
@@ -49,7 +52,6 @@
 		420F7B5C23A2EDA400E4796C /* AutoComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoComplete.swift; sourceTree = "<group>"; };
 		420F7B5E23A2EDC100E4796C /* AutoCompleteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteViewCell.swift; sourceTree = "<group>"; };
 		420F7B6023A2EE9D00E4796C /* AutoCompleteViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoCompleteViewCell.xib; sourceTree = "<group>"; };
-		423E3A3323A42B4400B7A841 /* Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Load.swift; sourceTree = "<group>"; };
 		425A2F36238862CD009828A4 /* AlohaIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlohaIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		425A2F39238862CD009828A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		425A2F3B238862CD009828A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,10 @@
 		4271F83523AA8A5D0028CF75 /* UserFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFlow.swift; sourceTree = "<group>"; };
 		4271F83723AA8AD10028CF75 /* ZupperFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZupperFlow.swift; sourceTree = "<group>"; };
 		427AC84E239E9BB9006CC402 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		42A7C5D123BD7DAF0082806E /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		42A7C5D323BD7F100082806E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		42A7C5D523BD7F9B0082806E /* Zupper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zupper.swift; sourceTree = "<group>"; };
+		42A7C5D723BD80DB0082806E /* ListZupper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListZupper.swift; sourceTree = "<group>"; };
 		42B212F3238C171600BC7000 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		42B212F5238C1B1100BC7000 /* ButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClass.swift; sourceTree = "<group>"; };
 		42B212FA238C428100BC7000 /* Diavlo_BLACK_II.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Diavlo_BLACK_II.otf; sourceTree = "<group>"; };
@@ -111,7 +117,7 @@
 		423E3A3223A4295400B7A841 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				423E3A3323A42B4400B7A841 /* Load.swift */,
+				42A7C5D123BD7DAF0082806E /* ApiRequest.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -179,6 +185,9 @@
 				4271F83323AA88780028CF75 /* FlowData.swift */,
 				4271F83523AA8A5D0028CF75 /* UserFlow.swift */,
 				4271F83723AA8AD10028CF75 /* ZupperFlow.swift */,
+				42A7C5D323BD7F100082806E /* Notification.swift */,
+				42A7C5D523BD7F9B0082806E /* Zupper.swift */,
+				42A7C5D723BD80DB0082806E /* ListZupper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -342,10 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A7C5D223BD7DAF0082806E /* ApiRequest.swift in Sources */,
 				4271F83623AA8A5D0028CF75 /* UserFlow.swift in Sources */,
 				4271F83823AA8AD10028CF75 /* ZupperFlow.swift in Sources */,
 				42B212F6238C1B1100BC7000 /* ButtonClass.swift in Sources */,
 				4271F83423AA88780028CF75 /* FlowData.swift in Sources */,
+				42A7C5D623BD7F9B0082806E /* Zupper.swift in Sources */,
 				42C7FF38239859680075E104 /* WelcomeViewController.swift in Sources */,
 				42C7FF3C23985B150075E104 /* ConfirmViewController.swift in Sources */,
 				42C7FF4223985B4E0075E104 /* EmailViewController.swift in Sources */,
@@ -353,14 +364,15 @@
 				42B21309238D430A00BC7000 /* TitleClass.swift in Sources */,
 				42C7FF4623985B970075E104 /* ObjectiveViewController.swift in Sources */,
 				42B212F4238C171600BC7000 /* BaseViewController.swift in Sources */,
+				42A7C5D823BD80DB0082806E /* ListZupper.swift in Sources */,
 				42C7FF2F239857000075E104 /* Visitor.swift in Sources */,
 				420F7B5D23A2EDA400E4796C /* AutoComplete.swift in Sources */,
 				42EB501523B4CAD200DEBD57 /* SubTitleClass.swift in Sources */,
 				425A2F3A238862CD009828A4 /* AppDelegate.swift in Sources */,
 				42C7FF4023985B3B0075E104 /* DataViewController.swift in Sources */,
 				42C7FF33239857430075E104 /* FormValidation.swift in Sources */,
-				423E3A3423A42B4400B7A841 /* Load.swift in Sources */,
 				42C7FF3A23985A690075E104 /* Alert.swift in Sources */,
+				42A7C5D423BD7F100082806E /* Notification.swift in Sources */,
 				42B21307238C463F00BC7000 /* TextFieldClass.swift in Sources */,
 				425A2F3C238862CD009828A4 /* SceneDelegate.swift in Sources */,
 				420F7B5F23A2EDC100E4796C /* AutoCompleteViewCell.swift in Sources */,

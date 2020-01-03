@@ -23,7 +23,7 @@ class TextFieldClass: MaskField {
         
         let borderField : UIColor = UIColor(named: "zupGreen")!
         
-        tintColor = UIColor.white
+        tintColor = UIColor.black
         textColor = UIColor(named: "zupBlue")
         font = UIFont(name: "DiavloBook-Regular", size: 20)
         backgroundColor = UIColor(named: "textBoxColor")
@@ -31,12 +31,11 @@ class TextFieldClass: MaskField {
         layer.borderColor = borderField.cgColor
         layer.borderWidth = 3.0
         layer.cornerRadius = 15.0
+        
         clipsToBounds = true
         
         let placeholder = self.placeholder != nil ? self.placeholder! : ""
         let placeholderFont = UIFont(name: "DiavloBook-Regular", size: 20)
         attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.font: placeholderFont as Any])
-        
-        
      }
 }
