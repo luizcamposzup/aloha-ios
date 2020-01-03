@@ -24,7 +24,7 @@ class DataViewController: BaseViewController {
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
         FlowData.flowInstance.popLastPage()
         page = FlowData.flowInstance.getLastPage()
-        callView(controller: page)
+        call(viewController: page)
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
@@ -38,11 +38,28 @@ class DataViewController: BaseViewController {
             UserFlow.userInstance.setUserPhone(phone: phone)
             UserFlow.userInstance.setUserCompany(company: company)
             
-            FlowData.flowInstance.pushLastPage(ToAppendInArray: "PhotoViewController")
-            callView(controller: "PhotoViewController")
+            let email = UserFlow.userInstance.getUserEmail()
+            
+            registerVisitor(name: name, email: email, telephone: phone, company: company, photo: "photoURL")
+            
+            FlowData.flowInstance.pushLastPage(ToAppendInArray: "ConfirmViewController")
+            call(viewController: "ConfirmViewController")
         } else {
             let alert = Alert.showAlertError(messageError: "Informe os dados necessários")
             self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    private func registerVisitor(name: String, email: String, telephone: String, company: String, photo: String) {
+        let visitorForRegister = Visitor(name: name, email: email, telephone: telephone, company: company, photo: photo)
+        let registerRequest = ApiRequest()
+        registerRequest.registerVisitorRequest(visitorForRegister, completion: { result in
+                switch result {
+                case .success(let successNotification):
+                    print("Visita registrada")
+                case .failure(let error):
+                    print("Visita registrada: \(error)")
+                }
+        })
     }
 }

@@ -38,9 +38,9 @@ class BaseViewController: UIViewController {
         
     }
     
-    func callView(controller: String) {
+    func call(viewController: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: controller)
+        let secondVC = storyboard.instantiateViewController(identifier: viewController)
         show(secondVC, sender: self)
     }
 }

@@ -25,11 +25,11 @@ class PreviewViewController: BaseViewController {
     }
     
     @IBAction func noButton(_ sender: Any) {
-        callView(controller: page)
+        call(viewController: page)
     }
     
     @IBAction func yesButton(_ sender: Any) {
-        callView(controller: "ConfirmViewController")
+        call(viewController: "ConfirmViewController")
     }
     
     func setupPhotoPreviewLayer(){
