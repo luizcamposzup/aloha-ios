@@ -20,7 +20,6 @@ class PhotoViewController: BaseViewController {
     var photoOutput: AVCapturePhotoOutput?
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     var image : UIImage?
-    var page : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +40,7 @@ class PhotoViewController: BaseViewController {
     }
 
     @IBAction func jumpViewControllerWhenButtonTouchUpInside(_ sender: Any) {
-        nextViewController(vc: "ConfirmViewController")
+        nextViewController(vc: "PreviewViewController")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
