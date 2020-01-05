@@ -30,7 +30,6 @@ struct ApiRequest {
             guard let resourceURL = URL(string: url) else {fatalError()}
             var urlRequest = URLRequest(url: resourceURL)
             urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            
             let dataTask = setConfiguration.dataTask(with: urlRequest) {data, response, _ in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200,
                 let jsonData = data else {
@@ -53,11 +52,9 @@ struct ApiRequest {
     func getListVisitors (completion: @escaping(Result<[Visitor], APIError>) -> Void) {
         do {
             let url = "https://aloha-backend-dev.continuousplatform.com/api/zup-aloha/all"
-            
             guard let resourceURL = URL(string: url) else {fatalError()}
             var urlRequest = URLRequest(url: resourceURL)
             urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            
             let dataTask = setConfiguration.dataTask(with: urlRequest) {data, response, _ in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200,
                 let jsonData = data else {
@@ -81,13 +78,11 @@ struct ApiRequest {
                        completion: @escaping(Result<Visitor, APIError>) -> Void) {
         do {
             let url = "https://aloha-backend-dev.continuousplatform.com/api/zup-aloha/people"
-            
             guard let resourceURL = URL(string: url) else {fatalError()}
             var urlRequest = URLRequest(url: resourceURL)
             urlRequest.httpMethod = "POST"
             urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
             urlRequest.httpBody = try JSONEncoder().encode(visitorForRegister)
-
             let dataTask = setConfiguration.dataTask(with: urlRequest) {data, response, _ in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 201,
                 let jsonData = data else {
@@ -97,9 +92,6 @@ struct ApiRequest {
                 do {
                     let registerData = try JSONDecoder().decode(Visitor.self, from: jsonData)
                     completion(.success(registerData))
-//                    DispatchQueue.main.async {
-//
-//                    }
                 } catch {
                     completion(.failure(.decodingProblem))
                 }
@@ -119,7 +111,6 @@ struct ApiRequest {
             urlRequest.httpMethod = "POST"
             urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
             urlRequest.httpBody = try JSONEncoder().encode(emailForNotification)
-
             let dataTask = setConfiguration.dataTask(with: urlRequest) {data, response, _ in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 201,
                 let jsonData = data else {

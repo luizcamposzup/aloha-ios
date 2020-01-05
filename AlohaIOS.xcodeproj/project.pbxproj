@@ -16,14 +16,13 @@
 		425A2F41238862CD009828A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425A2F3F238862CD009828A4 /* Main.storyboard */; };
 		425A2F43238862CF009828A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425A2F42238862CF009828A4 /* Assets.xcassets */; };
 		425A2F46238862CF009828A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425A2F44238862CF009828A4 /* LaunchScreen.storyboard */; };
-		4271F83423AA88780028CF75 /* FlowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271F83323AA88780028CF75 /* FlowData.swift */; };
-		4271F83623AA8A5D0028CF75 /* UserFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271F83523AA8A5D0028CF75 /* UserFlow.swift */; };
-		4271F83823AA8AD10028CF75 /* ZupperFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271F83723AA8AD10028CF75 /* ZupperFlow.swift */; };
+		4271F83623AA8A5D0028CF75 /* UserFlowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271F83523AA8A5D0028CF75 /* UserFlowData.swift */; };
+		4271F83823AA8AD10028CF75 /* ZupperFlowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271F83723AA8AD10028CF75 /* ZupperFlowData.swift */; };
 		427AC84F239E9BB9006CC402 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427AC84E239E9BB9006CC402 /* PreviewViewController.swift */; };
 		42A7C5D223BD7DAF0082806E /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7C5D123BD7DAF0082806E /* ApiRequest.swift */; };
-		42A7C5D423BD7F100082806E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7C5D323BD7F100082806E /* Notification.swift */; };
-		42A7C5D623BD7F9B0082806E /* Zupper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7C5D523BD7F9B0082806E /* Zupper.swift */; };
-		42A7C5D823BD80DB0082806E /* ListZupper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7C5D723BD80DB0082806E /* ListZupper.swift */; };
+		42A7C5D423BD7F100082806E /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7C5D323BD7F100082806E /* NotificationModel.swift */; };
+		42A7C5D623BD7F9B0082806E /* ZupperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7C5D523BD7F9B0082806E /* ZupperModel.swift */; };
+		42A7C5D823BD80DB0082806E /* ListFlowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7C5D723BD80DB0082806E /* ListFlowData.swift */; };
 		42B212F4238C171600BC7000 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B212F3238C171600BC7000 /* BaseViewController.swift */; };
 		42B212F6238C1B1100BC7000 /* ButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B212F5238C1B1100BC7000 /* ButtonClass.swift */; };
 		42B212FF238C428200BC7000 /* Diavlo_BLACK_II.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42B212FA238C428100BC7000 /* Diavlo_BLACK_II.otf */; };
@@ -34,7 +33,7 @@
 		42B21307238C463F00BC7000 /* TextFieldClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B21306238C463F00BC7000 /* TextFieldClass.swift */; };
 		42B21309238D430A00BC7000 /* TitleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B21308238D430A00BC7000 /* TitleClass.swift */; };
 		42C3F07E239FEAA50038C34B /* MaskField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3F07D239FEAA50038C34B /* MaskField.swift */; };
-		42C7FF2F239857000075E104 /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF2E239857000075E104 /* Visitor.swift */; };
+		42C7FF2F239857000075E104 /* VisitorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF2E239857000075E104 /* VisitorModel.swift */; };
 		42C7FF33239857430075E104 /* FormValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF32239857430075E104 /* FormValidation.swift */; };
 		42C7FF38239859680075E104 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF37239859680075E104 /* WelcomeViewController.swift */; };
 		42C7FF3A23985A690075E104 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7FF3923985A690075E104 /* Alert.swift */; };
@@ -59,14 +58,13 @@
 		425A2F42238862CF009828A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		425A2F45238862CF009828A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		425A2F47238862CF009828A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4271F83323AA88780028CF75 /* FlowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowData.swift; sourceTree = "<group>"; };
-		4271F83523AA8A5D0028CF75 /* UserFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFlow.swift; sourceTree = "<group>"; };
-		4271F83723AA8AD10028CF75 /* ZupperFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZupperFlow.swift; sourceTree = "<group>"; };
+		4271F83523AA8A5D0028CF75 /* UserFlowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFlowData.swift; sourceTree = "<group>"; };
+		4271F83723AA8AD10028CF75 /* ZupperFlowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZupperFlowData.swift; sourceTree = "<group>"; };
 		427AC84E239E9BB9006CC402 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		42A7C5D123BD7DAF0082806E /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
-		42A7C5D323BD7F100082806E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		42A7C5D523BD7F9B0082806E /* Zupper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zupper.swift; sourceTree = "<group>"; };
-		42A7C5D723BD80DB0082806E /* ListZupper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListZupper.swift; sourceTree = "<group>"; };
+		42A7C5D323BD7F100082806E /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		42A7C5D523BD7F9B0082806E /* ZupperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZupperModel.swift; sourceTree = "<group>"; };
+		42A7C5D723BD80DB0082806E /* ListFlowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFlowData.swift; sourceTree = "<group>"; };
 		42B212F3238C171600BC7000 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		42B212F5238C1B1100BC7000 /* ButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClass.swift; sourceTree = "<group>"; };
 		42B212FA238C428100BC7000 /* Diavlo_BLACK_II.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Diavlo_BLACK_II.otf; sourceTree = "<group>"; };
@@ -77,7 +75,7 @@
 		42B21306238C463F00BC7000 /* TextFieldClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldClass.swift; sourceTree = "<group>"; };
 		42B21308238D430A00BC7000 /* TitleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleClass.swift; sourceTree = "<group>"; };
 		42C3F07D239FEAA50038C34B /* MaskField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskField.swift; sourceTree = "<group>"; };
-		42C7FF2E239857000075E104 /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
+		42C7FF2E239857000075E104 /* VisitorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorModel.swift; sourceTree = "<group>"; };
 		42C7FF32239857430075E104 /* FormValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidation.swift; sourceTree = "<group>"; };
 		42C7FF37239859680075E104 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		42C7FF3923985A690075E104 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -181,13 +179,12 @@
 		42C7FF2D239856F40075E104 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				42C7FF2E239857000075E104 /* Visitor.swift */,
-				4271F83323AA88780028CF75 /* FlowData.swift */,
-				4271F83523AA8A5D0028CF75 /* UserFlow.swift */,
-				4271F83723AA8AD10028CF75 /* ZupperFlow.swift */,
-				42A7C5D323BD7F100082806E /* Notification.swift */,
-				42A7C5D523BD7F9B0082806E /* Zupper.swift */,
-				42A7C5D723BD80DB0082806E /* ListZupper.swift */,
+				42C7FF2E239857000075E104 /* VisitorModel.swift */,
+				4271F83523AA8A5D0028CF75 /* UserFlowData.swift */,
+				4271F83723AA8AD10028CF75 /* ZupperFlowData.swift */,
+				42A7C5D323BD7F100082806E /* NotificationModel.swift */,
+				42A7C5D523BD7F9B0082806E /* ZupperModel.swift */,
+				42A7C5D723BD80DB0082806E /* ListFlowData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -352,11 +349,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				42A7C5D223BD7DAF0082806E /* ApiRequest.swift in Sources */,
-				4271F83623AA8A5D0028CF75 /* UserFlow.swift in Sources */,
-				4271F83823AA8AD10028CF75 /* ZupperFlow.swift in Sources */,
+				4271F83623AA8A5D0028CF75 /* UserFlowData.swift in Sources */,
+				4271F83823AA8AD10028CF75 /* ZupperFlowData.swift in Sources */,
 				42B212F6238C1B1100BC7000 /* ButtonClass.swift in Sources */,
-				4271F83423AA88780028CF75 /* FlowData.swift in Sources */,
-				42A7C5D623BD7F9B0082806E /* Zupper.swift in Sources */,
+				42A7C5D623BD7F9B0082806E /* ZupperModel.swift in Sources */,
 				42C7FF38239859680075E104 /* WelcomeViewController.swift in Sources */,
 				42C7FF3C23985B150075E104 /* ConfirmViewController.swift in Sources */,
 				42C7FF4223985B4E0075E104 /* EmailViewController.swift in Sources */,
@@ -364,15 +360,15 @@
 				42B21309238D430A00BC7000 /* TitleClass.swift in Sources */,
 				42C7FF4623985B970075E104 /* ObjectiveViewController.swift in Sources */,
 				42B212F4238C171600BC7000 /* BaseViewController.swift in Sources */,
-				42A7C5D823BD80DB0082806E /* ListZupper.swift in Sources */,
-				42C7FF2F239857000075E104 /* Visitor.swift in Sources */,
+				42A7C5D823BD80DB0082806E /* ListFlowData.swift in Sources */,
+				42C7FF2F239857000075E104 /* VisitorModel.swift in Sources */,
 				420F7B5D23A2EDA400E4796C /* AutoComplete.swift in Sources */,
 				42EB501523B4CAD200DEBD57 /* SubTitleClass.swift in Sources */,
 				425A2F3A238862CD009828A4 /* AppDelegate.swift in Sources */,
 				42C7FF4023985B3B0075E104 /* DataViewController.swift in Sources */,
 				42C7FF33239857430075E104 /* FormValidation.swift in Sources */,
 				42C7FF3A23985A690075E104 /* Alert.swift in Sources */,
-				42A7C5D423BD7F100082806E /* Notification.swift in Sources */,
+				42A7C5D423BD7F100082806E /* NotificationModel.swift in Sources */,
 				42B21307238C463F00BC7000 /* TextFieldClass.swift in Sources */,
 				425A2F3C238862CD009828A4 /* SceneDelegate.swift in Sources */,
 				420F7B5F23A2EDC100E4796C /* AutoCompleteViewCell.swift in Sources */,

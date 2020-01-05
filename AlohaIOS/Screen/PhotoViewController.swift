@@ -12,6 +12,7 @@ import AVFoundation
 
 class PhotoViewController: BaseViewController {
     
+    @IBOutlet weak var cameraView: UIView!
     var captureSession = AVCaptureSession()
     var backCamera : AVCaptureDevice?
     var frontCamera : AVCaptureDevice?
@@ -20,103 +21,75 @@ class PhotoViewController: BaseViewController {
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     var image : UIImage?
     var page : String = ""
-    
-    @IBOutlet weak var cameraView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupCaptureSession()
         setupDevice()
         setupInputOutput()
         setupPreviewLayer()
         startRunningCaptureSession()
-        
     }
-        func setupCaptureSession(){
-           captureSession.sessionPreset = AVCaptureSession.Preset.photo
-       }
 
-        func setupDevice(){
-           let devideDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
-           let devices = devideDiscoverySession.devices
-           
-           for device in devices {
-               if device.position == AVCaptureDevice.Position.front {
-                   self.frontCamera = device
-               } else if device.position == AVCaptureDevice.Position.back {
-                   self.backCamera = device
-               }
-           }
-           
-           currentCamera = frontCamera
-       }
-       
-        func setupInputOutput(){
-           do {
-             let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamera!)
-               captureSession.addInput(captureDeviceInput)
-               photoOutput = AVCapturePhotoOutput()
-               photoOutput?.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
-               captureSession.addOutput(photoOutput!)
-               
-           } catch {
-               print(error)
-           }
-           
-       }
-       
-        func setupPreviewLayer(){
-           cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-           cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-           cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-           cameraPreviewLayer?.frame = cameraView.bounds
-           
-           cameraView.layer.addSublayer(cameraPreviewLayer!)
-           cameraView.layer.masksToBounds = true
-           cameraView.layer.cornerRadius = self.cameraView.frame.height / 30.0
-           
-       }
-       
-        func startRunningCaptureSession(){
-           captureSession.startRunning()
-           
-       }
-    
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        FlowData.flowInstance.popLastPage()
-        page = FlowData.flowInstance.getLastPage()
-        call(viewController: page)
+        backToPreviousViewController()
     }
-    
+
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
         let settings = AVCapturePhotoSettings()
         photoOutput?.capturePhoto(with: settings, delegate: self)
-//        FlowData.flowInstance.setLastPage(lastPagee: "PhotoViewController")
-        //callNext(viewController: "ConfirmViewController")
     }
-    
-    @IBAction func jumpViewControllerWhenButtonTouchUpInside(_ sender: Any) {
 
-        FlowData.flowInstance.pushLastPage(ToAppendInArray: "ConfirmViewController")
-        call(viewController: "ConfirmViewController")
+    @IBAction func jumpViewControllerWhenButtonTouchUpInside(_ sender: Any) {
+        nextViewController(vc: "ConfirmViewController")
     }
-    
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if segue.identifier == "showPhotoSegue" {
                let previewVC = segue.destination as! PreviewViewController
                previewVC.image = self.image
            }
-           
-       }
+    }
        
-       override func didReceiveMemoryWarning() {
-           super.didReceiveMemoryWarning()
-       }
+    override func didReceiveMemoryWarning() { super.didReceiveMemoryWarning() }
     
+    private func setupCaptureSession() {
+           captureSession.sessionPreset = AVCaptureSession.Preset.photo
+    }
+
+    private func setupDevice() {
+       let devideDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
+       let devices = devideDiscoverySession.devices
+       for device in devices {
+           if device.position == AVCaptureDevice.Position.front { self.frontCamera = device }
+           else if device.position == AVCaptureDevice.Position.back { self.backCamera = device }
+       }
+       currentCamera = frontCamera
+    }
+       
+    private func setupInputOutput() {
+       do {
+         let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamera!)
+           captureSession.addInput(captureDeviceInput)
+           photoOutput = AVCapturePhotoOutput()
+           photoOutput?.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
+           captureSession.addOutput(photoOutput!)
+       } catch { print(error) }
+    }
+       
+    private func setupPreviewLayer() {
+       cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+       cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+       cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+       cameraPreviewLayer?.frame = cameraView.bounds
+       cameraView.layer.addSublayer(cameraPreviewLayer!)
+       cameraView.layer.masksToBounds = true
+       cameraView.layer.cornerRadius = self.cameraView.frame.height / 30.0
+    }
+
+    private func startRunningCaptureSession() { captureSession.startRunning() }
 }
-
-
+    
 extension PhotoViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if let imageData = photo.fileDataRepresentation() {

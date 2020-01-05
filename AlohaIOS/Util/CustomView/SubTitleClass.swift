@@ -19,11 +19,9 @@ class SubTitleClass: UILabel {
         setupLabel()
     }
     
-    func setupLabel() {
+    private func setupLabel() {
         textColor = UIColor.white
         textAlignment = NSTextAlignment.center
         font = UIFont(name: "DiavloBook-Regular", size: 30)
-    
     }
-
 }

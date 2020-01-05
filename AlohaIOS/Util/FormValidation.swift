@@ -17,7 +17,7 @@ class FormValidation {
         return emailPred.evaluate(with: email)
     }
     
-    static func isValidEmailZupper(email: String) -> Bool {
+    static func isDomainEmailZupper(email: String) -> Bool {
         return email.contains("@zup.com.br")
     }
     
@@ -30,6 +30,4 @@ class FormValidation {
         let textReceivedFromTextField: String! = textField.text
         return !textReceivedFromTextField.isEmpty
     }
-    
-    
 }

@@ -16,7 +16,3 @@ struct ZupperResponse: Codable {
     let fullName : String
     let email : String?
 }
-
-//struct ZupperContent {
-//    var content : ZupperContentResponse
-//}
