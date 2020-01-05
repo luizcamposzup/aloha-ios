@@ -31,7 +31,6 @@ class AutoComplete: UIView {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     // MARK: - Show DropDown
     public func show(completionHandler: @escaping CompletionHandler) {
         self.tableView?.frame = CGRect(x: 0, y: 0, width: onTextField.frame.width, height: 150)
@@ -77,6 +76,7 @@ class AutoComplete: UIView {
             }
         }
     }
+    
     @objc func didBeganText(textField: UITextField) {
         self.isShowView(is_show: true);
     }
@@ -87,7 +87,7 @@ class AutoComplete: UIView {
         self.tableView?.reloadData()
     }
     
-    func isShowView(is_show : Bool) {
+    private func isShowView(is_show : Bool) {
         if !self.isHidden && is_show{ return }
         if is_show {
             self.alpha = 0
@@ -109,7 +109,8 @@ class AutoComplete: UIView {
             }
         }
     }
-    func changeHeightForCount(count: Int){
+    
+    private func changeHeightForCount(count: Int) {
         if cellHeight == nil { return }
         var newFrame = self.frame
         newFrame.size.height = cellHeight * CGFloat(count)
@@ -117,7 +118,8 @@ class AutoComplete: UIView {
         self.tableView?.frame = CGRect(x: 0, y: 0, width: newFrame.width, height: newFrame.height)
         self.setNeedsLayout()
     }
-    func attributedText(withString string: String, boldString: String, font: UIFont) -> NSAttributedString {
+    
+    private func attributedText(withString string: String, boldString: String, font: UIFont) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: string,
                                                          attributes: [NSAttributedString.Key.font: font])
         let boldFontAttribute: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font.withSize(font.pointSize + 3)]
@@ -154,6 +156,7 @@ extension AutoComplete : UITableViewDataSource {
         self.changeHeightForCount(count: self.dataSource.count < 4 ? self.dataSource.count : 3)
         return self.dataSource.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AutoCompleteViewCell") as! AutoCompleteViewCell
         if is_filter {
@@ -161,7 +164,7 @@ extension AutoComplete : UITableViewDataSource {
         }else{
             cell.lblTitle.text = dataSource[indexPath.row]
         }
-        //
+
         let formattedString = self.attributedText(withString: cell.lblTitle.text!, boldString: onTextField.text!, font: onTextField.font!)
         cell.lblTitle.attributedText = formattedString
         return cell
@@ -178,6 +181,7 @@ extension AutoComplete {
         label.sizeToFit()
         return label.frame.height + 20
     }
+    
     @objc func keyboarDidShown(notification: NSNotification) {
         let info = notification.userInfo!
         let keyboardSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size

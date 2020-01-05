@@ -10,33 +10,25 @@ import UIKit
 
 class PreviewViewController: BaseViewController {
     
- 
     @IBOutlet weak var photo: UIImageView!
-    
-    var page = FlowData.flowInstance.getLastPage()
     var image : UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPhotoPreviewLayer()
         photo.image = self.image
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func noButton(_ sender: Any) {
-        call(viewController: page)
+        backToPreviousViewController()
     }
     
     @IBAction func yesButton(_ sender: Any) {
-        call(viewController: "ConfirmViewController")
+        nextViewController(vc: "ConfirmViewController")
     }
     
-    func setupPhotoPreviewLayer(){
-     
+    private func setupPhotoPreviewLayer() {
         photo.layer.masksToBounds = true
         photo.layer.cornerRadius = self.photo.frame.width / 30.0
-        
     }
-    
 }

@@ -12,38 +12,32 @@ import UIKit
 class ConfirmViewController: BaseViewController {
     
     @IBOutlet weak var confirmTitleTextLabel: TitleClass!
-    
-    var page = FlowData.flowInstance.getLastPage()
-    var zupperName = ZupperFlow.zupperInstance.getUZupperName()
-    var userName = UserFlow.userInstance.getUserName()
-    var userEmail = UserFlow.userInstance.getUserEmail()
-    
+    var zupperName = ZupperFlowData.zupperInstance.getZupperName()
+    var zupperEmail = ZupperFlowData.zupperInstance.getZupperEmail()
+    var userName = UserFlowData.userInstance.getUserName()
+    var userEmail = UserFlowData.userInstance.getUserEmail()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setTextLabel()
-        print(UserFlow.userInstance.getUserName())
-        print(UserFlow.userInstance.getUserEmail())
-        print(UserFlow.userInstance.getUserPhone())
-        print(UserFlow.userInstance.getUserCompany())
-        print(ZupperFlow.zupperInstance.getUZupperName())
-        print(ZupperFlow.zupperInstance.getZupperEmail())
+        print(UserFlowData.userInstance.getUserName())
+        print(UserFlowData.userInstance.getUserEmail())
+        print(UserFlowData.userInstance.getUserPhone())
+        print(UserFlowData.userInstance.getUserCompany())
+        print(ZupperFlowData.zupperInstance.getZupperName())
+        print(ZupperFlowData.zupperInstance.getZupperEmail())
     }
     
-    @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        FlowData.flowInstance.popLastPage()
-        page = FlowData.flowInstance.getLastPage()
-        call(viewController: page)
-    }
+    @IBAction func backViewControllerWhenButtonTouchUpInside() { backToPreviousViewController() }
     
     @IBAction func confirmVisitWhenButtonTouchUpInside() {
-        //Call function notification to API
-        sendNotification(name: userName, email: userEmail)
+        sendNotification(name: userName, email: zupperEmail)
     }
     
     @IBAction func cancelVisitWhenButtonTouchUpInside() {
-        let alert = Alert.showAlertInfo(title: "ABORTAR", messageSuccess: "Cancelar visita \(zupperName)?")
+        let alert = Alert.showAlertInfo(title: "ABORTAR", messageSuccess: "Cancelar visita \(zupperName.split(separator: " ")[0])?")
         let acceptActionYes = UIAlertAction(title: "SIM", style: .default) { action in
-            self.call(viewController: "WelcomeViewController")
+            self.backToRootViewController()
         }
         let acceptActionNo = UIAlertAction(title: "NÃO", style: .cancel)
         alert.addAction(acceptActionYes)
@@ -51,21 +45,20 @@ class ConfirmViewController: BaseViewController {
         self.present(alert, animated: true)
     }
     
-    func setTextLabel(){
-        let text = "\(userName) confirma a visita com \(zupperName)"
+    private func setTextLabel() {
+        let text = "\(userName.split(separator: " ")[0]), confirma a visita com \(zupperName.split(separator: " ")[0]) ?"
         confirmTitleTextLabel.text = text
     }
     
-    private func sendNotification(name: String, email: String) -> Bool {
+    private func sendNotification(name: String, email: String) {
         let alert = Alert.showAlertLoading(messageLoading: "Sending notification...")
         present(alert, animated: true)
-        var resultNotification = false
         let emailForNotification = NotificationRequest(name:  name, email: email )
         let notificationRequest = ApiRequest()
             notificationRequest.notificationRequest(emailForNotification, completion: { result in
                 switch result {
                 case .success(let successNotification):
-                    DispatchQueue.main.async {
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
                         alert.dismiss(animated: true, completion: nil)
                         print("Zupper notificado")
                         self.alertMessage(error: false)
@@ -73,25 +66,26 @@ class ConfirmViewController: BaseViewController {
                 case .failure(let error):
                     alert.dismiss(animated: true, completion: nil)
                     self.alertMessage(error: true)
-                    resultNotification = false
                     print("Ocorreu um erro: \(error)")
                 }
         })
-        return resultNotification
     }
     
     private func alertMessage(error: Bool) {
+        var status = false
+        var title: String
         var message: String
         if(error) {
-            message = "Erro ao notificar \(zupperName)"
+            title = "CANCELADA"
+            message = "Erro ao notificar \(zupperName.split(separator: " ")[0])"
         } else {
-            message = "\(zupperName) foi notificado da sua visita. Aguarde na recepção"
+            title = "CONFIRMADA"
+            message = "\(zupperName.split(separator: " ")[0]) foi notificado da sua visita. Aguarde na recepção"
         }
-        var status = false
-        let alert = Alert.showAlertInfo(title: "CONFIRMADA", messageSuccess: message)
+        let alert = Alert.showAlertInfo(title: title, messageSuccess: message)
         let acceptAction = UIAlertAction(title: "OK", style: .default) { action in
                 status = true
-                self.call(viewController: "WelcomeViewController")
+                self.backToRootViewController()
         }
         alert.addAction(acceptAction)
         self.present(alert, animated: true)
@@ -99,7 +93,7 @@ class ConfirmViewController: BaseViewController {
         DispatchQueue.main.asyncAfter(deadline: when){
             if !status {
                 alert.dismiss(animated: true, completion: nil)
-                self.call(viewController: "WelcomeViewController")
+                self.backToRootViewController()
             }
         }
     }

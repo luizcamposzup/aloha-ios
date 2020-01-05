@@ -13,10 +13,9 @@ class ObjectiveViewController: BaseViewController {
     
     @IBOutlet weak var titleTextLabel: TitleClass!
     @IBOutlet weak var subTitleTextLabel: SubTitleClass!
-    
     var page : String = ""
-    var email = FlowData.flowInstance.getIsEmailRegistered()
-    var userName = UserFlow.userInstance.getUserName()
+    var email = UserFlowData.userInstance.getIsEmailRegistered()
+    var userName = UserFlowData.userInstance.getUserName()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +23,7 @@ class ObjectiveViewController: BaseViewController {
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        FlowData.flowInstance.popLastPage()
-        page = FlowData.flowInstance.getLastPage()
-        call(viewController: page)
+        backToPreviousViewController()
     }
     
     
@@ -34,9 +31,8 @@ class ObjectiveViewController: BaseViewController {
         doSomethingDependingOnWhoSent(sender.tag)
     }
     
-    func doSomethingDependingOnWhoSent(_ senderTag: Int) {
-        FlowData.flowInstance.pushLastPage(ToAppendInArray: "WhoViewController")
-        call(viewController: "WhoViewController")
+    private func doSomethingDependingOnWhoSent(_ senderTag: Int) {
+        nextViewController(vc: "WhoViewController")
         
 //         switch SomethingDependingOnWhoSent  {
 //            case user == true : callView(controller: "WhoViewController");
@@ -49,13 +45,12 @@ class ObjectiveViewController: BaseViewController {
 //         }
     }
     
-    func changeTextLabel() {
+    private func changeTextLabel() {
         if email == true {
-            let text = "Hey \(userName), então você já é de casa."
+            let text = "Hey \(userName.split(separator: " ")[0]), então você já é de casa."
             let subText = "Qual sua missão hoje?"
             titleTextLabel.text = text
             subTitleTextLabel.text = subText
         }
     }
-    
 }

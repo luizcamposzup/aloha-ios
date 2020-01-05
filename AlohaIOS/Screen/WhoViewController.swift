@@ -12,38 +12,21 @@ import UIKit
 class WhoViewController: BaseViewController {
     
     @IBOutlet weak var nameTextField: TextFieldClass!
-    
     var page : String = ""
-    var email = FlowData.flowInstance.getIsEmailRegistered()
+    var email = UserFlowData.userInstance.getIsEmailRegistered()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let listZupperOnlyName = ListZupper.listZupperInstance.getListZupperOnlyName()
+        let listZupperOnlyName = ListFlowData.listZupperInstance.getListZupperOnlyName()
         addDropDown(listNameToSetInTextField: listZupperOnlyName)
     }
     
-    func addDropDown(listNameToSetInTextField: [String]){
-            let dropDownTop = AutoComplete()
-            dropDownTop.dataSource = listNameToSetInTextField
-            dropDownTop.onTextField = nameTextField
-            dropDownTop.onView = self.view
-            dropDownTop.show { (str, index) in
-                print("string : \(str) and Index : \(index)")
-                self.nameTextField.text = str
-                ZupperFlow.zupperInstance.setZupperName(name: str)
-                ZupperFlow.zupperInstance.setZupperIndexList(indexToSet: index)
-            }
-        }
-    
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
-        FlowData.flowInstance.popLastPage()
-        page = FlowData.flowInstance.getLastPage()
-        call(viewController: page)
+        backToPreviousViewController()
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
         if(FormValidation.isValidTextFrom(textField: nameTextField)) {
-//            FlowData.flowInstance.setLastPage(lastPagee: "WhoViewController")
             email == true ? goToConfirmScreen() : goToDataScreen()
         } else {
             let alert = Alert.showAlertError(messageError:"Informe um nome")
@@ -51,15 +34,24 @@ class WhoViewController: BaseViewController {
         }
     }
     
-    func goToConfirmScreen() {
-        call(viewController: "ConfirmViewController")
-        FlowData.flowInstance.pushLastPage(ToAppendInArray: "ConfirmViewController")
+    private func addDropDown(listNameToSetInTextField: [String]){
+        let dropDownTop = AutoComplete()
+        dropDownTop.dataSource = listNameToSetInTextField
+        dropDownTop.onTextField = nameTextField
+        dropDownTop.onView = self.view
+        dropDownTop.show { (str, index) in
+            print("string : \(str) and Index : \(index)")
+            self.nameTextField.text = str
+            ZupperFlowData.zupperInstance.setZupperName(name: str)
+            ZupperFlowData.zupperInstance.setZupperEmail(indexListZupper: index)
+        }
     }
     
-    func goToDataScreen() {
-        call(viewController: "DataViewController")
-        FlowData.flowInstance.pushLastPage(ToAppendInArray: "DataViewController")
+    private func goToConfirmScreen() {
+        nextViewController(vc: "ConfirmViewController")
     }
     
-    
+    private func goToDataScreen() {
+        nextViewController(vc: "DataViewController")
+    }
 }
