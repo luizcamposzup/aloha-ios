@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="height" constant="70" id="C3R-2R-rxU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="continue"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFF-gC-trh">
                                 <rect key="frame" x="55" y="35" width="60" height="60"/>
@@ -114,13 +114,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8FT-Aa-5mC">
-                                <rect key="frame" x="55" y="498.5" width="700" height="481.5"/>
+                                <rect key="frame" x="55" y="512" width="700" height="468"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="3Kh-lt-WMq">
-                                        <rect key="frame" x="0.0" y="0.0" width="700" height="241"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="700" height="232"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yQ0-pF-mPH">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="210.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="206"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESC-M8-0LG">
                                                         <rect key="frame" x="15" y="0.0" width="170" height="170"/>
@@ -138,7 +138,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2Z-Kv-c1G">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="ByS-af-zbu"/>
                                                         </constraints>
@@ -149,7 +149,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aO3-LO-5oC">
-                                                <rect key="frame" x="265" y="0.0" width="170" height="241"/>
+                                                <rect key="frame" x="265" y="0.0" width="170" height="232"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNa-HE-CYj">
                                                         <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
@@ -167,7 +167,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departamento Pessoal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-YC-GqJ">
-                                                        <rect key="frame" x="0.0" y="180" width="170" height="61"/>
+                                                        <rect key="frame" x="0.0" y="180" width="170" height="52"/>
                                                         <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="26"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -175,7 +175,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Boi-Qg-jeP">
-                                                <rect key="frame" x="500" y="0.0" width="200" height="210.5"/>
+                                                <rect key="frame" x="500" y="0.0" width="200" height="206"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0J-bS-zSn">
                                                         <rect key="frame" x="15" y="0.0" width="170" height="170"/>
@@ -193,7 +193,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encomendas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09b-Hd-HBe">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="8qB-Jp-loV"/>
                                                         </constraints>
@@ -206,10 +206,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="WWz-9q-gxi">
-                                        <rect key="frame" x="0.0" y="271" width="700" height="210.5"/>
+                                        <rect key="frame" x="0.0" y="262" width="700" height="206"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mUD-6M-ejj">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="210.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="206"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i38-Yp-Osk">
                                                         <rect key="frame" x="15" y="0.0" width="170" height="170"/>
@@ -227,7 +227,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrevista" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH3-op-4Bf">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="XQH-gX-ObJ"/>
                                                         </constraints>
@@ -238,7 +238,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zt0-TV-80L">
-                                                <rect key="frame" x="265" y="0.0" width="170" height="210.5"/>
+                                                <rect key="frame" x="265" y="0.0" width="170" height="206"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sr2-NM-VeJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
@@ -256,7 +256,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fornecedores" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPW-Ez-QPF">
-                                                        <rect key="frame" x="0.0" y="180" width="170" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="180" width="170" height="26"/>
                                                         <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="26"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -264,7 +264,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7U2-Sn-yUY">
-                                                <rect key="frame" x="500" y="0.0" width="200" height="210.5"/>
+                                                <rect key="frame" x="500" y="0.0" width="200" height="206"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4B-Eg-flh">
                                                         <rect key="frame" x="15" y="0.0" width="170" height="170"/>
@@ -282,7 +282,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visita" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFR-O2-bbB">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="khX-vq-LmT"/>
                                                         </constraints>
@@ -312,7 +312,7 @@
                                     <action selector="backViewControllerWhenButtonTouchUpInside" destination="RSI-89-xrc" eventType="touchUpInside" id="Hdf-8k-9Bc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="o que te traz aqui?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4px-36-2mz" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="o que te traz na Zup?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4px-36-2mz" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
                                 <rect key="frame" x="110" y="175.5" width="590" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -478,7 +478,7 @@
                                     <constraint firstAttribute="height" constant="70" id="LjY-cy-1xe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Empresa (opcional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dyh-P9-rWP" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
                                 <rect key="frame" x="110" y="456.5" width="590" height="70"/>
@@ -486,7 +486,7 @@
                                     <constraint firstAttribute="height" constant="70" id="eDJ-MW-jIi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(  ) Telefone (WhatsApp)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z1n-gN-47o" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
                                 <rect key="frame" x="110" y="366.5" width="590" height="70"/>
@@ -494,7 +494,7 @@
                                     <constraint firstAttribute="height" constant="70" id="rl7-b8-6EZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" textContentType="tel"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="maskString" value="(NN) NNNNN-NNNN"/>
                                 </userDefinedRuntimeAttributes>
@@ -588,7 +588,7 @@
                                     <constraint firstAttribute="height" constant="70" id="kec-wc-YpC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" textContentType="email"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" assim podemos saber se ja te conhecemos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPc-8q-8CA" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
                                 <rect key="frame" x="110" y="181.5" width="590" height="20.5"/>
@@ -801,7 +801,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá visitante!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdy-PL-xMa">
-                                <rect key="frame" x="110" y="278" width="590" height="70"/>
+                                <rect key="frame" x="110" y="278" width="590" height="60"/>
                                 <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="60"/>
                                 <color key="textColor" name="textBoxColor"/>
                                 <nil key="highlightedColor"/>
