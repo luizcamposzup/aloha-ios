@@ -15,12 +15,47 @@ class DataViewController: BaseViewController {
     @IBOutlet weak var phoneTextField: TextFieldClass!
     @IBOutlet weak var companyTextField: TextFieldClass!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nameTextField.delegate = self
+        phoneTextField.delegate = self
+        companyTextField.delegate = self
+    }
+    
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
         backToPreviousViewController()
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
-        if(FormValidation.isValidTextFrom(textField: nameTextField) && FormValidation.isValidTextFrom(textField: phoneTextField)) {
+        processTextFieldInput()
+    }
+    
+    private func registerVisitor(name: String, email: String, telephone: String, company: String, photo: String) {
+        let alertLoading = Alert.showAlertLoading(messageLoading: "Saving data...")
+        present(alertLoading, animated: true)
+        let visitorForRegister = Visitor(name: name, email: email, telephone: telephone, company: company, photo: photo)
+        let registerRequest = ApiRequest()
+        registerRequest.registerVisitorRequest(visitorForRegister, completion: { result in
+                switch result {
+                case .success( _):
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+                        alertLoading.dismiss(animated: true, completion: nil)
+                        ListFlowData.listZupperInstance.setListVisitor(listToSet: [Visitor]())
+                        self.nextViewController(vc: "PhotoViewController")
+                    }
+                case .failure(let error):
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+                        alertLoading.dismiss(animated: true, completion: nil)
+                        let alert = Alert.showAlertError(messageError: "Erro while saving data")
+                        self.present(alert, animated: true, completion: nil)
+                        print("Visita não-registrada: \(error)")
+                    }
+                }
+        })
+    }
+    
+    func processTextFieldInput() {
+      if(FormValidation.isValidTextFrom(textField: nameTextField) && FormValidation.isValidTextFrom(textField: phoneTextField)) {
             let name = nameTextField.text!
             let phone = phoneTextField.text!
             var company = ""
@@ -36,27 +71,22 @@ class DataViewController: BaseViewController {
         }
     }
     
-    private func registerVisitor(name: String, email: String, telephone: String, company: String, photo: String) {
-        let alertLoading = Alert.showAlertLoading(messageLoading: "Saving data...")
-        present(alertLoading, animated: true)
-        let visitorForRegister = Visitor(name: name, email: email, telephone: telephone, company: company, photo: photo)
-        let registerRequest = ApiRequest()
-        registerRequest.registerVisitorRequest(visitorForRegister, completion: { result in
-                switch result {
-                case .success( _):
-                    DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-                        alertLoading.dismiss(animated: true, completion: nil)
-                        ListFlowData.listZupperInstance.setListVisitor(listToSet: [Visitor]())
-                        self.nextViewController(vc: "ConfirmViewController")
-                    }
-                case .failure(let error):
-                    DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-                        alertLoading.dismiss(animated: true, completion: nil)
-                        let alert = Alert.showAlertError(messageError: "Erro while saving data")
-                        self.present(alert, animated: true, completion: nil)
-                        print("Visita não-registrada: \(error)")
-                    }
-                }
-        })
-    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+           self.view.endEditing(true)
+       }
+       
+       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == nameTextField {
+           textField.resignFirstResponder()
+           phoneTextField.becomeFirstResponder()
+        } else if textField == phoneTextField {
+           textField.resignFirstResponder()
+           companyTextField.becomeFirstResponder()
+        } else if textField == companyTextField {
+           textField.resignFirstResponder()
+            processTextFieldInput()
+        }
+           return true
+       }
 }

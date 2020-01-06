@@ -40,7 +40,7 @@ class PhotoViewController: BaseViewController {
     }
 
     @IBAction func jumpViewControllerWhenButtonTouchUpInside(_ sender: Any) {
-        nextViewController(vc: "PreviewViewController")
+        nextViewController(vc: "ConfirmViewController")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -16,6 +16,7 @@ class EmailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
         if ListFlowData.listZupperInstance.getListVisitor().count == 0 { requestListVisitors() }
     }
     
@@ -24,16 +25,7 @@ class EmailViewController: BaseViewController {
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
-        let emailText = emailTextField.text
-        if FormValidation.isValidEmail(email: emailText!) {
-            if FormValidation.isDomainEmailZupper(email: emailText!) {
-                if isVerifyEmailZupperInList(emailText!) {
-                    callNextScene(emailUser: emailText!, statusRegister: true)
-                } else { showAlertErrorEmail() }
-            } else {
-                callNextScene(emailUser: emailText!, statusRegister: verifyVisitor(emailText!))
-            }
-        } else { showAlertErrorEmail() }
+       processTextFieldInput()
     }
     
     private func showAlertErrorEmail() {
@@ -91,4 +83,28 @@ class EmailViewController: BaseViewController {
         UserFlowData.userInstance.setEmailRegistered(status: statusRegister)
         nextViewController(vc: "ObjectiveViewController")
     }
+    
+    func processTextFieldInput() {
+        let emailText = emailTextField.text
+               if FormValidation.isValidEmail(email: emailText!) {
+                   if FormValidation.isDomainEmailZupper(email: emailText!) {
+                       if isVerifyEmailZupperInList(emailText!) {
+                           callNextScene(emailUser: emailText!, statusRegister: true)
+                       } else { showAlertErrorEmail() }
+                   } else {
+                       callNextScene(emailUser: emailText!, statusRegister: verifyVisitor(emailText!))
+                   }
+               } else { showAlertErrorEmail() }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        processTextFieldInput()
+        return true
+    }
+    
 }

@@ -12,11 +12,11 @@ import UIKit
 class WhoViewController: BaseViewController {
     
     @IBOutlet weak var nameTextField: TextFieldClass!
-    var page : String = ""
     var email = UserFlowData.userInstance.getIsEmailRegistered()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.delegate = self
         let listZupperOnlyName = ListFlowData.listZupperInstance.getListZupperOnlyName()
         addDropDown(listNameToSetInTextField: listZupperOnlyName)
     }
@@ -26,12 +26,7 @@ class WhoViewController: BaseViewController {
     }
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
-        if(FormValidation.isValidTextFrom(textField: nameTextField)) {
-            email == true ? goToConfirmScreen() : goToDataScreen()
-        } else {
-            let alert = Alert.showAlertError(messageError:"Informe um nome")
-            self.present(alert, animated: true, completion: nil)
-        }
+        processTextFieldInput()
     }
     
     private func addDropDown(listNameToSetInTextField: [String]){
@@ -44,6 +39,7 @@ class WhoViewController: BaseViewController {
             self.nameTextField.text = str
             ZupperFlowData.zupperInstance.setZupperName(name: str)
             ZupperFlowData.zupperInstance.setZupperEmail(indexListZupper: index)
+            self.nameTextField.resignFirstResponder()
         }
     }
     
@@ -54,4 +50,24 @@ class WhoViewController: BaseViewController {
     private func goToDataScreen() {
         nextViewController(vc: "DataViewController")
     }
+    
+    func processTextFieldInput() {
+        if(FormValidation.isValidTextFrom(textField: nameTextField)) {
+            email == true ? goToConfirmScreen() : goToDataScreen()
+        } else {
+            let alert = Alert.showAlertError(messageError:"Informe um nome")
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        processTextFieldInput()
+        return true
+    }
+
 }
