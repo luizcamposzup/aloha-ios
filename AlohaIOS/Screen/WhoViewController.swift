@@ -51,7 +51,7 @@ class WhoViewController: BaseViewController {
         nextViewController(vc: "DataViewController")
     }
     
-    func processTextFieldInput() {
+    private func processTextFieldInput() {
         if(FormValidation.isValidTextFrom(textField: nameTextField)) {
             email == true ? goToConfirmScreen() : goToDataScreen()
         } else {
@@ -64,7 +64,7 @@ class WhoViewController: BaseViewController {
         self.view.endEditing(true)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameTextField.resignFirstResponder()
         processTextFieldInput()
         return true

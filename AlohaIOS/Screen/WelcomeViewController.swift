@@ -13,15 +13,21 @@ class WelcomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if ListFlowData.listZupperInstance.getListZupperOnlyName().count == 0 { requestGetListZuppers() }
+        updateListZupper()
     }
     
     @IBAction func nextScreenWhenTouchUpInside(_ sender: Any) {
         nextViewController(vc: "EmailViewController")
     }
     
+    private func updateListZupper() {
+        if ListFlowData.listZupperInstance.getListZupperOnlyName().count == 0 {
+            requestGetListZuppers()
+        }
+    }
+    
     private func requestGetListZuppers() {
-        let alertLoading = Alert.showAlertLoading(messageLoading: "Updating Database...")
+        let alertLoading = Alert.showAlertLoading(messageLoading: "Atualizando base de dados...")
         present(alertLoading, animated: true)
         ApiRequest.defaultRequest.getListZuppers(completion: {result in
             switch result {
@@ -30,13 +36,13 @@ class WelcomeViewController: BaseViewController {
                     ListFlowData.listZupperInstance.setListZupperOnlyName(listToSet: self.filter(listToReturnZupperOnlyName: successGetListZuppers))
                     DispatchQueue.main.async {
                         alertLoading.dismiss(animated: true, completion: nil)
-                        let alertSuccess = Alert.showAlertAction(title: "Sucess", messageSuccess: "Database updated successfully")
+                        let alertSuccess = Alert.showAlertAction(title: "Sucesso", messageSuccess: "Base de dados atualizada")
                         self.present(alertSuccess, animated: true)
                         print("End Request Get List Zupper")
                     }
                 case .failure(let error):
                     alertLoading.dismiss(animated: true, completion: nil)
-                    let alertError = Alert.showAlertError(messageError: "Error while updating database")
+                    let alertError = Alert.showAlertError(messageError: "Não foi possível atualizar a base de dados")
                     self.present(alertError, animated: true)
                     print("Ocorreu um erro: \(error)")
             }

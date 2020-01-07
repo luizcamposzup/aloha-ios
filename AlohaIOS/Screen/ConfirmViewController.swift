@@ -35,7 +35,7 @@ class ConfirmViewController: BaseViewController {
     }
     
     @IBAction func cancelVisitWhenButtonTouchUpInside() {
-        let alert = Alert.showAlertInfo(title: "ABORTAR", messageSuccess: "Cancelar visita \(zupperName.split(separator: " ")[0])?")
+        let alert = Alert.showAlertInfo(title: "ABORTAR", messageSuccess: "Cancelar visita com \(zupperName.split(separator: " ")[0])?")
         let acceptActionYes = UIAlertAction(title: "SIM", style: .default) { action in
             self.backToRootViewController()
         }
@@ -51,7 +51,7 @@ class ConfirmViewController: BaseViewController {
     }
     
     private func sendNotification(name: String, email: String) {
-        let alert = Alert.showAlertLoading(messageLoading: "Sending notification...")
+        let alert = Alert.showAlertLoading(messageLoading: "Enviando notificação...")
         present(alert, animated: true)
         let emailForNotification = NotificationRequest(name:  name, email: email )
         let notificationRequest = ApiRequest()

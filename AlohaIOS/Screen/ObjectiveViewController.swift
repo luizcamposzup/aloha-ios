@@ -47,7 +47,10 @@ class ObjectiveViewController: BaseViewController {
     
     private func changeTextLabel() {
         if email == true {
-            let text = "Hey \(userName.split(separator: " ")[0]), então você já é de casa."
+            if(userName.contains(" ")) {
+                userName = String(userName.split(separator: " ")[0])
+            }
+            let text = "Hey \(userName), então você já é de casa."
             let subText = "Qual sua missão hoje?"
             titleTextLabel.text = text
             subTitleTextLabel.text = subText

@@ -39,9 +39,11 @@ class BaseViewController: UIViewController, UITextFieldDelegate {
     }
     
     func nextViewController(vc: String) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: vc)
-        navigationController?.pushViewController(vc, animated: true)
+        DispatchQueue.main.async() {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: vc)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func backToPreviousViewController() {

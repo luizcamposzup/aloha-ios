@@ -31,7 +31,7 @@ class DataViewController: BaseViewController {
     }
     
     private func registerVisitor(name: String, email: String, telephone: String, company: String, photo: String) {
-        let alertLoading = Alert.showAlertLoading(messageLoading: "Saving data...")
+        let alertLoading = Alert.showAlertLoading(messageLoading: "Salvando dados...")
         present(alertLoading, animated: true)
         let visitorForRegister = Visitor(name: name, email: email, telephone: telephone, company: company, photo: photo)
         let registerRequest = ApiRequest()
@@ -40,13 +40,12 @@ class DataViewController: BaseViewController {
                 case .success( _):
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
                         alertLoading.dismiss(animated: true, completion: nil)
-                        ListFlowData.listZupperInstance.setListVisitor(listToSet: [Visitor]())
                         self.nextViewController(vc: "PhotoViewController")
                     }
                 case .failure(let error):
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
                         alertLoading.dismiss(animated: true, completion: nil)
-                        let alert = Alert.showAlertError(messageError: "Erro while saving data")
+                        let alert = Alert.showAlertError(messageError: "Não foi possível salvar os dados")
                         self.present(alert, animated: true, completion: nil)
                         print("Visita não-registrada: \(error)")
                     }
@@ -54,7 +53,7 @@ class DataViewController: BaseViewController {
         })
     }
     
-    func processTextFieldInput() {
+    private func processTextFieldInput() {
       if(FormValidation.isValidTextFrom(textField: nameTextField) && FormValidation.isValidTextFrom(textField: phoneTextField)) {
             let name = nameTextField.text!
             let phone = phoneTextField.text!
@@ -73,20 +72,21 @@ class DataViewController: BaseViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
            self.view.endEditing(true)
-       }
+    }
        
-       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        if textField == nameTextField {
-           textField.resignFirstResponder()
-           phoneTextField.becomeFirstResponder()
-        } else if textField == phoneTextField {
-           textField.resignFirstResponder()
-           companyTextField.becomeFirstResponder()
-        } else if textField == companyTextField {
-           textField.resignFirstResponder()
-            processTextFieldInput()
+    private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+            case nameTextField:
+                 phoneTextField.becomeFirstResponder()
+            case phoneTextField:
+                 companyTextField.becomeFirstResponder()
+            case companyTextField:
+                 processTextFieldInput()
+            default:
+                 textField.resignFirstResponder()
+                 return true
         }
-           return true
-       }
+        textField.resignFirstResponder()
+        return true
+        }
 }
