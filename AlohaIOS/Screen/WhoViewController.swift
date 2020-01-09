@@ -17,8 +17,17 @@ class WhoViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
-        let listZupperOnlyName = ListFlowData.listZupperInstance.getListZupperOnlyName()
-        addDropDown(listNameToSetInTextField: listZupperOnlyName)
+    }
+    
+    @IBAction func nameTextFieldWatch() {
+        guard let nameInput = nameTextField.text else { return }
+        print(nameInput.count)
+        if nameInput.count == 0 {
+            
+        } else if nameInput.count > 2 {
+            print(nameInput)
+            requestGetListZuppers(wordOfName: nameInput)
+        }
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
@@ -29,16 +38,18 @@ class WhoViewController: BaseViewController {
         processTextFieldInput()
     }
     
-    private func addDropDown(listNameToSetInTextField: [String]){
+    private func addDropDown(listDataZupper: [ZupperResponse]) {
         let dropDownTop = AutoComplete()
-        dropDownTop.dataSource = listNameToSetInTextField
+        let listToSet = filter(listToReturnZupperOnlyName: listDataZupper)
+        dropDownTop.dataSource = listToSet
         dropDownTop.onTextField = nameTextField
         dropDownTop.onView = self.view
-        dropDownTop.show { (str, index) in
-            print("string : \(str) and Index : \(index)")
-            self.nameTextField.text = str
-            ZupperFlowData.zupperInstance.setZupperName(name: str)
-            ZupperFlowData.zupperInstance.setZupperEmail(indexListZupper: index)
+        dropDownTop.show { (name, index) in
+            print("string : \(name) and Index : \(index)")
+            self.nameTextField.text = name
+            let email = listDataZupper[index].email
+            ZupperFlowData.zupperInstance.setZupperName(name: name)
+            ZupperFlowData.zupperInstance.setZupperEmail(emailListZupper: email!)
             self.nameTextField.resignFirstResponder()
         }
     }
@@ -69,5 +80,32 @@ class WhoViewController: BaseViewController {
         processTextFieldInput()
         return true
     }
-
+    
+    private func requestGetListZuppers(wordOfName: String) {
+        ApiRequest.defaultRequest.getListZuppers(wordsOfNameToSearch: wordOfName, completion: {result in
+            switch result {
+                case .success(let successGetListZuppers):
+                    print("End Request Get List Zupper")
+                    print(successGetListZuppers)
+                    ListFlowData.listZupperInstance.setListZupperComplete(listToSet: successGetListZuppers)
+                    DispatchQueue.main.async {
+                        self.addDropDown(listDataZupper: successGetListZuppers.content)
+                    }
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        let alertError = Alert.showAlertError(messageError: "Erro na busca do nome")
+                        self.present(alertError, animated: true)
+                    }
+                    print("Ocorreu um erro: \(error)")
+            }
+        })
+    }
+    
+    private func filter(listToReturnZupperOnlyName: [ZupperResponse]) -> [String] {
+        var listZupperOnlyName = [String]()
+        for zupper in listToReturnZupperOnlyName {
+            listZupperOnlyName.append(zupper.fullName)
+        }
+        return listZupperOnlyName
+    }
 }

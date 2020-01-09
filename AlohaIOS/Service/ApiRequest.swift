@@ -12,6 +12,7 @@ enum APIError: Error {
     case responseProblem
     case decodingProblem
     case encodingProblem
+    case requestProblem
 }
 
 struct ApiRequest {
@@ -24,13 +25,21 @@ struct ApiRequest {
         return URLSession(configuration: sessionConfig)
     }
     
-    func getListZuppers (completion: @escaping(Result<ZupperContentResponse, APIError>) -> Void) {
+    func getListZuppers(wordsOfNameToSearch: String, completion: @escaping(Result<ZupperContentResponse, APIError>) -> Void) {
         do {
-            let url = "https://aloha-backend-dev.continuousplatform.com/customer"
-            guard let resourceURL = URL(string: url) else {fatalError()}
-            var urlRequest = URLRequest(url: resourceURL)
-            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            let dataTask = setConfiguration.dataTask(with: urlRequest) {data, response, _ in
+            var components = URLComponents()
+            components.scheme = "https"
+            components.host = "aloha-backend-dev.continuousplatform.com"
+            components.path = "/customer"
+            components.queryItems = [
+                URLQueryItem(name: "nameOrEmail", value: wordsOfNameToSearch),
+                URLQueryItem(name: "size", value: "5")
+            ]
+            guard let url = components.url else {
+                completion(.failure(.requestProblem))
+                return
+            }
+            let dataTask = setConfiguration.dataTask(with: url) {data, response, _ in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200,
                 let jsonData = data else {
                     completion(.failure(.responseProblem))
@@ -49,21 +58,59 @@ struct ApiRequest {
         }
     }
     
-    func getListVisitors (completion: @escaping(Result<[Visitor], APIError>) -> Void) {
+    func getZupper(emailZupperToSearch: String, completion: @escaping(Result<ZupperContentResponse, APIError>) -> Void) {
         do {
-            let url = "https://aloha-backend-dev.continuousplatform.com/api/zup-aloha/all"
-            guard let resourceURL = URL(string: url) else {fatalError()}
-            var urlRequest = URLRequest(url: resourceURL)
-            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            let dataTask = setConfiguration.dataTask(with: urlRequest) {data, response, _ in
+            var components = URLComponents()
+            components.scheme = "https"
+            components.host = "aloha-backend-dev.continuousplatform.com"
+            components.path = "/customer"
+            components.queryItems = [
+                URLQueryItem(name: "nameOrEmail", value: emailZupperToSearch),
+                URLQueryItem(name: "size", value: "1")
+            ]
+            guard let url = components.url else {
+                completion(.failure(.requestProblem))
+                return
+            }
+            let dataTask = setConfiguration.dataTask(with: url) {data, response, _ in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200,
                 let jsonData = data else {
                     completion(.failure(.responseProblem))
                     return
                 }
                 do {
-                    let getVisitorData = try JSONDecoder().decode([Visitor].self, from: jsonData)
-                    completion(.success(getVisitorData))
+                    let zupperData = try JSONDecoder().decode(ZupperContentResponse.self, from: jsonData)
+                    completion(.success(zupperData))
+                } catch {
+                    completion(.failure(.decodingProblem))
+                }
+            }
+            dataTask.resume()
+        } catch {
+            completion(.failure(.encodingProblem))
+        }
+    }
+    
+    func getVisitor(emailVisitorToSearch: String, completion: @escaping(Result<VisitorResponse, APIError>) -> Void) {
+        do {
+            var components = URLComponents()
+            components.scheme = "https"
+            components.host = "aloha-backend-dev.continuousplatform.com"
+            components.path = "/api/zup-aloha/email"
+            components.queryItems = [URLQueryItem(name: "email", value: emailVisitorToSearch)]
+            guard let url = components.url else {
+                completion(.failure(.requestProblem))
+                return
+            }
+            let dataTask = setConfiguration.dataTask(with: url) {data, response, _ in
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200,
+                let jsonData = data else {
+                    completion(.failure(.responseProblem))
+                    return
+                }
+                do {
+                    let visitorData = try JSONDecoder().decode(VisitorResponse.self, from: jsonData)
+                    completion(.success(visitorData))
                 } catch {
                     completion(.failure(.decodingProblem))
                 }
