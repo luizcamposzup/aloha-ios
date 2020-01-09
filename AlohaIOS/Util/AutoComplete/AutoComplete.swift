@@ -7,6 +7,20 @@
 
 import UIKit
 
+struct AutoCompleteData {
+    static let autoCompleteDataInstance = AutoCompleteData()
+    
+    var autoCompleteData = AutoComplete()
+    
+    mutating func setInstance(instance: AutoComplete) {
+        self.autoCompleteData = instance
+    }
+    
+    func getInstance() -> AutoComplete {
+        return autoCompleteData
+    }
+}
+
 class AutoComplete: UIView {
     public var dataSource = [String]()
     public var onTextField : UITextField!

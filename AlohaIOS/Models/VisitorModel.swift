@@ -16,3 +16,8 @@ struct Visitor : Codable{
     var company: String?
     var photo: String?
 }
+
+struct VisitorResponse : Codable{
+    var name:String!
+    var email:String!
+}

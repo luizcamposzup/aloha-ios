@@ -25,8 +25,7 @@ struct ZupperFlowData {
     
     mutating func setZupperIndexList (indexToSet: Int) { zupperIndexList = indexToSet }
        
-    mutating func setZupperEmail (indexListZupper : Int) {
-        let list = ListFlowData.listZupperInstance.getListZupperComplete()
-        zupperEmail = list[indexListZupper].email!
+    mutating func setZupperEmail (emailListZupper : String) {
+        zupperEmail = emailListZupper
     }
 }

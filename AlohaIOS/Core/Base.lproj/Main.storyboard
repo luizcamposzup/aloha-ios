@@ -46,6 +46,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                <connections>
+                                    <action selector="nameTextFieldWatch" destination="BYZ-38-t0r" eventType="editingChanged" id="lno-9X-jOn"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFF-gC-trh">
                                 <rect key="frame" x="55" y="35" width="60" height="60"/>
@@ -114,13 +117,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8FT-Aa-5mC">
-                                <rect key="frame" x="55" y="512" width="700" height="468"/>
+                                <rect key="frame" x="55" y="498.5" width="700" height="481.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="3Kh-lt-WMq">
-                                        <rect key="frame" x="0.0" y="0.0" width="700" height="232"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="700" height="241"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yQ0-pF-mPH">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="206"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="210.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESC-M8-0LG">
                                                         <rect key="frame" x="15" y="0.0" width="170" height="170"/>
@@ -138,7 +141,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2Z-Kv-c1G">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="30.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="ByS-af-zbu"/>
                                                         </constraints>
@@ -149,7 +152,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aO3-LO-5oC">
-                                                <rect key="frame" x="265" y="0.0" width="170" height="232"/>
+                                                <rect key="frame" x="265" y="0.0" width="170" height="241"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNa-HE-CYj">
                                                         <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
@@ -167,7 +170,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departamento Pessoal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-YC-GqJ">
-                                                        <rect key="frame" x="0.0" y="180" width="170" height="52"/>
+                                                        <rect key="frame" x="0.0" y="180" width="170" height="61"/>
                                                         <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="26"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -175,7 +178,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Boi-Qg-jeP">
-                                                <rect key="frame" x="500" y="0.0" width="200" height="206"/>
+                                                <rect key="frame" x="500" y="0.0" width="200" height="210.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0J-bS-zSn">
                                                         <rect key="frame" x="15" y="0.0" width="170" height="170"/>
@@ -193,7 +196,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encomendas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09b-Hd-HBe">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="30.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="8qB-Jp-loV"/>
                                                         </constraints>
@@ -206,10 +209,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="WWz-9q-gxi">
-                                        <rect key="frame" x="0.0" y="262" width="700" height="206"/>
+                                        <rect key="frame" x="0.0" y="271" width="700" height="210.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mUD-6M-ejj">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="206"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="210.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i38-Yp-Osk">
                                                         <rect key="frame" x="15" y="0.0" width="170" height="170"/>
@@ -227,7 +230,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrevista" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH3-op-4Bf">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="30.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="XQH-gX-ObJ"/>
                                                         </constraints>
@@ -238,7 +241,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zt0-TV-80L">
-                                                <rect key="frame" x="265" y="0.0" width="170" height="206"/>
+                                                <rect key="frame" x="265" y="0.0" width="170" height="210.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sr2-NM-VeJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
@@ -256,7 +259,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fornecedores" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPW-Ez-QPF">
-                                                        <rect key="frame" x="0.0" y="180" width="170" height="26"/>
+                                                        <rect key="frame" x="0.0" y="180" width="170" height="30.5"/>
                                                         <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="26"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -264,7 +267,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7U2-Sn-yUY">
-                                                <rect key="frame" x="500" y="0.0" width="200" height="206"/>
+                                                <rect key="frame" x="500" y="0.0" width="200" height="210.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4B-Eg-flh">
                                                         <rect key="frame" x="15" y="0.0" width="170" height="170"/>
@@ -282,7 +285,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visita" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFR-O2-bbB">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="30.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="khX-vq-LmT"/>
                                                         </constraints>
@@ -801,7 +804,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá visitante!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdy-PL-xMa">
-                                <rect key="frame" x="110" y="278" width="590" height="60"/>
+                                <rect key="frame" x="110" y="278" width="590" height="70"/>
                                 <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="60"/>
                                 <color key="textColor" name="textBoxColor"/>
                                 <nil key="highlightedColor"/>
@@ -823,7 +826,7 @@
 (Clique aqui para começar)</string>
                                 </state>
                                 <connections>
-                                    <action selector="nextScreenWhenTouchUpInside:" destination="B0e-tT-faJ" eventType="touchUpInside" id="i1q-Au-neu"/>
+                                    <action selector="nextScreenWhenTouchUpInside" destination="B0e-tT-faJ" eventType="touchUpInside" id="gy6-P9-Ijp"/>
                                 </connections>
                             </button>
                         </subviews>

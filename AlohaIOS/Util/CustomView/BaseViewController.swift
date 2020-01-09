@@ -32,23 +32,23 @@ class BaseViewController: UIViewController, UITextFieldDelegate {
         backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive     = true
     }
     
-    func call(viewController: String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: viewController)
-        show(secondVC, sender: self)
-    }
-    
     func nextViewController(vc: String) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: vc)
-        navigationController?.pushViewController(vc, animated: true)
+        DispatchQueue.main.async {
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: vc)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func backToPreviousViewController() {
-        navigationController?.popViewController(animated: true)
+        DispatchQueue.main.async {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     func backToRootViewController() {
-        navigationController?.popToRootViewController(animated: true)
+        DispatchQueue.main.async {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 }
