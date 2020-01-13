@@ -63,10 +63,10 @@ class WhoViewController: BaseViewController {
     }
     
     func processTextFieldInput() {
-        if(FormValidation.isValidTextFrom(textField: nameTextField)) {
+        if FormValidation.isValidTextFrom(textField: nameTextField) && verifyIfDataZupperEmpty() {
             email == true ? goToConfirmScreen() : goToDataScreen()
         } else {
-            let alert = Alert.showAlertError(messageError:"Informe um nome")
+            let alert = Alert.showAlertError(messageError:"Informe um nome e selecione na lista")
             self.present(alert, animated: true, completion: nil)
         }
     }
@@ -99,6 +99,13 @@ class WhoViewController: BaseViewController {
                     print("Ocorreu um erro: \(error)")
             }
         })
+    }
+    
+    private func verifyIfDataZupperEmpty() -> Bool {
+        let name = ZupperFlowData.zupperInstance.getZupperName()
+        let email = ZupperFlowData.zupperInstance.getZupperEmail()
+      
+        return name.count > 0 && email.count > 0
     }
     
     private func filter(listToReturnZupperOnlyName: [ZupperResponse]) -> [String] {

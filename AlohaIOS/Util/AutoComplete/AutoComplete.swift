@@ -48,7 +48,7 @@ class AutoComplete: UIView {
     // MARK: - Show DropDown
     public func show(completionHandler: @escaping CompletionHandler) {
         self.tableView?.frame = CGRect(x: 0, y: 0, width: onTextField.frame.width, height: 150)
-        self.frame = CGRect(x: onTextField.frame.minX, y: onTextField.frame.maxY+40, width: onTextField.frame.width, height: 150)
+        self.frame = CGRect(x: onTextField.frame.minX, y: onTextField.frame.maxY+2, width: onTextField.frame.width, height: 150)
         onTextField.addTarget(self, action: #selector(didBeganText(textField:)), for: .editingDidBegin)
         onTextField.addTarget(self, action: #selector(didChangeText(textField:)), for: .editingChanged)
         onTextField.addTarget(self, action: #selector(didEndText(textField:)), for: .editingDidEnd)

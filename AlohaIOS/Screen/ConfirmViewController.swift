@@ -85,6 +85,8 @@ class ConfirmViewController: BaseViewController {
         let alert = Alert.showAlertInfo(title: title, messageSuccess: message)
         let acceptAction = UIAlertAction(title: "OK", style: .default) { action in
                 status = true
+                ZupperFlowData.zupperInstance.setZupperName(name: "")
+                ZupperFlowData.zupperInstance.setZupperEmail(emailListZupper: "")
                 self.backToRootViewController()
         }
         alert.addAction(acceptAction)
