@@ -13,6 +13,7 @@ class ObjectiveViewController: BaseViewController {
     
     @IBOutlet weak var titleTextLabel: TitleClass!
     @IBOutlet weak var subTitleTextLabel: SubTitleClass!
+    
     var page : String = ""
     var email = UserFlowData.userInstance.getIsEmailRegistered()
     var userName = UserFlowData.userInstance.getUserName()

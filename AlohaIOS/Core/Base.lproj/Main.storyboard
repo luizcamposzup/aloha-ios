@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJ4-hO-LtY" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="860" width="590" height="70"/>
+                                <rect key="frame" x="110" y="810" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Vdl-Jo-4ds"/>
                                 </constraints>
@@ -33,14 +33,14 @@
                                     <action selector="callNextViewControllerWhenButtonTouchUpInside" destination="BYZ-38-t0r" eventType="touchUpInside" id="xsJ-rp-ICz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quem você procura?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcA-L7-rS4" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="150" width="590" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legal, agora nos informe quem você procura" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcA-L7-rS4" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="110" y="200" width="590" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: Sicrano da Silva" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96a-qX-bec" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="346.5" width="590" height="70"/>
+                                <rect key="frame" x="110" y="396.5" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="C3R-2R-rxU"/>
                                 </constraints>
@@ -65,8 +65,8 @@
                                     <action selector="backViewControllerWhenButtonTouchUpInside" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lzc-vd-Apr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Podemos notificar sua presença." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWK-BS-WcA" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="181.5" width="590" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pra notificarmos sua presença." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWK-BS-WcA" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="110" y="231.5" width="590" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -83,10 +83,10 @@
                             <constraint firstItem="sJ4-hO-LtY" firstAttribute="trailing" secondItem="wcA-L7-rS4" secondAttribute="trailing" id="Pt4-mW-hSe"/>
                             <constraint firstItem="oFF-gC-trh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="35" id="T6e-iB-8nE"/>
                             <constraint firstItem="wcA-L7-rS4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aYw-qw-WKH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sJ4-hO-LtY" secondAttribute="bottom" constant="150" id="igT-cG-wUQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sJ4-hO-LtY" secondAttribute="bottom" constant="200" id="igT-cG-wUQ"/>
                             <constraint firstItem="PWK-BS-WcA" firstAttribute="top" secondItem="wcA-L7-rS4" secondAttribute="bottom" constant="5" id="is6-P4-068"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sJ4-hO-LtY" secondAttribute="trailing" constant="90" id="nJN-YS-LrX"/>
-                            <constraint firstItem="wcA-L7-rS4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="150" id="pXt-Qx-TaI"/>
+                            <constraint firstItem="wcA-L7-rS4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="200" id="pXt-Qx-TaI"/>
                             <constraint firstItem="oFF-gC-trh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="yKc-Ne-Fm1"/>
                             <constraint firstItem="sJ4-hO-LtY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="zyf-xy-UBX"/>
                         </constraints>
@@ -110,14 +110,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vejo que é novo por aqui," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjs-D5-qzT" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="150" width="590" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que te traz à Zup?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjs-D5-qzT" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="110" y="200" width="590" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8FT-Aa-5mC">
-                                <rect key="frame" x="55" y="498.5" width="700" height="481.5"/>
+                                <rect key="frame" x="55" y="448.5" width="700" height="481.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="3Kh-lt-WMq">
                                         <rect key="frame" x="0.0" y="0.0" width="700" height="241"/>
@@ -222,7 +222,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                                         <color key="tintColor" name="zupGreen"/>
-                                                        <state key="normal" title="Button" image="aloha2Person">
+                                                        <state key="normal" title="Button" image="alohaVisit">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="170"/>
                                                         </state>
                                                         <connections>
@@ -315,8 +315,8 @@
                                     <action selector="backViewControllerWhenButtonTouchUpInside" destination="RSI-89-xrc" eventType="touchUpInside" id="Hdf-8k-9Bc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="o que te traz na Zup?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4px-36-2mz" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="175.5" width="590" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhv-o5-QDH" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="110" y="225.5" width="590" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -325,30 +325,30 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0ML-Pn-hBu" firstAttribute="top" secondItem="Yeb-za-zFG" secondAttribute="top" constant="35" id="7AF-Ov-va9"/>
-                            <constraint firstItem="4px-36-2mz" firstAttribute="leading" secondItem="tjs-D5-qzT" secondAttribute="leading" id="8Pr-W6-hKi"/>
+                            <constraint firstItem="Lhv-o5-QDH" firstAttribute="trailing" secondItem="tjs-D5-qzT" secondAttribute="trailing" id="CiO-gL-zZ0"/>
+                            <constraint firstItem="Lhv-o5-QDH" firstAttribute="top" secondItem="tjs-D5-qzT" secondAttribute="bottom" constant="5" id="JYZ-Cx-y0R"/>
                             <constraint firstItem="tjs-D5-qzT" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="90" id="P7e-bp-y66"/>
-                            <constraint firstItem="4px-36-2mz" firstAttribute="top" secondItem="tjs-D5-qzT" secondAttribute="bottom" constant="5" id="PES-AD-Bgd"/>
                             <constraint firstItem="8FT-Aa-5mC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tjs-D5-qzT" secondAttribute="bottom" constant="10" id="QKB-6l-ubf"/>
+                            <constraint firstItem="Lhv-o5-QDH" firstAttribute="leading" secondItem="tjs-D5-qzT" secondAttribute="leading" id="Uz7-pK-mEL"/>
                             <constraint firstItem="0ML-Pn-hBu" firstAttribute="leading" secondItem="ynN-hA-CS7" secondAttribute="leadingMargin" constant="35" id="Ywo-78-1S7"/>
                             <constraint firstItem="8FT-Aa-5mC" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="aiq-E0-FAy"/>
                             <constraint firstItem="tjs-D5-qzT" firstAttribute="centerX" secondItem="ynN-hA-CS7" secondAttribute="centerX" id="i44-cT-lMl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tjs-D5-qzT" secondAttribute="trailing" constant="90" id="iIl-e9-39m"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="8FT-Aa-5mC" secondAttribute="bottom" constant="100" id="inD-VZ-PMf"/>
-                            <constraint firstItem="tjs-D5-qzT" firstAttribute="top" secondItem="ynN-hA-CS7" secondAttribute="topMargin" constant="150" id="rO8-rc-XP9"/>
-                            <constraint firstItem="4px-36-2mz" firstAttribute="trailing" secondItem="tjs-D5-qzT" secondAttribute="trailing" id="wnX-XO-jL7"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8FT-Aa-5mC" secondAttribute="bottom" constant="150" id="inD-VZ-PMf"/>
+                            <constraint firstItem="tjs-D5-qzT" firstAttribute="top" secondItem="ynN-hA-CS7" secondAttribute="topMargin" constant="200" id="rO8-rc-XP9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yeb-za-zFG"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q0w-9n-5W8"/>
                     <connections>
-                        <outlet property="subTitleTextLabel" destination="4px-36-2mz" id="Er1-cf-Qxr"/>
+                        <outlet property="subTitleTextLabel" destination="Lhv-o5-QDH" id="J3U-cz-AXr"/>
                         <outlet property="titleTextLabel" destination="tjs-D5-qzT" id="QAr-hi-Mzc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRG-fC-bD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="kau-qt-t7Z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3117.7777777777774" y="-35"/>
+            <point key="canvasLocation" x="3131" y="-35"/>
         </scene>
         <!--Confirm View Controller-->
         <scene sceneID="7B0-tU-v6w">
@@ -374,7 +374,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOx-Aq-EJ4">
-                                <rect key="frame" x="110" y="860" width="590" height="70"/>
+                                <rect key="frame" x="110" y="810" width="590" height="70"/>
                                 <color key="backgroundColor" name="noButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="DfV-3l-9z2"/>
@@ -393,13 +393,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirma a visita com Sicrano?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xeu-rS-vev" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="150" width="590" height="26.5"/>
+                                <rect key="frame" x="110" y="200" width="590" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kw5-fm-GvQ" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="760" width="590" height="70"/>
+                                <rect key="frame" x="110" y="710" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="fVh-8g-Ook"/>
                                 </constraints>
@@ -414,11 +414,11 @@
                         <constraints>
                             <constraint firstItem="LOx-Aq-EJ4" firstAttribute="leading" secondItem="1Vq-oh-4nf" secondAttribute="leadingMargin" constant="90" id="1P1-PN-rtd"/>
                             <constraint firstItem="Amx-gQ-1nd" firstAttribute="top" secondItem="1Vq-oh-4nf" secondAttribute="topMargin" constant="35" id="Ijf-a7-K5d"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="LOx-Aq-EJ4" secondAttribute="bottom" constant="150" id="MO1-4q-Eeq"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="LOx-Aq-EJ4" secondAttribute="bottom" constant="200" id="MO1-4q-Eeq"/>
                             <constraint firstItem="LOx-Aq-EJ4" firstAttribute="leading" secondItem="Xeu-rS-vev" secondAttribute="leading" id="XOS-33-Szv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LOx-Aq-EJ4" secondAttribute="trailing" constant="90" id="afI-l5-0NG"/>
                             <constraint firstItem="LOx-Aq-EJ4" firstAttribute="top" secondItem="kw5-fm-GvQ" secondAttribute="bottom" constant="30" id="eMK-IN-D87"/>
-                            <constraint firstItem="Xeu-rS-vev" firstAttribute="top" secondItem="1Vq-oh-4nf" secondAttribute="topMargin" constant="150" id="mFG-KC-QK7"/>
+                            <constraint firstItem="Xeu-rS-vev" firstAttribute="top" secondItem="1Vq-oh-4nf" secondAttribute="topMargin" constant="200" id="mFG-KC-QK7"/>
                             <constraint firstItem="LOx-Aq-EJ4" firstAttribute="trailing" secondItem="Xeu-rS-vev" secondAttribute="trailing" id="mk3-tx-I4T"/>
                             <constraint firstItem="Amx-gQ-1nd" firstAttribute="leading" secondItem="1Vq-oh-4nf" secondAttribute="leadingMargin" constant="35" id="sFc-ux-MyV"/>
                             <constraint firstItem="kw5-fm-GvQ" firstAttribute="leading" secondItem="Xeu-rS-vev" secondAttribute="leading" id="v5D-wh-NXY"/>
@@ -459,7 +459,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7C-eH-8qk" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="860" width="590" height="70"/>
+                                <rect key="frame" x="110" y="810" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="sNp-Jt-jDa"/>
                                 </constraints>
@@ -469,14 +469,14 @@
                                     <action selector="callNextViewControllerWhenButtonTouchUpInside" destination="dlc-zL-LAa" eventType="touchUpInside" id="clR-3E-Qrd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Já que não nos conhecemos," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-fC-rQB" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="150" width="590" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vejo que é novo por aqui." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-fC-rQB" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="110" y="200" width="590" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZX-FR-419" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="276.5" width="590" height="70"/>
+                                <rect key="frame" x="110" y="326.5" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="LjY-cy-1xe"/>
                                 </constraints>
@@ -484,7 +484,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Empresa (opcional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dyh-P9-rWP" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="456.5" width="590" height="70"/>
+                                <rect key="frame" x="110" y="506.5" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="eDJ-MW-jIi"/>
                                 </constraints>
@@ -492,7 +492,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(  ) Telefone (WhatsApp)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z1n-gN-47o" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="366.5" width="590" height="70"/>
+                                <rect key="frame" x="110" y="416.5" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="rl7-b8-6EZ"/>
                                 </constraints>
@@ -502,8 +502,8 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="maskString" value="(NN) NNNNN-NNNN"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="insira seus dados para te conhecermos melhor." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2S-cd-wA8" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="181.5" width="590" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insira seus dados pra te conhecermos melhor." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2S-cd-wA8" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="110" y="231.5" width="590" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -518,7 +518,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="O7C-eH-8qk" secondAttribute="trailing" constant="90" id="Ama-wB-fTB"/>
                             <constraint firstItem="Z1n-gN-47o" firstAttribute="top" secondItem="sZX-FR-419" secondAttribute="bottom" constant="20" id="CkQ-sE-dah"/>
                             <constraint firstItem="O7C-eH-8qk" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="90" id="HI4-cq-Wna"/>
-                            <constraint firstItem="L6d-fC-rQB" firstAttribute="top" secondItem="I3x-xi-b5s" secondAttribute="topMargin" constant="150" id="IFd-j0-Zge"/>
+                            <constraint firstItem="L6d-fC-rQB" firstAttribute="top" secondItem="I3x-xi-b5s" secondAttribute="topMargin" constant="200" id="IFd-j0-Zge"/>
                             <constraint firstItem="Dyh-P9-rWP" firstAttribute="trailing" secondItem="sZX-FR-419" secondAttribute="trailing" id="IcV-WC-luC"/>
                             <constraint firstItem="stu-rg-eCh" firstAttribute="leading" secondItem="I3x-xi-b5s" secondAttribute="leadingMargin" constant="35" id="Iop-L6-TI5"/>
                             <constraint firstItem="r2S-cd-wA8" firstAttribute="trailing" secondItem="L6d-fC-rQB" secondAttribute="trailing" id="Jlc-WX-KEt"/>
@@ -527,7 +527,7 @@
                             <constraint firstItem="Z1n-gN-47o" firstAttribute="trailing" secondItem="sZX-FR-419" secondAttribute="trailing" id="aF4-Jg-aK0"/>
                             <constraint firstItem="sZX-FR-419" firstAttribute="top" secondItem="L6d-fC-rQB" secondAttribute="bottom" constant="100" id="hDV-4W-TqB"/>
                             <constraint firstItem="Dyh-P9-rWP" firstAttribute="top" secondItem="Z1n-gN-47o" secondAttribute="bottom" constant="20" id="m0W-zh-hzo"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="O7C-eH-8qk" secondAttribute="bottom" constant="150" id="mk5-Qv-YDe"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="O7C-eH-8qk" secondAttribute="bottom" constant="200" id="mk5-Qv-YDe"/>
                             <constraint firstItem="Z1n-gN-47o" firstAttribute="leading" secondItem="sZX-FR-419" secondAttribute="leading" id="qA4-b5-bk4"/>
                             <constraint firstItem="L6d-fC-rQB" firstAttribute="trailing" secondItem="sZX-FR-419" secondAttribute="trailing" id="tsj-p8-hHD"/>
                             <constraint firstItem="r2S-cd-wA8" firstAttribute="top" secondItem="L6d-fC-rQB" secondAttribute="bottom" constant="5" id="vjz-Zj-Nde"/>
@@ -569,7 +569,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plg-ge-7DS" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="860" width="590" height="70"/>
+                                <rect key="frame" x="110" y="810" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="IY7-5f-p0K"/>
                                 </constraints>
@@ -579,22 +579,22 @@
                                     <action selector="callNextViewControllerWhenButtonTouchUpInside" destination="YQx-rR-qes" eventType="touchUpInside" id="7Xm-b4-sGN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informe o seu melhor e-mail," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4b-bK-1dd" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="150" width="590" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pra saber se já te conhecemos," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4b-bK-1dd" customClass="TitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="110" y="200" width="590" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: fulano@zup.com.br" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFv-Zt-6YK" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="346.5" width="590" height="70"/>
+                                <rect key="frame" x="110" y="396.5" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="kec-wc-YpC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" textContentType="email"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" assim podemos saber se ja te conhecemos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPc-8q-8CA" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="181.5" width="590" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="informe o seu melhor e-mail." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPc-8q-8CA" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="110" y="231.5" width="590" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -604,7 +604,7 @@
                         <constraints>
                             <constraint firstItem="342-si-IES" firstAttribute="top" secondItem="ruy-cl-bwS" secondAttribute="topMargin" constant="35" id="6Jf-rP-g5D"/>
                             <constraint firstItem="IPc-8q-8CA" firstAttribute="top" secondItem="n4b-bK-1dd" secondAttribute="bottom" constant="5" id="9gX-T6-3oA"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="plg-ge-7DS" secondAttribute="bottom" constant="150" id="CC1-2q-71l"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="plg-ge-7DS" secondAttribute="bottom" constant="200" id="CC1-2q-71l"/>
                             <constraint firstItem="plg-ge-7DS" firstAttribute="trailing" secondItem="n4b-bK-1dd" secondAttribute="trailing" id="D9A-iA-kzn"/>
                             <constraint firstItem="plg-ge-7DS" firstAttribute="leading" secondItem="n4b-bK-1dd" secondAttribute="leading" id="IqP-8k-TCL"/>
                             <constraint firstItem="342-si-IES" firstAttribute="leading" secondItem="ruy-cl-bwS" secondAttribute="leadingMargin" constant="35" id="JQP-xN-D27"/>
@@ -613,7 +613,7 @@
                             <constraint firstItem="plg-ge-7DS" firstAttribute="leading" secondItem="ruy-cl-bwS" secondAttribute="leadingMargin" constant="90" id="XdP-LU-2mi"/>
                             <constraint firstItem="pFv-Zt-6YK" firstAttribute="leading" secondItem="n4b-bK-1dd" secondAttribute="leading" id="Xjl-Ag-oIY"/>
                             <constraint firstItem="IPc-8q-8CA" firstAttribute="leading" secondItem="n4b-bK-1dd" secondAttribute="leading" id="g5s-qy-mxm"/>
-                            <constraint firstItem="n4b-bK-1dd" firstAttribute="top" secondItem="ruy-cl-bwS" secondAttribute="topMargin" constant="150" id="hzM-lN-HQb"/>
+                            <constraint firstItem="n4b-bK-1dd" firstAttribute="top" secondItem="ruy-cl-bwS" secondAttribute="topMargin" constant="200" id="hzM-lN-HQb"/>
                             <constraint firstItem="pFv-Zt-6YK" firstAttribute="trailing" secondItem="n4b-bK-1dd" secondAttribute="trailing" id="k1R-YQ-hAL"/>
                             <constraint firstItem="pFv-Zt-6YK" firstAttribute="top" secondItem="n4b-bK-1dd" secondAttribute="bottom" constant="170" id="ozh-XD-kI2"/>
                         </constraints>
@@ -804,20 +804,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá visitante!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdy-PL-xMa">
-                                <rect key="frame" x="110" y="278" width="590" height="70"/>
+                                <rect key="frame" x="110" y="358" width="590" height="70"/>
                                 <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="60"/>
                                 <color key="textColor" name="textBoxColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo zup" translatesAutoresizingMaskIntoConstraints="NO" id="QD6-ig-YL0">
-                                <rect key="frame" x="285" y="100" width="240" height="128"/>
+                                <rect key="frame" x="285" y="150" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Dpb-cb-Tfk"/>
                                     <constraint firstAttribute="width" constant="240" id="uow-dv-8rH"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Q-sZ-WHh" customClass="ButtonClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="860" width="590" height="70"/>
+                                <rect key="frame" x="110" y="810" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="jas-WI-Rr2"/>
                                 </constraints>
@@ -829,18 +829,44 @@
                                     <action selector="nextScreenWhenTouchUpInside" destination="B0e-tT-faJ" eventType="touchUpInside" id="gy6-P9-Ijp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quer falar com algum Zupper?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-Ua-chL" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="110" y="458" width="590" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique abaixo." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEA-RL-sJv" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
+                                <rect key="frame" x="110" y="484" width="590" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made by PGG Zup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWZ-TY-121">
+                                <rect key="frame" x="300" y="980" width="210" height="30"/>
+                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="25"/>
+                                <color key="textColor" name="textBoxColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Z5Q-sZ-WHh" firstAttribute="leading" secondItem="tdy-PL-xMa" secondAttribute="leading" id="2Cd-z5-M5c"/>
+                            <constraint firstItem="0fV-Ua-chL" firstAttribute="leading" secondItem="tdy-PL-xMa" secondAttribute="leading" id="4Bi-gQ-QZn"/>
                             <constraint firstItem="tdy-PL-xMa" firstAttribute="leading" secondItem="r5o-iE-R4c" secondAttribute="leadingMargin" constant="90" id="JvM-DN-L91"/>
+                            <constraint firstItem="0fV-Ua-chL" firstAttribute="trailing" secondItem="tdy-PL-xMa" secondAttribute="trailing" id="SeF-V7-yJj"/>
                             <constraint firstItem="tdy-PL-xMa" firstAttribute="centerX" secondItem="r5o-iE-R4c" secondAttribute="centerX" id="SfM-8W-8ku"/>
-                            <constraint firstItem="tdy-PL-xMa" firstAttribute="top" secondItem="QD6-ig-YL0" secondAttribute="bottom" constant="50" id="VTl-Mo-asU"/>
-                            <constraint firstItem="QD6-ig-YL0" firstAttribute="top" secondItem="r5o-iE-R4c" secondAttribute="topMargin" constant="50" id="f5v-kP-1QW"/>
+                            <constraint firstItem="TWZ-TY-121" firstAttribute="centerX" secondItem="r5o-iE-R4c" secondAttribute="centerX" id="TKs-Jk-5j3"/>
+                            <constraint firstItem="tdy-PL-xMa" firstAttribute="top" secondItem="QD6-ig-YL0" secondAttribute="bottom" constant="80" id="VTl-Mo-asU"/>
+                            <constraint firstItem="0fV-Ua-chL" firstAttribute="top" secondItem="tdy-PL-xMa" secondAttribute="bottom" constant="30" id="Zs3-Nb-Rl8"/>
+                            <constraint firstItem="TEA-RL-sJv" firstAttribute="top" secondItem="0fV-Ua-chL" secondAttribute="bottom" constant="5" id="cDf-ti-lkg"/>
+                            <constraint firstItem="QD6-ig-YL0" firstAttribute="top" secondItem="r5o-iE-R4c" secondAttribute="topMargin" constant="100" id="f5v-kP-1QW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tdy-PL-xMa" secondAttribute="trailing" constant="90" id="j9L-Ge-8Hk"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Z5Q-sZ-WHh" secondAttribute="bottom" constant="150" id="jnk-Vc-nbt"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Z5Q-sZ-WHh" secondAttribute="bottom" constant="200" id="jnk-Vc-nbt"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="TWZ-TY-121" secondAttribute="bottom" constant="70" id="kzI-dU-d29"/>
                             <constraint firstItem="Z5Q-sZ-WHh" firstAttribute="trailing" secondItem="tdy-PL-xMa" secondAttribute="trailing" id="oRj-0b-61k"/>
                             <constraint firstItem="QD6-ig-YL0" firstAttribute="centerX" secondItem="r5o-iE-R4c" secondAttribute="centerX" id="txD-3s-aNd"/>
+                            <constraint firstItem="TEA-RL-sJv" firstAttribute="trailing" secondItem="tdy-PL-xMa" secondAttribute="trailing" id="xdv-4b-ETq"/>
+                            <constraint firstItem="TEA-RL-sJv" firstAttribute="leading" secondItem="tdy-PL-xMa" secondAttribute="leading" id="xux-T3-1gU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bDt-7u-c0e"/>
                     </view>
@@ -870,12 +896,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="aloha2Person" width="200" height="200"/>
         <image name="alohaBox" width="200" height="200"/>
         <image name="alohaCard" width="200" height="200"/>
         <image name="alohaFood" width="200" height="200"/>
         <image name="alohaFornecedores" width="200" height="200"/>
         <image name="alohaPerson" width="200" height="200"/>
+        <image name="alohaVisit" width="200" height="200"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="logo zup" width="600" height="332"/>
         <namedColor name="noButton">

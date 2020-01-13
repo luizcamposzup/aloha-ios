@@ -12,7 +12,7 @@ import UIKit
 class WelcomeViewController: BaseViewController {
     
     @IBAction func nextScreenWhenTouchUpInside() {
-        nextViewController(vc: "WhoViewController")
+        nextViewController(vc: "EmailViewController")
     }
 
 }

@@ -21,10 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todos os direitos reservados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFY-aw-AmG">
-                                <rect key="frame" x="213" y="990" width="384.5" height="35"/>
-                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made by PGG Zup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFY-aw-AmG">
+                                <rect key="frame" x="300" y="980.5" width="210" height="29.5"/>
+                                <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="25"/>
+                                <color key="textColor" name="textBoxColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logozupb" translatesAutoresizingMaskIntoConstraints="NO" id="WRv-JC-kuR">
@@ -39,7 +39,7 @@
                         <constraints>
                             <constraint firstItem="IFY-aw-AmG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="EmG-B0-dpS"/>
                             <constraint firstItem="WRv-JC-kuR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PfU-1m-sFM"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="IFY-aw-AmG" secondAttribute="bottom" constant="55" id="VKD-0G-9GQ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="IFY-aw-AmG" secondAttribute="bottom" constant="70" id="VKD-0G-9GQ"/>
                             <constraint firstItem="WRv-JC-kuR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-130" id="aOF-ck-MJx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -47,11 +47,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="394" y="335"/>
+            <point key="canvasLocation" x="393.33333333333331" y="335"/>
         </scene>
     </scenes>
     <resources>
         <image name="logozupb" width="4090" height="2420"/>
+        <namedColor name="textBoxColor">
+            <color red="0.93699997663497925" green="0.93699997663497925" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="zupBlue">
             <color red="0.019999999552965164" green="0.21199999749660492" blue="0.31400001049041748" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
