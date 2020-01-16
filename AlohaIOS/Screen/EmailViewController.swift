@@ -13,11 +13,18 @@ class EmailViewController: BaseViewController {
     
     @IBOutlet weak var emailTextField: TextFieldClass!
     var listVisitor = [Visitor]()
+    @IBOutlet weak var bottomMargin: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+       }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
        backToPreviousViewController()
@@ -127,4 +134,17 @@ class EmailViewController: BaseViewController {
         return true
     }
     
+    @objc func keyboardNotification(notification: NSNotification) {
+    if let userInfo = notification.userInfo {
+        let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        let endFrameY = endFrame?.origin.y ?? 0
+        
+        if endFrameY >= UIScreen.main.bounds.size.height {
+            self.bottomMargin.constant = 200
+        } else {
+            self.bottomMargin.constant = endFrame!.size.height + 5
+        }
+       
+        }
+    }
 }

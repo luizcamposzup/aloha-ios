@@ -14,12 +14,18 @@ class DataViewController: BaseViewController {
     @IBOutlet weak var nameTextField: TextFieldClass!
     @IBOutlet weak var phoneTextField: TextFieldClass!
     @IBOutlet weak var companyTextField: TextFieldClass!
+    @IBOutlet weak var bottomMargin: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
         phoneTextField.delegate = self
         companyTextField.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
@@ -89,4 +95,18 @@ class DataViewController: BaseViewController {
         }
            return true
        }
+    
+    @objc func keyboardNotification(notification: NSNotification) {
+    if let userInfo = notification.userInfo {
+        let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        let endFrameY = endFrame?.origin.y ?? 0
+        
+        if endFrameY >= UIScreen.main.bounds.size.height {
+            self.bottomMargin.constant = 200
+        } else {
+            self.bottomMargin.constant = endFrame!.size.height + 5
+        }
+       
+        }
+    }
 }
