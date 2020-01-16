@@ -39,7 +39,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: Sicrano da Silva" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96a-qX-bec" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Zupper" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96a-qX-bec" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
                                 <rect key="frame" x="110" y="396.5" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="C3R-2R-rxU"/>
@@ -117,13 +117,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8FT-Aa-5mC">
-                                <rect key="frame" x="55" y="448.5" width="700" height="481.5"/>
+                                <rect key="frame" x="55" y="462" width="700" height="468"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="3Kh-lt-WMq">
-                                        <rect key="frame" x="0.0" y="0.0" width="700" height="241"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="700" height="232"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yQ0-pF-mPH">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="210.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="206"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESC-M8-0LG">
                                                         <rect key="frame" x="15" y="0.0" width="170" height="170"/>
@@ -141,7 +141,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2Z-Kv-c1G">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="ByS-af-zbu"/>
                                                         </constraints>
@@ -152,7 +152,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aO3-LO-5oC">
-                                                <rect key="frame" x="265" y="0.0" width="170" height="241"/>
+                                                <rect key="frame" x="265" y="0.0" width="170" height="232"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNa-HE-CYj">
                                                         <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
@@ -170,7 +170,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departamento Pessoal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-YC-GqJ">
-                                                        <rect key="frame" x="0.0" y="180" width="170" height="61"/>
+                                                        <rect key="frame" x="0.0" y="180" width="170" height="52"/>
                                                         <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="26"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -178,7 +178,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Boi-Qg-jeP">
-                                                <rect key="frame" x="500" y="0.0" width="200" height="210.5"/>
+                                                <rect key="frame" x="500" y="0.0" width="200" height="206"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0J-bS-zSn">
                                                         <rect key="frame" x="15" y="0.0" width="170" height="170"/>
@@ -196,7 +196,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encomendas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09b-Hd-HBe">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="8qB-Jp-loV"/>
                                                         </constraints>
@@ -209,10 +209,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="WWz-9q-gxi">
-                                        <rect key="frame" x="0.0" y="271" width="700" height="210.5"/>
+                                        <rect key="frame" x="0.0" y="262" width="700" height="206"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mUD-6M-ejj">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="210.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="206"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i38-Yp-Osk">
                                                         <rect key="frame" x="15" y="0.0" width="170" height="170"/>
@@ -230,7 +230,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrevista" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH3-op-4Bf">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="XQH-gX-ObJ"/>
                                                         </constraints>
@@ -241,7 +241,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zt0-TV-80L">
-                                                <rect key="frame" x="265" y="0.0" width="170" height="210.5"/>
+                                                <rect key="frame" x="265" y="0.0" width="170" height="206"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sr2-NM-VeJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
@@ -259,7 +259,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fornecedores" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPW-Ez-QPF">
-                                                        <rect key="frame" x="0.0" y="180" width="170" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="180" width="170" height="26"/>
                                                         <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="26"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -267,7 +267,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7U2-Sn-yUY">
-                                                <rect key="frame" x="500" y="0.0" width="200" height="210.5"/>
+                                                <rect key="frame" x="500" y="0.0" width="200" height="206"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4B-Eg-flh">
                                                         <rect key="frame" x="15" y="0.0" width="170" height="170"/>
@@ -285,7 +285,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visita" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFR-O2-bbB">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="26"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="khX-vq-LmT"/>
                                                         </constraints>
@@ -536,6 +536,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="3F6-RH-SGX"/>
                     <connections>
+                        <outlet property="bottomMargin" destination="mk5-Qv-YDe" id="Wyd-0f-v8y"/>
                         <outlet property="companyTextField" destination="Dyh-P9-rWP" id="mGm-ou-nWj"/>
                         <outlet property="nameTextField" destination="sZX-FR-419" id="qKI-zx-aZH"/>
                         <outlet property="phoneTextField" destination="Z1n-gN-47o" id="0WO-CJ-VRR"/>
@@ -585,7 +586,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: fulano@zup.com.br" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFv-Zt-6YK" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email@exemplo.com.br" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFv-Zt-6YK" customClass="TextFieldClass" customModule="AlohaIOS" customModuleProvider="target">
                                 <rect key="frame" x="110" y="396.5" width="590" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="kec-wc-YpC"/>
@@ -621,6 +622,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="X4N-9k-IaT"/>
                     <connections>
+                        <outlet property="bottomMargin" destination="CC1-2q-71l" id="oeh-b6-Z06"/>
                         <outlet property="emailTextField" destination="pFv-Zt-6YK" id="14c-K2-c46"/>
                     </connections>
                 </viewController>
@@ -677,13 +679,19 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dD5-HR-zEK">
-                                <rect key="frame" x="695" y="35" width="60" height="60"/>
+                                <rect key="frame" x="635" y="35" width="120" height="60"/>
+                                <color key="backgroundColor" name="zupGreen"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="43P-wR-sFb"/>
+                                    <constraint firstAttribute="width" constant="120" id="43P-wR-sFb"/>
                                     <constraint firstAttribute="height" constant="60" id="aSn-t2-9bI"/>
                                 </constraints>
-                                <color key="tintColor" name="zupGreen"/>
+                                <color key="tintColor" name="zupBlue"/>
                                 <state key="normal" title="PULAR"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="jumpViewControllerWhenButtonTouchUpInside:" destination="2Ee-7f-rcE" eventType="touchUpInside" id="kjS-Hd-dgO"/>
                                 </connections>
@@ -803,7 +811,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá visitante!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdy-PL-xMa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá, visitante!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdy-PL-xMa">
                                 <rect key="frame" x="110" y="358" width="590" height="70"/>
                                 <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="60"/>
                                 <color key="textColor" name="textBoxColor"/>
@@ -821,10 +829,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="jas-WI-Rr2"/>
                                 </constraints>
-                                <state key="normal">
-                                    <string key="title">ALOHA!
-(Clique aqui para começar)</string>
-                                </state>
+                                <state key="normal" title="Clique Aqui"/>
                                 <connections>
                                     <action selector="nextScreenWhenTouchUpInside" destination="B0e-tT-faJ" eventType="touchUpInside" id="gy6-P9-Ijp"/>
                                 </connections>
@@ -835,38 +840,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique abaixo." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEA-RL-sJv" customClass="SubTitleClass" customModule="AlohaIOS" customModuleProvider="target">
-                                <rect key="frame" x="110" y="484" width="590" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made by PGG Zup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWZ-TY-121">
-                                <rect key="frame" x="300" y="980" width="210" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALOHA by PGG Zup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWZ-TY-121">
+                                <rect key="frame" x="290" y="980.5" width="230" height="29.5"/>
                                 <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="25"/>
                                 <color key="textColor" name="textBoxColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo aloha" translatesAutoresizingMaskIntoConstraints="NO" id="VJ9-cJ-QBl">
+                                <rect key="frame" x="520" y="945" width="65.000000000000227" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="X8J-MC-U8b"/>
+                                    <constraint firstAttribute="width" constant="65" id="hC8-gF-au7"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Z5Q-sZ-WHh" firstAttribute="leading" secondItem="tdy-PL-xMa" secondAttribute="leading" id="2Cd-z5-M5c"/>
                             <constraint firstItem="0fV-Ua-chL" firstAttribute="leading" secondItem="tdy-PL-xMa" secondAttribute="leading" id="4Bi-gQ-QZn"/>
+                            <constraint firstItem="VJ9-cJ-QBl" firstAttribute="leading" secondItem="TWZ-TY-121" secondAttribute="trailing" id="EuD-ZN-XXc"/>
                             <constraint firstItem="tdy-PL-xMa" firstAttribute="leading" secondItem="r5o-iE-R4c" secondAttribute="leadingMargin" constant="90" id="JvM-DN-L91"/>
                             <constraint firstItem="0fV-Ua-chL" firstAttribute="trailing" secondItem="tdy-PL-xMa" secondAttribute="trailing" id="SeF-V7-yJj"/>
                             <constraint firstItem="tdy-PL-xMa" firstAttribute="centerX" secondItem="r5o-iE-R4c" secondAttribute="centerX" id="SfM-8W-8ku"/>
                             <constraint firstItem="TWZ-TY-121" firstAttribute="centerX" secondItem="r5o-iE-R4c" secondAttribute="centerX" id="TKs-Jk-5j3"/>
+                            <constraint firstItem="VJ9-cJ-QBl" firstAttribute="bottom" secondItem="TWZ-TY-121" secondAttribute="bottom" id="U3e-5P-h8n"/>
                             <constraint firstItem="tdy-PL-xMa" firstAttribute="top" secondItem="QD6-ig-YL0" secondAttribute="bottom" constant="80" id="VTl-Mo-asU"/>
                             <constraint firstItem="0fV-Ua-chL" firstAttribute="top" secondItem="tdy-PL-xMa" secondAttribute="bottom" constant="30" id="Zs3-Nb-Rl8"/>
-                            <constraint firstItem="TEA-RL-sJv" firstAttribute="top" secondItem="0fV-Ua-chL" secondAttribute="bottom" constant="5" id="cDf-ti-lkg"/>
                             <constraint firstItem="QD6-ig-YL0" firstAttribute="top" secondItem="r5o-iE-R4c" secondAttribute="topMargin" constant="100" id="f5v-kP-1QW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tdy-PL-xMa" secondAttribute="trailing" constant="90" id="j9L-Ge-8Hk"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Z5Q-sZ-WHh" secondAttribute="bottom" constant="200" id="jnk-Vc-nbt"/>
                             <constraint firstAttribute="bottomMargin" secondItem="TWZ-TY-121" secondAttribute="bottom" constant="70" id="kzI-dU-d29"/>
                             <constraint firstItem="Z5Q-sZ-WHh" firstAttribute="trailing" secondItem="tdy-PL-xMa" secondAttribute="trailing" id="oRj-0b-61k"/>
                             <constraint firstItem="QD6-ig-YL0" firstAttribute="centerX" secondItem="r5o-iE-R4c" secondAttribute="centerX" id="txD-3s-aNd"/>
-                            <constraint firstItem="TEA-RL-sJv" firstAttribute="trailing" secondItem="tdy-PL-xMa" secondAttribute="trailing" id="xdv-4b-ETq"/>
-                            <constraint firstItem="TEA-RL-sJv" firstAttribute="leading" secondItem="tdy-PL-xMa" secondAttribute="leading" id="xux-T3-1gU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bDt-7u-c0e"/>
                     </view>
@@ -874,7 +879,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AFF-Qz-Nkv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1770" y="-35"/>
+            <point key="canvasLocation" x="1769.6296296296296" y="-35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YyK-AT-3Fj">
@@ -903,12 +908,16 @@
         <image name="alohaPerson" width="200" height="200"/>
         <image name="alohaVisit" width="200" height="200"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <image name="logo aloha" width="824" height="1097"/>
         <image name="logo zup" width="600" height="332"/>
         <namedColor name="noButton">
             <color red="0.59600001573562622" green="0.63899999856948853" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textBoxColor">
             <color red="0.93699997663497925" green="0.93699997663497925" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="zupBlue">
+            <color red="0.019999999552965164" green="0.21199999749660492" blue="0.31400001049041748" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="zupGreen">
             <color red="0.67100000381469727" green="0.75700002908706665" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

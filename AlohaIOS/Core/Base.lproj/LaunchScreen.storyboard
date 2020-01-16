@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made by PGG Zup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFY-aw-AmG">
-                                <rect key="frame" x="300" y="980.5" width="210" height="29.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALOHA by PGG Zup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFY-aw-AmG">
+                                <rect key="frame" x="290" y="980.5" width="230" height="29.5"/>
                                 <fontDescription key="fontDescription" name="DiavloBook-Regular" family="Diavlo" pointSize="25"/>
                                 <color key="textColor" name="textBoxColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" name="zupBlue"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="IFY-aw-AmG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="EmG-B0-dpS"/>
                             <constraint firstItem="WRv-JC-kuR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PfU-1m-sFM"/>
@@ -52,11 +52,11 @@
     </scenes>
     <resources>
         <image name="logozupb" width="4090" height="2420"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.20800000429153442" green="0.51399999856948853" blue="0.6119999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="textBoxColor">
             <color red="0.93699997663497925" green="0.93699997663497925" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="zupBlue">
-            <color red="0.019999999552965164" green="0.21199999749660492" blue="0.31400001049041748" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
