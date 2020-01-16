@@ -22,6 +22,7 @@ class DataViewController: BaseViewController {
         phoneTextField.delegate = self
         companyTextField.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        backToRootViewControllerAfterTime()
     }
     
     deinit {
@@ -47,7 +48,7 @@ class DataViewController: BaseViewController {
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
                         alertLoading.dismiss(animated: true, completion: nil)
                         ListFlowData.listZupperInstance.setListVisitor(listToSet: [Visitor]())
-                        self.nextViewController(vc: "PhotoViewController")
+                        self.nextViewController(vc: "ConfirmViewController")
                     }
                 case .failure(let error):
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {

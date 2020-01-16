@@ -11,21 +11,22 @@ import UIKit
 
 class WhoViewController: BaseViewController {
     
+    var tableViewZuppers = AutoComplete()
+    var nameChanged = ""
+    
     @IBOutlet weak var nameTextField: TextFieldClass!
-    var email = UserFlowData.userInstance.getIsEmailRegistered()
+    var emailRegistered = UserFlowData.userInstance.getIsEmailRegistered()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        backToRootViewControllerAfterTime()
         nameTextField.delegate = self
+        setListTableViewZuppers()
     }
     
     @IBAction func nameTextFieldWatch() {
         guard let nameInput = nameTextField.text else { return }
-        print(nameInput.count)
-        if nameInput.count == 0 {
-            
-        } else if nameInput.count > 2 {
-            print(nameInput)
+        if nameInput.count > 2 {
             requestGetListZuppers(wordOfName: nameInput)
         }
     }
@@ -38,35 +39,34 @@ class WhoViewController: BaseViewController {
         processTextFieldInput()
     }
     
-    private func addDropDown(listDataZupper: [ZupperResponse]) {
-        let dropDownTop = AutoComplete()
-        let listToSet = filter(listToReturnZupperOnlyName: listDataZupper)
-        dropDownTop.dataSource = listToSet
-        dropDownTop.onTextField = nameTextField
-        dropDownTop.onView = self.view
-        dropDownTop.show { (name, index) in
+    private func setListTableViewZuppers() {
+        self.tableViewZuppers.onTextField = nameTextField
+        self.tableViewZuppers.onView = self.view
+        self.tableViewZuppers.show { (name, index) in
             print("string : \(name) and Index : \(index)")
             self.nameTextField.text = name
-            let email = listDataZupper[index].email
+            self.nameChanged = name
             ZupperFlowData.zupperInstance.setZupperName(name: name)
+            let email = ListFlowData.listZupperInstance.getListZupperComplete()[index].email
             ZupperFlowData.zupperInstance.setZupperEmail(emailListZupper: email!)
             self.nameTextField.resignFirstResponder()
         }
     }
-    
+
     private func goToConfirmScreen() {
         nextViewController(vc: "ConfirmViewController")
     }
     
     private func goToDataScreen() {
+        self.tableViewZuppers.removeFromSuperview()
         nextViewController(vc: "DataViewController")
     }
     
     func processTextFieldInput() {
-        if FormValidation.isValidTextFrom(textField: nameTextField) && verifyIfDataZupperEmpty() {
-            email == true ? goToConfirmScreen() : goToDataScreen()
+        if(FormValidation.isValidTextFrom(textField: nameTextField) && nameChanged == nameTextField.text) {
+            emailRegistered == true ? goToConfirmScreen() : goToDataScreen()
         } else {
-            let alert = Alert.showAlertError(messageError:"Informe um nome e selecione na lista")
+            let alert = Alert.showAlertError(messageError:"Informe um nome e selecione-o na lista")
             self.present(alert, animated: true, completion: nil)
         }
     }
@@ -89,7 +89,8 @@ class WhoViewController: BaseViewController {
                     print(successGetListZuppers)
                     ListFlowData.listZupperInstance.setListZupperComplete(listToSet: successGetListZuppers)
                     DispatchQueue.main.async {
-                        self.addDropDown(listDataZupper: successGetListZuppers.content)
+                        let listToSet = self.filter(listToReturnZupperOnlyName: successGetListZuppers.content)
+                        self.tableViewZuppers.updateDataSource(listToSet: listToSet)
                     }
                 case .failure(let error):
                     DispatchQueue.main.async {
@@ -99,13 +100,6 @@ class WhoViewController: BaseViewController {
                     print("Ocorreu um erro: \(error)")
             }
         })
-    }
-    
-    private func verifyIfDataZupperEmpty() -> Bool {
-        let name = ZupperFlowData.zupperInstance.getZupperName()
-        let email = ZupperFlowData.zupperInstance.getZupperEmail()
-      
-        return name.count > 0 && email.count > 0
     }
     
     private func filter(listToReturnZupperOnlyName: [ZupperResponse]) -> [String] {

@@ -28,6 +28,7 @@ class PhotoViewController: BaseViewController {
         setupInputOutput()
         setupPreviewLayer()
         startRunningCaptureSession()
+        backToRootViewControllerAfterTime()
     }
 
     @IBAction func backViewControllerWhenButtonTouchUpInside() {

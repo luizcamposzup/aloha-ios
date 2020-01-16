@@ -21,6 +21,7 @@ class ObjectiveViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         changeTextLabel()
+        backToRootViewControllerAfterTime()
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() {
