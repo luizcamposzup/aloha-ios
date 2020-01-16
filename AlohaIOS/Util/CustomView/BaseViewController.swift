@@ -51,4 +51,10 @@ class BaseViewController: UIViewController, UITextFieldDelegate {
             self.navigationController?.popToRootViewController(animated: true)
         }
     }
+    
+    func backToRootViewControllerAfterTime() {
+        DispatchQueue.main.asyncAfter(deadline: .now()+120) {
+            self.backToRootViewController()
+        }
+    }
 }

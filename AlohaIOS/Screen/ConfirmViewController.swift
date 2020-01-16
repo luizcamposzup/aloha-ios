@@ -26,6 +26,7 @@ class ConfirmViewController: BaseViewController {
         print(UserFlowData.userInstance.getUserCompany())
         print(ZupperFlowData.zupperInstance.getZupperName())
         print(ZupperFlowData.zupperInstance.getZupperEmail())
+        backToRootViewControllerAfterTime()
     }
     
     @IBAction func backViewControllerWhenButtonTouchUpInside() { backToPreviousViewController() }

@@ -17,6 +17,7 @@ class PreviewViewController: BaseViewController {
         super.viewDidLoad()
         setupPhotoPreviewLayer()
         photo.image = self.image
+        backToRootViewControllerAfterTime()
     }
     
     @IBAction func noButton(_ sender: Any) {

@@ -7,20 +7,6 @@
 
 import UIKit
 
-struct AutoCompleteData {
-    static let autoCompleteDataInstance = AutoCompleteData()
-    
-    var autoCompleteData = AutoComplete()
-    
-    mutating func setInstance(instance: AutoComplete) {
-        self.autoCompleteData = instance
-    }
-    
-    func getInstance() -> AutoComplete {
-        return autoCompleteData
-    }
-}
-
 class AutoComplete: UIView {
     public var dataSource = [String]()
     public var onTextField : UITextField!
@@ -33,11 +19,17 @@ class AutoComplete: UIView {
     private var isMultiLine  = false
     public var cellHeight : CGFloat!
     public var showAlwaysOnTop = false
-    var is_filter = false
-    private var isOnTop = false
+    private var is_filter = false
     typealias CompletionHandler = (_ text: String , _ index : Int) -> Void
     
+    func updateDataSource(listToSet: [String]) {
+        self.dataSource = listToSet
+        self.tableView?.reloadData()
+        self.addSubview(tableView!)
+    }
+
     override init(frame: CGRect) {
+        print("initframe")
         super.init(frame: frame)
         self.setUp()
     }
@@ -45,24 +37,10 @@ class AutoComplete: UIView {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    // MARK: - Show DropDown
-    public func show(completionHandler: @escaping CompletionHandler) {
-        self.tableView?.frame = CGRect(x: 0, y: 0, width: onTextField.frame.width, height: 150)
-        self.frame = CGRect(x: onTextField.frame.minX, y: onTextField.frame.maxY+2, width: onTextField.frame.width, height: 150)
-        onTextField.addTarget(self, action: #selector(didBeganText(textField:)), for: .editingDidBegin)
-        onTextField.addTarget(self, action: #selector(didChangeText(textField:)), for: .editingChanged)
-        onTextField.addTarget(self, action: #selector(didEndText(textField:)), for: .editingDidEnd)
-        self.addSubview(tableView!)
-        self.onView?.addSubview(self)
-        self.alpha = 0
-        self.isHidden = true
-        self.tableView?.alpha = 0
-        self.tableView?.isHidden = true
-        self.completionHandler = completionHandler
-    }
     
     // MARK: - SetUp View
     private func setUp() {
+        print("setup")
         self.tableView = UITableView()
         self.tableView?.register(UINib(nibName: "AutoCompleteViewCell", bundle: nil),
                                  forCellReuseIdentifier: "AutoCompleteViewCell")
@@ -75,16 +53,35 @@ class AutoComplete: UIView {
         self.clipsToBounds = true
         self.cellHeight = 60
     }
-    
+
+    // MARK: - Show DropDown
+    public func show(completionHandler: @escaping CompletionHandler) {
+        print("show")
+        self.tableView?.frame = CGRect(x: 0, y: 0, width: onTextField.frame.width, height: 150)
+        self.frame = CGRect(x: onTextField.frame.minX, y: onTextField.frame.maxY+88, width: onTextField.frame.width, height: 150)
+        onTextField.addTarget(self, action: #selector(didBeganText(textField:)), for: .editingDidBegin)
+        onTextField.addTarget(self, action: #selector(didChangeText(textField:)), for: .editingChanged)
+        onTextField.addTarget(self, action: #selector(didEndText(textField:)), for: .editingDidEnd)
+        self.onView?.addSubview(self)
+        self.alpha = 0
+        self.isHidden = true
+        self.tableView?.alpha = 0
+        self.tableView?.isHidden = true
+        self.addSubview(tableView!)
+        self.completionHandler = completionHandler
+    }
+
     @objc func didChangeText(textField: UITextField) {
+        print("didChangeText")
         if let textInField = onTextField.text {
-            if textInField.count == 0{
-                is_filter = false
+            if textInField.count == 0 {
+                self.is_filter = false
+                //self.tableView?.removeFromSuperview()
                 self.tableView?.reloadData()
-            }else{
-                is_filter = true
-                let tempData = dataSource.filter{ $0.localizedCaseInsensitiveContains(textInField) }
-                filterDataSource = tempData
+            } else {
+                self.is_filter = true
+                let tempData = dataSource.filter { $0.localizedCaseInsensitiveContains(textInField) }
+                self.filterDataSource = tempData
                 self.isShowView(is_show: true)
                 self.tableView?.reloadData()
             }
@@ -92,18 +89,22 @@ class AutoComplete: UIView {
     }
     
     @objc func didBeganText(textField: UITextField) {
+        print("didBeganText")
         self.isShowView(is_show: true);
     }
     
     @objc func didEndText(textField: UITextField) {
-        is_filter = false
+        print("didEndText")
+        self.is_filter = false
         self.isShowView(is_show: false)
         self.tableView?.reloadData()
     }
     
     private func isShowView(is_show : Bool) {
+        print("isShowView")
         if !self.isHidden && is_show{ return }
         if is_show {
+            print("isShowViewIf")
             self.alpha = 0
             self.isHidden = false
             self.tableView?.alpha = 0
@@ -114,6 +115,7 @@ class AutoComplete: UIView {
                 self.tableView?.alpha = 1
             }
         } else {
+            print("isShowViewElse")
             UIView.animate(withDuration: 0.3, animations: {
                 self.tableView?.alpha = 0
                 self.alpha = 0
@@ -125,6 +127,7 @@ class AutoComplete: UIView {
     }
     
     private func changeHeightForCount(count: Int) {
+        print("changeHeightForCount")
         if cellHeight == nil { return }
         var newFrame = self.frame
         newFrame.size.height = cellHeight * CGFloat(count)
@@ -134,9 +137,10 @@ class AutoComplete: UIView {
     }
     
     private func attributedText(withString string: String, boldString: String, font: UIFont) -> NSAttributedString {
+        print("attibutedText")
         let attributedString = NSMutableAttributedString(string: string,
                                                          attributes: [NSAttributedString.Key.font: font])
-        let boldFontAttribute: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font.withSize(font.pointSize + 3)]
+        let boldFontAttribute: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font.withSize(font.pointSize + 5)]
         let range = (string as NSString).range(of: boldString, options: .caseInsensitive)
         attributedString.addAttributes(boldFontAttribute, range: range)
         return attributedString
@@ -146,7 +150,8 @@ class AutoComplete: UIView {
 // MARK: - TableView Delegate
 extension AutoComplete : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if is_filter {
+        print("TableViewDelegate")
+        if self.is_filter {
             let selectedStr = filterDataSource[indexPath.row]
             let selectedIndex = dataSource.firstIndex(of: selectedStr)
             self.isShowView(is_show: false)
@@ -160,22 +165,24 @@ extension AutoComplete : UITableViewDelegate {
     }
 }
 
+
 // MARK: - TableView DataSource
 extension AutoComplete : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if is_filter{
-            self.changeHeightForCount(count: self.filterDataSource.count < 4 ? self.filterDataSource.count : 3)
+        print("tableViewDataSource1")
+        self.changeHeightForCount(count: self.filterDataSource.count < 5 ? self.filterDataSource.count : 3)
+        if self.is_filter {
             return self.filterDataSource.count
         }
-        self.changeHeightForCount(count: self.dataSource.count < 4 ? self.dataSource.count : 3)
         return self.dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("tableViewDataSource2")
         let cell = tableView.dequeueReusableCell(withIdentifier: "AutoCompleteViewCell") as! AutoCompleteViewCell
-        if is_filter {
+        if self.is_filter {
             cell.lblTitle.text = filterDataSource[indexPath.row]
-        }else{
+        } else {
             cell.lblTitle.text = dataSource[indexPath.row]
         }
 
@@ -187,6 +194,7 @@ extension AutoComplete : UITableViewDataSource {
 
 extension AutoComplete {
     func heightForLabel(text:String) -> CGFloat {
+        print("heightForLabel")
         let label:UILabel = UILabel(frame: CGRect(x:0, y:0, width: self.onTextField.frame.width, height: CGFloat.greatestFiniteMagnitude))
         label.numberOfLines = 0
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -197,17 +205,15 @@ extension AutoComplete {
     }
     
     @objc func keyboarDidShown(notification: NSNotification) {
+        print("keyboardDidShown")
         let info = notification.userInfo!
         let keyboardSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
         var aRect : CGRect = (self.onView?.frame)!
         aRect.size.height -= keyboardSize!.height
         if (self.onTextField) != nil {
             if aRect.height < (self.frame.origin.y + self.frame .height) {
-                if !isOnTop {
-                    self.frame = CGRect(x: onTextField.frame.minX, y: self.frame.origin.y - self.frame.height - self.onTextField.frame.height, width: onTextField.frame.width, height: self.frame.height)
-                    isOnTop = true
-                    self.setNeedsDisplay()
-                }
+                self.frame = CGRect(x: onTextField.frame.minX, y: self.frame.origin.y - self.frame.height - self.onTextField.frame.height, width: onTextField.frame.width, height: self.frame.height)
+                self.setNeedsDisplay()
             }
         }
     }
@@ -216,6 +222,7 @@ extension AutoComplete {
 // MARK: - Height for text
 extension String {
     func height(constraintedWidth width: CGFloat, font: UIFont) -> CGFloat {
+        print("heightString")
         let label =  UILabel(frame: CGRect(x: 0, y: 0, width: width, height: .greatestFiniteMagnitude))
         label.numberOfLines = 0
         label.lineBreakMode = NSLineBreakMode.byWordWrapping

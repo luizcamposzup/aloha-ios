@@ -20,6 +20,7 @@ class EmailViewController: BaseViewController {
         emailTextField.delegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        backToRootViewControllerAfterTime()
     }
     
     deinit {
@@ -100,6 +101,10 @@ class EmailViewController: BaseViewController {
                         print("Visita não cadastrada")
                         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
                             alertLoading.dismiss(animated: true, completion: nil)
+                            guard let email = self.emailTextField.text else {
+                                return
+                            }
+                            UserFlowData.userInstance.setUserEmail(email: email)
                             self.callNextScene(statusRegister: false)
                         }
                     } else {

@@ -22,6 +22,7 @@ class DataViewController: BaseViewController {
         phoneTextField.delegate = self
         companyTextField.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        backToRootViewControllerAfterTime()
     }
     
     deinit {

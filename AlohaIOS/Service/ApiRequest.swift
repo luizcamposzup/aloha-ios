@@ -33,7 +33,7 @@ struct ApiRequest {
             components.path = "/customer"
             components.queryItems = [
                 URLQueryItem(name: "nameOrEmail", value: wordsOfNameToSearch),
-                URLQueryItem(name: "size", value: "5")
+                URLQueryItem(name: "size", value: "10")
             ]
             guard let url = components.url else {
                 completion(.failure(.requestProblem))
