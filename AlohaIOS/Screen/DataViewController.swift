@@ -48,7 +48,7 @@ class DataViewController: BaseViewController {
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
                         alertLoading.dismiss(animated: true, completion: nil)
                         ListFlowData.listZupperInstance.setListVisitor(listToSet: [Visitor]())
-                        self.nextViewController(vc: "ConfirmViewController")
+                        self.nextViewController(vc: "PhotoViewController")
                     }
                 case .failure(let error):
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
