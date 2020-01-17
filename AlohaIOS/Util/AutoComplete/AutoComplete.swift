@@ -14,12 +14,10 @@ class AutoComplete: UIView {
     var tableView : UITableView?
     public var dropDownHeight : CGFloat?
     public var onView : UIView?
-    var filterDataSource = [String]()
     public var indexPath : IndexPath?
     private var isMultiLine  = false
     public var cellHeight : CGFloat!
     public var showAlwaysOnTop = false
-    private var is_filter = false
     typealias CompletionHandler = (_ text: String , _ index : Int) -> Void
     
     func updateDataSource(listToSet: [String]) {
@@ -75,13 +73,9 @@ class AutoComplete: UIView {
         print("didChangeText")
         if let textInField = onTextField.text {
             if textInField.count == 0 {
-                self.is_filter = false
-                //self.tableView?.removeFromSuperview()
+                self.isHidden = true
                 self.tableView?.reloadData()
             } else {
-                self.is_filter = true
-                let tempData = dataSource.filter { $0.localizedCaseInsensitiveContains(textInField) }
-                self.filterDataSource = tempData
                 self.isShowView(is_show: true)
                 self.tableView?.reloadData()
             }
@@ -95,7 +89,6 @@ class AutoComplete: UIView {
     
     @objc func didEndText(textField: UITextField) {
         print("didEndText")
-        self.is_filter = false
         self.isShowView(is_show: false)
         self.tableView?.reloadData()
     }
@@ -151,13 +144,6 @@ class AutoComplete: UIView {
 extension AutoComplete : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("TableViewDelegate")
-        if self.is_filter {
-            let selectedStr = filterDataSource[indexPath.row]
-            let selectedIndex = dataSource.firstIndex(of: selectedStr)
-            self.isShowView(is_show: false)
-            self.completionHandler!(selectedStr, selectedIndex!)
-            return
-        }
         let selectedStr = dataSource[indexPath.row]
         let selectedIndex = indexPath.row
         self.isShowView(is_show: false)
@@ -170,22 +156,14 @@ extension AutoComplete : UITableViewDelegate {
 extension AutoComplete : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("tableViewDataSource1")
-        self.changeHeightForCount(count: self.filterDataSource.count < 5 ? self.filterDataSource.count : 3)
-        if self.is_filter {
-            return self.filterDataSource.count
-        }
+        self.changeHeightForCount(count: self.dataSource.count < 5 ? self.dataSource.count : 3)
         return self.dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("tableViewDataSource2")
         let cell = tableView.dequeueReusableCell(withIdentifier: "AutoCompleteViewCell") as! AutoCompleteViewCell
-        if self.is_filter {
-            cell.lblTitle.text = filterDataSource[indexPath.row]
-        } else {
-            cell.lblTitle.text = dataSource[indexPath.row]
-        }
-
+        cell.lblTitle.text = dataSource[indexPath.row]
         let formattedString = self.attributedText(withString: cell.lblTitle.text!, boldString: onTextField.text!, font: onTextField.font!)
         cell.lblTitle.attributedText = formattedString
         return cell

@@ -58,6 +58,8 @@ class WhoViewController: BaseViewController {
     }
     
     private func goToDataScreen() {
+        print("Name Zupper: "+ZupperFlowData.zupperInstance.getZupperName())
+        print("Email Zupper: "+ZupperFlowData.zupperInstance.getZupperEmail())
         self.tableViewZuppers.removeFromSuperview()
         nextViewController(vc: "DataViewController")
     }

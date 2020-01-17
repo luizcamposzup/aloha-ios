@@ -38,7 +38,7 @@ class DataViewController: BaseViewController {
     }
     
     private func registerVisitor(name: String, email: String, telephone: String, company: String, photo: String) {
-        let alertLoading = Alert.showAlertLoading(messageLoading: "Saving data...")
+        let alertLoading = Alert.showAlertLoading(messageLoading: "Salvando dados...")
         present(alertLoading, animated: true)
         let visitorForRegister = Visitor(name: name, email: email, telephone: telephone, company: company, photo: photo)
         let registerRequest = ApiRequest()
@@ -53,7 +53,7 @@ class DataViewController: BaseViewController {
                 case .failure(let error):
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
                         alertLoading.dismiss(animated: true, completion: nil)
-                        let alert = Alert.showAlertError(messageError: "Erro while saving data")
+                        let alert = Alert.showAlertError(messageError: "Erro no salvamento dos dados")
                         self.present(alert, animated: true, completion: nil)
                         print("Visita não-registrada: \(error)")
                     }
@@ -105,7 +105,7 @@ class DataViewController: BaseViewController {
         if endFrameY >= UIScreen.main.bounds.size.height {
             self.bottomMargin.constant = 200
         } else {
-            self.bottomMargin.constant = endFrame!.size.height + 5
+            self.bottomMargin.constant = endFrame!.size.height + 20
         }
        
         }

@@ -147,7 +147,7 @@ class EmailViewController: BaseViewController {
         if endFrameY >= UIScreen.main.bounds.size.height {
             self.bottomMargin.constant = 200
         } else {
-            self.bottomMargin.constant = endFrame!.size.height + 5
+            self.bottomMargin.constant = endFrame!.size.height + 20
         }
        
         }
