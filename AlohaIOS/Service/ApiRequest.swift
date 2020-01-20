@@ -26,39 +26,6 @@ struct ApiRequest {
         return URLSession(configuration: sessionConfig)
     }
     
-    func getListZuppers(wordsOfNameToSearch: String, completion: @escaping(Result<ZupperContentResponse, APIError>) -> Void) {
-        do {
-            var components = URLComponents()
-            components.scheme = "https"
-            components.host = self.baseUrl
-            components.path = "/customer"
-            components.queryItems = [
-                URLQueryItem(name: "nameOrEmail", value: wordsOfNameToSearch),
-                URLQueryItem(name: "size", value: "10")
-            ]
-            guard let url = components.url else {
-                completion(.failure(.requestProblem))
-                return
-            }
-            let dataTask = setConfiguration.dataTask(with: url) {data, response, _ in
-                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200,
-                let jsonData = data else {
-                    completion(.failure(.responseProblem))
-                    return
-                }
-                do {
-                    let notificationData = try JSONDecoder().decode(ZupperContentResponse.self, from: jsonData)
-                    completion(.success(notificationData))
-                } catch {
-                    completion(.failure(.decodingProblem))
-                }
-            }
-            dataTask.resume()
-        } catch {
-            completion(.failure(.encodingProblem))
-        }
-    }
-    
     func getZupper(emailOrNameToSearch: String, sizeRequest: String, completion: @escaping(Result<ZupperContentResponse, APIError>) -> Void) {
         do {
             var components = URLComponents()
@@ -170,9 +137,6 @@ struct ApiRequest {
                     let notificationData = try JSONDecoder().decode(NotificationResponse.self, from: jsonData)
                     completion(.success(notificationData))
                     print("notificationData")
-//                    DispatchQueue.main.async {
-//
-//                    }
                 } catch {
                     completion(.failure(.decodingProblem))
                     print("decodingProblem")
