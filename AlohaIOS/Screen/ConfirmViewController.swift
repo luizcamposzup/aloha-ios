@@ -65,9 +65,11 @@ class ConfirmViewController: BaseViewController {
                         self.alertMessage(error: false)
                     }
                 case .failure(let error):
-                    alert.dismiss(animated: true, completion: nil)
-                    self.alertMessage(error: true)
-                    print("Ocorreu um erro: \(error)")
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+                        alert.dismiss(animated: true, completion: nil)
+                        self.alertMessage(error: true)
+                        print("Ocorreu um erro: \(error)")
+                    }
                 }
         })
     }

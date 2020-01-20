@@ -84,7 +84,7 @@ class WhoViewController: BaseViewController {
     }
     
     private func requestGetListZuppers(wordOfName: String) {
-        ApiRequest.defaultRequest.getListZuppers(wordsOfNameToSearch: wordOfName, completion: {result in
+        ApiRequest.defaultRequest.getZupper(emailOrNameToSearch: wordOfName, sizeRequest: "10", completion: {result in
             switch result {
                 case .success(let successGetListZuppers):
                     print("End Request Get List Zupper")
