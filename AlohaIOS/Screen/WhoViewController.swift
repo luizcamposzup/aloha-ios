@@ -27,7 +27,7 @@ class WhoViewController: BaseViewController {
     @IBAction func nameTextFieldWatch() {
         guard let nameInput = nameTextField.text else { return }
         if nameInput.count > 2 {
-            requestGetListZuppers(wordOfName: nameInput)
+            requestGetListZuppers(wordOfName: removeDiacritcs(fromString: nameInput))
         }
     }
     
@@ -84,7 +84,7 @@ class WhoViewController: BaseViewController {
     }
     
     private func requestGetListZuppers(wordOfName: String) {
-        ApiRequest.defaultRequest.getListZuppers(wordsOfNameToSearch: wordOfName, completion: {result in
+        ApiRequest.defaultRequest.getZupper(emailOrNameToSearch: wordOfName, sizeRequest: "10", completion: {result in
             switch result {
                 case .success(let successGetListZuppers):
                     print("End Request Get List Zupper")
@@ -110,5 +110,9 @@ class WhoViewController: BaseViewController {
             listZupperOnlyName.append(zupper.fullName)
         }
         return listZupperOnlyName
+    }
+    
+    private func removeDiacritcs(fromString: String) -> String {
+        return fromString.folding(options: .diacriticInsensitive, locale: .current)
     }
 }

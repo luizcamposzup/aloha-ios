@@ -17,6 +17,7 @@ enum APIError: Error {
 
 struct ApiRequest {
     static var defaultRequest = ApiRequest()
+    let baseUrl = "aloha-backend-dev.continuousplatform.com"
     
     var setConfiguration: URLSession {
         let sessionConfig = URLSessionConfiguration.default
@@ -25,48 +26,15 @@ struct ApiRequest {
         return URLSession(configuration: sessionConfig)
     }
     
-    func getListZuppers(wordsOfNameToSearch: String, completion: @escaping(Result<ZupperContentResponse, APIError>) -> Void) {
+    func getZupper(emailOrNameToSearch: String, sizeRequest: String, completion: @escaping(Result<ZupperContentResponse, APIError>) -> Void) {
         do {
             var components = URLComponents()
             components.scheme = "https"
-            components.host = "aloha-backend-dev.continuousplatform.com"
+            components.host = self.baseUrl
             components.path = "/customer"
             components.queryItems = [
-                URLQueryItem(name: "nameOrEmail", value: wordsOfNameToSearch),
-                URLQueryItem(name: "size", value: "10")
-            ]
-            guard let url = components.url else {
-                completion(.failure(.requestProblem))
-                return
-            }
-            let dataTask = setConfiguration.dataTask(with: url) {data, response, _ in
-                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200,
-                let jsonData = data else {
-                    completion(.failure(.responseProblem))
-                    return
-                }
-                do {
-                    let notificationData = try JSONDecoder().decode(ZupperContentResponse.self, from: jsonData)
-                    completion(.success(notificationData))
-                } catch {
-                    completion(.failure(.decodingProblem))
-                }
-            }
-            dataTask.resume()
-        } catch {
-            completion(.failure(.encodingProblem))
-        }
-    }
-    
-    func getZupper(emailZupperToSearch: String, completion: @escaping(Result<ZupperContentResponse, APIError>) -> Void) {
-        do {
-            var components = URLComponents()
-            components.scheme = "https"
-            components.host = "aloha-backend-dev.continuousplatform.com"
-            components.path = "/customer"
-            components.queryItems = [
-                URLQueryItem(name: "nameOrEmail", value: emailZupperToSearch),
-                URLQueryItem(name: "size", value: "1")
+                URLQueryItem(name: "nameOrEmail", value: emailOrNameToSearch),
+                URLQueryItem(name: "size", value: sizeRequest)
             ]
             guard let url = components.url else {
                 completion(.failure(.requestProblem))
@@ -95,7 +63,7 @@ struct ApiRequest {
         do {
             var components = URLComponents()
             components.scheme = "https"
-            components.host = "aloha-backend-dev.continuousplatform.com"
+            components.host = self.baseUrl
             components.path = "/api/zup-aloha/email"
             components.queryItems = [URLQueryItem(name: "email", value: emailVisitorToSearch)]
             guard let url = components.url else {
@@ -162,20 +130,22 @@ struct ApiRequest {
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 201,
                 let jsonData = data else {
                     completion(.failure(.responseProblem))
+                    print("responseProblem")
                     return
                 }
                 do {
                     let notificationData = try JSONDecoder().decode(NotificationResponse.self, from: jsonData)
-                    DispatchQueue.main.async {
-                        completion(.success(notificationData))
-                    }
+                    completion(.success(notificationData))
+                    print("notificationData")
                 } catch {
                     completion(.failure(.decodingProblem))
+                    print("decodingProblem")
                 }
             }
             dataTask.resume()
         } catch {
             completion(.failure(.encodingProblem))
+            print("encodingProblem")
         }
     }
 }

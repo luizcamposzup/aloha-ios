@@ -39,11 +39,12 @@ class EmailViewController: BaseViewController {
         guard let emailText = emailTextField.text else {
             return
         }
-        if FormValidation.isValidEmail(email: emailText) {
-            if FormValidation.isDomainEmailZupper(email: emailText) {
-                verifyIfZupperExist(emailText)
+        let email = removeSpace(fromString: emailText)
+        if FormValidation.isValidEmail(email: email) {
+            if FormValidation.isDomainEmailZupper(email: email) {
+                verifyIfZupperExist(email)
             } else {
-                verifyIfVisitorExist(emailText)
+                verifyIfVisitorExist(email)
             }
         } else {
             showAlertErrorEmail()
@@ -55,10 +56,15 @@ class EmailViewController: BaseViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    private func showAlertConection() {
+        let alert = Alert.showAlertError(messageError: "Houve um problema na resposta do servidor")
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     private func verifyIfZupperExist(_ emailToSearch: String) {
         let alertLoading = Alert.showAlertLoading(messageLoading: "Verificando email...")
         present(alertLoading, animated: true)
-        ApiRequest.defaultRequest.getZupper(emailZupperToSearch: emailToSearch, completion: { result in
+        ApiRequest.defaultRequest.getZupper(emailOrNameToSearch: emailToSearch, sizeRequest: "1", completion: { result in
                 switch result {
                 case .success(let successGetListZuppers):
                     print("success zupper")
@@ -74,9 +80,16 @@ class EmailViewController: BaseViewController {
                     }
                     print("End Request Get Zupper")
                 case .failure(let error):
-                    DispatchQueue.main.async {
-                        alertLoading.dismiss(animated: true, completion: nil)
-                        self.showAlertErrorEmail()
+                    if error == .responseProblem {
+                        DispatchQueue.main.async {
+                            alertLoading.dismiss(animated: true, completion: nil)
+                            self.showAlertConection()
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            alertLoading.dismiss(animated: true, completion: nil)
+                            self.showAlertErrorEmail()
+                        }
                     }
                     print("Ocorreu um erro: \(error)")
                 }
@@ -139,17 +152,19 @@ class EmailViewController: BaseViewController {
         return true
     }
     
+    private func removeSpace(fromString: String) -> String {
+        return fromString.replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
+    }
+    
     @objc func keyboardNotification(notification: NSNotification) {
     if let userInfo = notification.userInfo {
         let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         let endFrameY = endFrame?.origin.y ?? 0
-        
-        if endFrameY >= UIScreen.main.bounds.size.height {
-            self.bottomMargin.constant = 200
-        } else {
-            self.bottomMargin.constant = endFrame!.size.height + 20
-        }
-       
+            if endFrameY >= UIScreen.main.bounds.size.height {
+                self.bottomMargin.constant = 200
+            } else {
+                self.bottomMargin.constant = endFrame!.size.height + 20
+            }
         }
     }
 }
