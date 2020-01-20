@@ -92,7 +92,7 @@ struct ApiRequest {
     func registerVisitorRequest (_ visitorForRegister: Visitor,
                        completion: @escaping(Result<Visitor, APIError>) -> Void) {
         do {
-            let url = "\(self.baseUrl)/api/zup-aloha/people"
+            let url = "https://aloha-backend-dev.continuousplatform.com/api/zup-aloha/people"
             guard let resourceURL = URL(string: url) else {fatalError()}
             var urlRequest = URLRequest(url: resourceURL)
             urlRequest.httpMethod = "POST"
