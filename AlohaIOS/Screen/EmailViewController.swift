@@ -39,11 +39,12 @@ class EmailViewController: BaseViewController {
         guard let emailText = emailTextField.text else {
             return
         }
-        if FormValidation.isValidEmail(email: emailText) {
-            if FormValidation.isDomainEmailZupper(email: emailText) {
-                verifyIfZupperExist(emailText)
+        var email = removeSpace(fromString: emailText)
+        if FormValidation.isValidEmail(email: email) {
+            if FormValidation.isDomainEmailZupper(email: email) {
+                verifyIfZupperExist(email)
             } else {
-                verifyIfVisitorExist(emailText)
+                verifyIfVisitorExist(email)
             }
         } else {
             showAlertErrorEmail()
@@ -139,17 +140,19 @@ class EmailViewController: BaseViewController {
         return true
     }
     
+    private func removeSpace(fromString: String) -> String {
+        return fromString.replacingOccurrences(of: " ", with: "", options: NSString.CompareOptions.literal, range: nil)
+    }
+    
     @objc func keyboardNotification(notification: NSNotification) {
     if let userInfo = notification.userInfo {
         let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         let endFrameY = endFrame?.origin.y ?? 0
-        
-        if endFrameY >= UIScreen.main.bounds.size.height {
-            self.bottomMargin.constant = 200
-        } else {
-            self.bottomMargin.constant = endFrame!.size.height + 20
-        }
-       
+            if endFrameY >= UIScreen.main.bounds.size.height {
+                self.bottomMargin.constant = 200
+            } else {
+                self.bottomMargin.constant = endFrame!.size.height + 20
+            }
         }
     }
 }
