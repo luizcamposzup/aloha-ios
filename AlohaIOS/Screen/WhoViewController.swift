@@ -11,11 +11,10 @@ import UIKit
 
 class WhoViewController: BaseViewController {
     
-    var tableViewZuppers = AutoComplete()
-    var nameChanged = ""
-    
     @IBOutlet weak var nameTextField: TextFieldClass!
-    var emailRegistered = UserFlowData.userInstance.getIsEmailRegistered()
+    private var tableViewZuppers = AutoComplete()
+    private var nameChanged = ""
+    private var emailRegistered = UserFlowData.userInstance.getIsEmailRegistered()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +23,15 @@ class WhoViewController: BaseViewController {
         setListTableViewZuppers()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.nameTextField.becomeFirstResponder()
+    }
+    
     @IBAction func nameTextFieldWatch() {
         guard let nameInput = nameTextField.text else { return }
         if nameInput.count > 2 {
-            requestGetListZuppers(wordOfName: removeDiacritcs(fromString: nameInput))
+            requestZupper(wordOfName: removeDiacritcs(fromString: nameInput))
         }
     }
     
@@ -37,6 +41,10 @@ class WhoViewController: BaseViewController {
     
     @IBAction func callNextViewControllerWhenButtonTouchUpInside() {
         processTextFieldInput()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     private func setListTableViewZuppers() {
@@ -64,7 +72,7 @@ class WhoViewController: BaseViewController {
         nextViewController(vc: "DataViewController")
     }
     
-    func processTextFieldInput() {
+    private func processTextFieldInput() {
         if(FormValidation.isValidTextFrom(textField: nameTextField) && nameChanged == nameTextField.text) {
             emailRegistered == true ? goToConfirmScreen() : goToDataScreen()
         } else {
@@ -73,35 +81,36 @@ class WhoViewController: BaseViewController {
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameTextField.resignFirstResponder()
         processTextFieldInput()
         return true
     }
     
-    private func requestGetListZuppers(wordOfName: String) {
-        ApiRequest.defaultRequest.getZupper(emailOrNameToSearch: wordOfName, sizeRequest: "10", completion: {result in
+    private func requestZupper(wordOfName: String) {
+        ApiRequest.apiRequestInstance.getZupper(emailOrNameToSearch: wordOfName, sizeRequest: "10", completion: { result in
             switch result {
-                case .success(let successGetListZuppers):
-                    print("End Request Get List Zupper")
-                    print(successGetListZuppers)
-                    ListFlowData.listZupperInstance.setListZupperComplete(listToSet: successGetListZuppers)
-                    DispatchQueue.main.async {
-                        let listToSet = self.filter(listToReturnZupperOnlyName: successGetListZuppers.content)
-                        self.tableViewZuppers.updateDataSource(listToSet: listToSet)
-                    }
-                case .failure(let error):
-                    DispatchQueue.main.async {
-                        let alertError = Alert.showAlertError(messageError: "Erro na busca do nome")
-                        self.present(alertError, animated: true)
-                    }
-                    print("Ocorreu um erro: \(error)")
+                case .success(let successZupper):
+                    self.resultSuccessRequestZupper(response: successZupper)
+                case .failure( _):
+                    self.resultFailureRequestZupper()
             }
         })
+    }
+    
+    private func resultSuccessRequestZupper(response: ZupperContentResponse) {
+        ListFlowData.listZupperInstance.setListZupperComplete(listToSet: response)
+        DispatchQueue.main.async {
+            let listToSet = self.filter(listToReturnZupperOnlyName: response.content)
+            self.tableViewZuppers.updateDataSource(listToSet: listToSet)
+        }
+    }
+    
+    private func resultFailureRequestZupper() {
+        DispatchQueue.main.async {
+            let alertError = Alert.showAlertError(messageError: "Erro na busca do nome")
+            self.present(alertError, animated: true)
+        }
     }
     
     private func filter(listToReturnZupperOnlyName: [ZupperResponse]) -> [String] {
