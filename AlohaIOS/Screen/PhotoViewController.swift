@@ -13,12 +13,12 @@ import AVFoundation
 class PhotoViewController: BaseViewController {
     
     @IBOutlet weak var cameraView: UIView!
-    var captureSession = AVCaptureSession()
-    var backCamera : AVCaptureDevice?
-    var frontCamera : AVCaptureDevice?
-    var currentCamera : AVCaptureDevice?
-    var photoOutput: AVCapturePhotoOutput?
-    var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
+    private var captureSession = AVCaptureSession()
+    private var backCamera : AVCaptureDevice?
+    private var frontCamera : AVCaptureDevice?
+    private var currentCamera : AVCaptureDevice?
+    private var photoOutput: AVCapturePhotoOutput?
+    private var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     var image : UIImage?
 
     override func viewDidLoad() {
@@ -45,13 +45,15 @@ class PhotoViewController: BaseViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           if segue.identifier == "showPhotoSegue" {
-               let previewVC = segue.destination as! PreviewViewController
-               previewVC.image = self.image
-           }
+       if segue.identifier == "showPhotoSegue" {
+           let previewVC = segue.destination as! PreviewViewController
+           previewVC.image = self.image
+       }
     }
        
-    override func didReceiveMemoryWarning() { super.didReceiveMemoryWarning() }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
     private func setupCaptureSession() {
            captureSession.sessionPreset = AVCaptureSession.Preset.photo
@@ -87,7 +89,9 @@ class PhotoViewController: BaseViewController {
        cameraView.layer.cornerRadius = self.cameraView.frame.height / 30.0
     }
 
-    private func startRunningCaptureSession() { captureSession.startRunning() }
+    private func startRunningCaptureSession() {
+        captureSession.startRunning()
+    }
 }
     
 extension PhotoViewController: AVCapturePhotoCaptureDelegate {

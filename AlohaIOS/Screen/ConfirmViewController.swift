@@ -12,27 +12,23 @@ import UIKit
 class ConfirmViewController: BaseViewController {
     
     @IBOutlet weak var confirmTitleTextLabel: TitleClass!
-    var zupperName = ZupperFlowData.zupperInstance.getZupperName()
-    var zupperEmail = ZupperFlowData.zupperInstance.getZupperEmail()
-    var userName = UserFlowData.userInstance.getUserName()
-    var userEmail = UserFlowData.userInstance.getUserEmail()
+    private var zupperName = ZupperFlowData.zupperInstance.getZupperName()
+    private var zupperEmail = ZupperFlowData.zupperInstance.getZupperEmail()
+    private var userName = UserFlowData.userInstance.getUserName()
+    private var userEmail = UserFlowData.userInstance.getUserEmail()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTextLabel()
-        print(UserFlowData.userInstance.getUserName())
-        print(UserFlowData.userInstance.getUserEmail())
-        print(UserFlowData.userInstance.getUserPhone())
-        print(UserFlowData.userInstance.getUserCompany())
-        print(ZupperFlowData.zupperInstance.getZupperName())
-        print(ZupperFlowData.zupperInstance.getZupperEmail())
         backToRootViewControllerAfterTime()
+        self.setTextLabel()
     }
     
-    @IBAction func backViewControllerWhenButtonTouchUpInside() { backToPreviousViewController() }
+    @IBAction func backViewControllerWhenButtonTouchUpInside() {
+        backToPreviousViewController()
+    }
     
     @IBAction func confirmVisitWhenButtonTouchUpInside() {
-        sendNotification(name: userName, email: zupperEmail)
+        self.sendNotification(name: userName, email: zupperEmail)
     }
     
     @IBAction func cancelVisitWhenButtonTouchUpInside() {
@@ -52,33 +48,37 @@ class ConfirmViewController: BaseViewController {
     }
     
     private func sendNotification(name: String, email: String) {
-        let alert = Alert.showAlertLoading(messageLoading: "Enviando notificação...")
-        present(alert, animated: true)
+        let alertLoading = Alert.showAlertLoading(messageLoading: "Enviando notificação...")
+        present(alertLoading, animated: true)
         let emailForNotification = NotificationRequest(name:  name, email: email )
-        let notificationRequest = ApiRequest()
-            notificationRequest.notificationRequest(emailForNotification, completion: { result in
+        self.requestNotification(objectNotification: emailForNotification, alert: alertLoading)
+    }
+    
+    private func requestNotification(objectNotification: NotificationRequest, alert: UIAlertController) {
+        ApiRequest.apiRequestInstance.notificationRequest(objectNotification, completion: { result in
                 switch result {
-                case .success(let successNotification):
+                case .success( _):
+                    self.resultRequestApi(statusAlert: false, alert: alert)
+                case .failure( _):
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-                        alert.dismiss(animated: true, completion: nil)
-                        print("Zupper notificado")
-                        self.alertMessage(error: false)
-                    }
-                case .failure(let error):
-                    DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-                        alert.dismiss(animated: true, completion: nil)
-                        self.alertMessage(error: true)
-                        print("Ocorreu um erro: \(error)")
+                        self.resultRequestApi(statusAlert: true, alert: alert)
                     }
                 }
         })
+    }
+    
+    private func resultRequestApi(statusAlert: Bool, alert: UIAlertController) {
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+            alert.dismiss(animated: true, completion: nil)
+            self.alertMessage(error: statusAlert)
+        }
     }
     
     private func alertMessage(error: Bool) {
         var status = false
         var title: String
         var message: String
-        if(error) {
+        if error {
             title = "CANCELADA"
             message = "Erro ao notificar \(zupperName.split(separator: " ")[0])"
         } else {

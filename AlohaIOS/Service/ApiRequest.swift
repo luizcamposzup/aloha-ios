@@ -16,8 +16,8 @@ enum APIError: Error {
 }
 
 struct ApiRequest {
-    static var defaultRequest = ApiRequest()
-    let baseUrl = "aloha-backend-dev.continuousplatform.com"
+    static var apiRequestInstance = ApiRequest()
+    let baseUrl = "aloha-backend.continuousplatform.com"
     
     var setConfiguration: URLSession {
         let sessionConfig = URLSessionConfiguration.default
@@ -92,7 +92,7 @@ struct ApiRequest {
     func registerVisitorRequest (_ visitorForRegister: Visitor,
                        completion: @escaping(Result<Visitor, APIError>) -> Void) {
         do {
-            let url = "https://aloha-backend-dev.continuousplatform.com/api/zup-aloha/people"
+            let url = "https://aloha-backend.continuousplatform.com/api/zup-aloha/people"
             guard let resourceURL = URL(string: url) else {fatalError()}
             var urlRequest = URLRequest(url: resourceURL)
             urlRequest.httpMethod = "POST"
@@ -120,7 +120,7 @@ struct ApiRequest {
     func notificationRequest (_ emailForNotification: NotificationRequest,
                        completion: @escaping(Result<NotificationResponse, APIError>) -> Void) {
         do {
-            let url = "https://aloha-backend-dev.continuousplatform.com/message"
+            let url = "https://aloha-backend.continuousplatform.com/message"
             guard let resourceURL = URL(string: url) else {fatalError()}
             var urlRequest = URLRequest(url: resourceURL)
             urlRequest.httpMethod = "POST"
